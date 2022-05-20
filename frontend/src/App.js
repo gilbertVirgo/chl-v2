@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import InternationalTours from "./pages/InternationalTours";
@@ -23,6 +24,7 @@ function App() {
 					path="/international-tours"
 					element={<InternationalTours />}
 				/>
+				<Route path="/contact" element={<Contact />} />
 			</Routes>
 			<Footer />
 		</React.Fragment>
