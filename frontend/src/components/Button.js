@@ -1,12 +1,11 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import media from "../media";
 import styled from "styled-components";
 
 const ButtonTemplate = styled.button`
+	cursor: pointer;
 	appearance: none;
 	border: none;
-	border-radius: 3px;
+	/* border-radius: 3px; */
 	padding: 13px 20px;
 	font-size: 16px;
 	line-height: 16px;
@@ -33,6 +32,15 @@ const ButtonTemplate = styled.button`
 	${({ center }) => center && `display: block;margin: 0 auto;`}
 `;
 
+const External = styled.div`
+	display: inline-block;
+	background-image: url("${require("../assets/icons/external.svg").default}");
+	background-size: cover;
+	width: 11px;
+	height: 11px;
+	margin-right: 8px;
+`;
+
 const Chevron = styled.div`
 	display: inline-block;
 	background-image: url("${require("../assets/icons/chevron-down.svg")
@@ -40,12 +48,13 @@ const Chevron = styled.div`
 	background-size: cover;
 	width: 11px;
 	height: 8px;
-	margin-left: 5px;
+	margin-left: 8px;
 `;
 
-export default ({ dropdown, children, ...props }) => {
+export default ({ dropdown, external, children, ...props }) => {
 	return (
 		<ButtonTemplate {...props}>
+			{external && <External />}
 			{children} {dropdown && <Chevron />}
 		</ButtonTemplate>
 	);

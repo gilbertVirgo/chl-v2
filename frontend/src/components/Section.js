@@ -31,6 +31,7 @@ const Inner = styled.div`
 `;
 
 export default ({
+	as,
 	children,
 	dark,
 	deflate,
@@ -39,7 +40,7 @@ export default ({
 	innerStyle,
 }) => {
 	return (
-		<Outer explode={explode} dark={dark} style={outerStyle}>
+		<Outer as={as} explode={explode} dark={dark} style={outerStyle}>
 			<Inner style={innerStyle} deflate={deflate}>
 				{children}
 			</Inner>

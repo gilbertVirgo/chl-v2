@@ -23,7 +23,7 @@ export const VideoPlaceholder = styled.div`
 		grid-row: 1;
 	`}
 
-	border-radius: 3px;
+	/* border-radius: 3px; */
 
 	background-image: url("${require("../../assets/video-placeholder.svg")
 		.default}");

@@ -55,7 +55,7 @@ export const Image = styled.div`
 
 	background-image: url("${({ src }) => src}");
 	background-size: cover;
-	border-radius: 3px;
+	/* border-radius: 3px; */
 
 	${media.maxWidth("l")`
         width: calc(100% + 30px);
