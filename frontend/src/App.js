@@ -1,9 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 
+import About from "./pages/About";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import InternationalTours from "./pages/InternationalTours";
 import Nav from "./components/Nav";
+import Podcast from "./pages/Podcast";
 import React from "react";
+import Walks from "./pages/Walks";
 
 function App() {
 	return (
@@ -12,6 +16,13 @@ function App() {
 
 			<Routes>
 				<Route exact path="/" element={<Home />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/podcast" element={<Podcast />} />
+				<Route path="/walks" element={<Walks />} />
+				<Route
+					path="/international-tours"
+					element={<InternationalTours />}
+				/>
 			</Routes>
 			<Footer />
 		</React.Fragment>

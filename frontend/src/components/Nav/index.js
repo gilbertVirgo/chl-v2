@@ -1,10 +1,8 @@
-import { Drawer, Link, LinkList, Logo, Padding, Wrapper } from "./styles";
-import { ShowOnLargeScreens, ShowOnSmallScreens } from "..";
+import { Drawer, Link, LinkGroup, Logo, Padding, Wrapper } from "./styles";
 
 import Burger from "./Burger";
 import Button from "../Button";
 import Grid from "../Grid";
-import Headroom from "react-headroom";
 import React from "react";
 import links from "./links";
 
@@ -15,33 +13,38 @@ export default () => {
 		setDrawerOpen(!drawerOpen);
 	};
 
-	const linkList = (
-		<LinkList>
+	const listOfLinks = (
+		<React.Fragment>
 			{links.map(({ title, href }) => (
 				<Link to={href}>{title}</Link>
 			))}
 			<Link to="/donate">
 				<Button>Donate</Button>
 			</Link>
-		</LinkList>
+		</React.Fragment>
 	);
 
 	return (
-		// <Headroom
-		// 	upTolerance={drawerOpen ? Infinity : 0}
-		// 	downTolerance={drawerOpen ? Infinity : 0}
-		// >
 		<React.Fragment>
 			<Wrapper>
-				<Grid>
-					<Logo />
+				<Grid
+					style={{
+						alignItems: "center",
+						maxWidth: "1125px",
+						margin: "0 auto",
+					}}
+				>
+					<Logo to="/" />
 					<Burger active={drawerOpen} onClick={handleBurgerClicked} />
-					<Drawer open={drawerOpen}>{linkList}</Drawer>
-					<ShowOnLargeScreens>{linkList}</ShowOnLargeScreens>
+					<Drawer open={drawerOpen}>
+						<LinkGroup.SmallScreen>
+							{listOfLinks}
+						</LinkGroup.SmallScreen>
+					</Drawer>
+					<LinkGroup.LargeScreen>{listOfLinks}</LinkGroup.LargeScreen>
 				</Grid>
 			</Wrapper>
 			<Padding />
 		</React.Fragment>
-		// </Headroom>
 	);
 };

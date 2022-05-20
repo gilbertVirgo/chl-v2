@@ -7,13 +7,9 @@ import Section from "../Section";
 
 export default ({ children }) => {
 	return (
-		<Section>
-			<Background>
-				<Grid style={{ marginBottom: 0 }}>
-					<Caption>{children}</Caption>
-					<VideoPlaceholder />
-				</Grid>
-			</Background>
-		</Section>
+		<Grid style={{ marginBottom: 0 }}>
+			<Caption>{children}</Caption>
+			<VideoPlaceholder />
+		</Grid>
 	);
 };

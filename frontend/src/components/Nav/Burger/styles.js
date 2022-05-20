@@ -1,4 +1,4 @@
-import breakpoint from "styled-components-breakpoint";
+import media from "../../../media";
 import styled from "styled-components";
 
 const burgerWidth = 24,
@@ -32,7 +32,7 @@ export const Bars = {
 const OuterPadding = 10;
 
 export const Outer = styled.div`
-	${breakpoint("lg")`display: none`}
+	${media.minWidth("l")`display: none`}
 
 	cursor: pointer;
 	padding: ${OuterPadding}px;

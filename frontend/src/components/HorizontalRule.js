@@ -1,7 +1,7 @@
 import Grid from "./Grid";
 import React from "react";
 import Section from "./Section";
-import breakpoint from "styled-components-breakpoint";
+import media from "../media";
 import styled from "styled-components";
 
 // rgba(26, 26, 26, 0.25)
@@ -19,7 +19,7 @@ const Template = styled.div`
 
 	grid-column: 1 / -1;
 
-	${breakpoint("lg")`
+	${media.minWidth("l")`
         grid-column: 2 / -2;
     `}
 `;
@@ -27,7 +27,7 @@ const Template = styled.div`
 const NegativePadding = styled.div`
 	margin-top: -25px;
 
-	${breakpoint("lg")`margin-top: -50px;`}
+	${media.minWidth("l")`margin-top: -50px;`}
 `;
 
 export default () => (

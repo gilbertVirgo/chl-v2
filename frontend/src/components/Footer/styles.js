@@ -1,13 +1,13 @@
-import { Paragraph, Subheading } from "../Text";
+import { Caption, Paragraph } from "../Text";
 
-import breakpoint from "styled-components-breakpoint";
+import media from "../../media";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
 	background-color: #1a1a1a;
 	padding: 50px 0;
 
-	${breakpoint("lg")`
+	${media.minWidth("l")`
 		padding: 100px 0;
 		margin-bottom: 0;
 	`}
@@ -17,7 +17,7 @@ export const Strapline = styled.div`
 	grid-column: 1 / -1;
 	margin-bottom: 35px;
 
-	${breakpoint("lg")`
+	${media.minWidth("l")`
 		grid-column: 1 / 7;
 		margin-bottom: 0;
 
@@ -30,13 +30,13 @@ export const Verse = styled(Paragraph)`
 	line-height: 29px;
 	margin-bottom: 8px;
 
-	${breakpoint("lg")`
+	${media.minWidth("l")`
         font-size: 28px;
         line-height: 34px;
     `}
 `;
 
-export const Reference = styled(Subheading)`
+export const Reference = styled(Caption)`
 	color: white;
 `;
 
@@ -65,7 +65,7 @@ export const SocialsWrapper = styled.div`
 	align-items: center;
 	justify-content: space-between;
 
-	${breakpoint("lg")`
+	${media.minWidth("l")`
 		grid-column: -3 / -1;
 	`}
 `;

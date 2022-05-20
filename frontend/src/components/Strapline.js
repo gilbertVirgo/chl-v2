@@ -1,7 +1,7 @@
 import Grid from "./Grid";
 import React from "react";
 import Section from "./Section";
-import breakpoint from "styled-components-breakpoint";
+import media from "../media";
 import styled from "styled-components";
 
 const Text = styled.h3`
@@ -11,10 +11,11 @@ const Text = styled.h3`
 	line-height: 130.3%;
 	text-align: center;
 	font-size: 24px;
+	margin-top: 0 !important;
 
 	grid-column: 1 / -1;
 
-	${breakpoint("lg")`
+	${media.minWidth("l")`
         font-size: 28px;
         grid-column: 4 / -4;
         width: 120%;
@@ -23,9 +24,7 @@ const Text = styled.h3`
 `;
 
 export default ({ children }) => (
-	<Section>
-		<Grid>
-			<Text>{children}</Text>
-		</Grid>
-	</Section>
+	<Grid>
+		<Text>{children}</Text>
+	</Grid>
 );

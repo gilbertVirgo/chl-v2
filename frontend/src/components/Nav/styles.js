@@ -1,7 +1,6 @@
 import { Link as DefaultLink } from "react-router-dom";
 import Grid from "../Grid";
-import Headroom from "react-headroom";
-import breakpoint from "styled-components-breakpoint";
+import media from "../../media";
 import styled from "styled-components";
 
 const navBarHeight = 90;
@@ -21,14 +20,40 @@ export const Wrapper = styled.div`
 	z-index: 1000;
 
 	${Grid} {
-		${breakpoint("xs", "lg")`
+		${media.maxWidth("l")`
 			max-width: 100%;
 			margin: 0;
 		`}
 	}
 `;
 
-export const Logo = styled.div`
+export const LinkGroup = {
+	SmallScreen: styled.div`
+		${media.minWidth("l")`
+			display: none;
+		`}
+
+		padding: 0;
+		grid-column: 2 / -2;
+
+		> * {
+			display: block;
+		}
+	`,
+	LargeScreen: styled.div`
+		${media.maxWidth("l")`
+			display: none
+		`}
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		grid-column: -7 / -1;
+	`,
+};
+
+export const Logo = styled(DefaultLink)`
+	display: block;
 	background-image: url("${require("../../assets/logo.png")}");
 	background-size: cover;
 	width: 150px;
@@ -59,26 +84,6 @@ export const Drawer = styled(Grid)`
 	`}
 `;
 
-export const LinkList = styled.div`
-	padding: 0;
-	list-style-type: none;
-	grid-column: 2 / -2;
-
-	${breakpoint("xs", "lg")`
-		> * {
-			display: block;
-			
-		}
-	`}
-
-	${breakpoint("lg")`
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        grid-column: -7 / -1;
-    `}
-`;
-
 export const Link = styled(DefaultLink)`
 	color: #1a1a1a;
 	text-decoration: none;
@@ -87,12 +92,12 @@ export const Link = styled(DefaultLink)`
 	font-weight: 300;
 	line-height: 106.3%;
 
-	${breakpoint("xs", "lg")`
+	${media.maxWidth("l")`
 		font-size: 24px;
 		margin-bottom: 15px;
 	`}
 
-	${breakpoint("lg")`
+	${media.minWidth("l")`
 		font-size: 16px;
 	`}
 `;

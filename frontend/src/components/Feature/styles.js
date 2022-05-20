@@ -1,7 +1,7 @@
-import { Heading, Paragraph, Subheading } from "../Text";
+import { Caption, Heading, Paragraph } from "../Text";
 
 import Grid from "../Grid";
-import breakpoint from "styled-components-breakpoint";
+import media from "../../media";
 import styled from "styled-components";
 
 export const FeatureGrid = styled(Grid)`
@@ -11,18 +11,22 @@ export const FeatureGrid = styled(Grid)`
 		"image"
 		"body";
 
-	${Subheading} {
-		${breakpoint("lg")`
+	margin-bottom: 30px;
+
+	${Caption} {
+		${media.minWidth("l")`
         
         margin: -17px 0 15px;
         `}
 	}
 
-	${breakpoint("lg")`
+	${media.minWidth("l")`
+		margin-bottom: 75px;
+
         grid-template-rows: auto auto auto auto auto;
 
-        ${({ inverted }) =>
-			!inverted
+        ${({ invert }) =>
+			!invert
 				? `grid-template-columns: 1fr 4fr 1fr 6fr;
         grid-template-areas: 
             ". . . image"
@@ -36,6 +40,10 @@ export const FeatureGrid = styled(Grid)`
             "image . body ."
             "image . . .";  `}
     `}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 `;
 
 export const Title = styled(Heading)`
@@ -49,7 +57,7 @@ export const Image = styled.div`
 	background-size: cover;
 	border-radius: 3px;
 
-	${breakpoint("xs", "lg")`
+	${media.maxWidth("l")`
         width: calc(100% + 30px);
         margin-left: -15px;
 		
@@ -57,7 +65,7 @@ export const Image = styled.div`
         padding-bottom: calc(100 / 16 / 9 * 100%);
     `}
 
-	${breakpoint("lg")`
+	${media.minWidth("l")`
         height: 350px;
     `}
 `;

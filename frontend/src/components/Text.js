@@ -1,4 +1,4 @@
-import breakpoint from "styled-components-breakpoint";
+import media from "../media";
 import styled from "styled-components";
 
 export const Heading = styled.h1`
@@ -10,9 +10,15 @@ export const Heading = styled.h1`
 
 	margin: 0;
 
-	${breakpoint("lg")`
+	${media.minWidth("l")`
         font-size: 42px;
+
+		${({ margin }) => margin && `margin-bottom: 30px;`}
     `}
+
+	${media.maxWidth("l")`
+	${({ margin }) => margin && `margin-bottom: 15px;`}
+	`}
 `;
 
 export const Paragraph = styled.p`
@@ -25,7 +31,7 @@ export const Paragraph = styled.p`
 	margin: 0;
 `;
 
-export const Subheading = styled.h5`
+export const Caption = styled.h5`
 	font-family: "myriad-pro";
 	font-style: normal;
 	font-weight: 600;
@@ -36,4 +42,14 @@ export const Subheading = styled.h5`
 	color: #5f5f5f;
 
 	margin: 0;
+`;
+
+export const Subheading = styled.h3`
+	font-family: "myriad-pro";
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 130.3%;
+	color: #1a1a1a;
+	margin: 0 0 25px;
 `;

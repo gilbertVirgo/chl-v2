@@ -1,4 +1,5 @@
-import breakpoint from "styled-components-breakpoint";
+import { Heading } from "../Text";
+import media from "../../media";
 import styled from "styled-components";
 
 export const Background = styled.div`
@@ -6,7 +7,7 @@ export const Background = styled.div`
 	height: 100%;
 
 	padding: 50px 0;
-	${breakpoint("lg")`padding: 100px 0;`}
+	${media.minWidth("l")`padding: 100px 0;`}
 `;
 
 export const VideoPlaceholder = styled.div`
@@ -17,7 +18,7 @@ export const VideoPlaceholder = styled.div`
 	grid-column: 1 / -1;
 	grid-row: 2;
 
-	${breakpoint("lg")`
+	${media.minWidth("l")`
 		grid-column: 2 / -2;
 		grid-row: 1;
 	`}
@@ -37,7 +38,11 @@ export const Caption = styled.div`
 	grid-row: 1;
 	color: white;
 
-	${breakpoint("lg")`
+	${Heading} {
+		margin-bottom: 8px !important;
+	}
+
+	${media.minWidth("l")`
 		grid-column: 3 / 7;
 		grid-row: 1;
 

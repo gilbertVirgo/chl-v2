@@ -1,14 +1,8 @@
 import { Body, FeatureGrid, Image, Title } from "./styles";
 
-import Button from "../Button";
-import Section from "../Section";
-
-const Feature = ({ inverted, children }) => {
-	return (
-		<Section>
-			<FeatureGrid inverted={inverted}>{children}</FeatureGrid>
-		</Section>
-	);
+// Prop options: invert, deflate
+const Feature = ({ children, ...props }) => {
+	return <FeatureGrid {...props}>{children}</FeatureGrid>;
 };
 
 Feature.Title = ({ children }) => <Title>{children}</Title>;
