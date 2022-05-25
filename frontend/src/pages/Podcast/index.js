@@ -27,7 +27,22 @@ export default () => (
 				leaders who serve the church in the purpose, perspective and
 				power of the gospel.
 			</Strapline>
-			<Button dropdown center>
+			<Button
+				dropdown
+				center
+				options={{
+					items: [
+						{
+							value: "Apple Podcasts",
+							href: "https://podcasts.apple.com/gb/podcast/christian-heritage-london-podcast/id1232042916",
+						},
+						{
+							value: "Spotify",
+							href: "https://podcasts.apple.com/gb/podcast/christian-heritage-london-podcast/id1232042916",
+						},
+					],
+				}}
+			>
 				Subscribe
 			</Button>
 		</Section>

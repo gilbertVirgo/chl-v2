@@ -8,7 +8,7 @@ export const Heading = styled.h1`
 	font-size: 32px;
 	line-height: 106.3%;
 
-	margin: 0;
+	margin: 0 0 15px;
 
 	${media.minWidth("l")`
         font-size: 42px;
@@ -28,7 +28,7 @@ export const Paragraph = styled.p`
 	font-size: 18px;
 	line-height: 130.3%;
 
-	margin: 0;
+	margin: 0 0 15px;
 `;
 
 export const Caption = styled.h5`
@@ -51,5 +51,5 @@ export const Subheading = styled.h3`
 	font-size: 24px;
 	line-height: 130.3%;
 	color: #1a1a1a;
-	margin: 0 0 25px;
+	margin: 0 0 15px;
 `;

@@ -24,45 +24,19 @@ export default () => (
 				leaders who serve the church in the purpose, perspective and
 				power of the gospel.
 			</Strapline>
-			<Button dropdown center>
-				Subscribe
-			</Button>
+			<Button center>Apply for a tour</Button>
 		</Section>
 		<Section innerStyle={{ paddingTop: "0" }}>
 			<Lattice
 				squares
-				panels={[
-					{
-						title: "London & Cambridge",
-						subtitle: "National Tour",
-						image: require("../../assets/london-cambridge.jpg"),
+				panels={Array(9).fill({
+					title: "London & Cambridge",
+					externalLink: {
+						text: "View Guide",
+						href: "https://www.christianheritagelondon.org/pdf/london-cambridge.pdf",
 					},
-					{
-						title: "London & Cambridge",
-						subtitle: "National Tour",
-						image: require("../../assets/london-cambridge.jpg"),
-					},
-					{
-						title: "London & Cambridge",
-						subtitle: "National Tour",
-						image: require("../../assets/london-cambridge.jpg"),
-					},
-					{
-						title: "London & Cambridge",
-						subtitle: "National Tour",
-						image: require("../../assets/london-cambridge.jpg"),
-					},
-					{
-						title: "London & Cambridge",
-						subtitle: "National Tour",
-						image: require("../../assets/london-cambridge.jpg"),
-					},
-					{
-						title: "London & Cambridge",
-						subtitle: "National Tour",
-						image: require("../../assets/london-cambridge.jpg"),
-					},
-				]}
+					image: require("../../assets/london-cambridge.jpg"),
+				})}
 			/>
 		</Section>
 	</React.Fragment>

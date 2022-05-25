@@ -88,7 +88,7 @@ export default () => {
 							awesome London gospel stories.
 						</Paragraph>
 						<Button theme="red" suspend>
-							Book a walk
+							Apply for a walk
 						</Button>
 					</Feature.Body>
 				</Feature>

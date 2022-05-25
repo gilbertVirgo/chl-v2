@@ -3,6 +3,7 @@ import { Heading, Paragraph } from "../../components/Text";
 import Button from "../../components/Button";
 import Feature from "../../components/Feature";
 import Hero from "../../components/Hero";
+import { Link } from "react-router-dom";
 import React from "react";
 import Section from "../../components/Section";
 
@@ -28,7 +29,7 @@ export default () => (
 						on walks and tours through some of the awesome London
 						gospel stories.
 					</Paragraph>
-					<Button>Book a London Day</Button>
+					<Button>Apply for a London Day</Button>
 				</Feature.Body>
 			</Feature>
 			<Feature invert>
@@ -44,10 +45,7 @@ export default () => (
 						If you would like to apply for one of these, or if you
 						would like only a City Walk or a British Museum tour, or
 						if you have any other questions please{" "}
-						<a href="mailto:info@christianheritagelondon.org">
-							email
-						</a>
-						.
+						<Link to="contact">email</Link>.
 					</Paragraph>
 				</Feature.Body>
 			</Feature>

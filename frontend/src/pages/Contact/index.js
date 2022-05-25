@@ -3,6 +3,7 @@ import { Caption, Heading, Paragraph } from "../../components/Text";
 import Button from "../../components/Button";
 import Form from "../../components/Form";
 import Grid from "../../components/Grid";
+import { Image } from "./styles";
 import React from "react";
 import Section from "../../components/Section";
 import { goTo } from "../../functions";
@@ -13,13 +14,15 @@ export default () => {
 
 		const { target } = event;
 
-		goTo(
-			`mailto:info@christianheritagelondon.org?subject=${
-				target.subject.value
-			}&body=${encodeURI(`${target.body.value}
+		if (target.checkValidity()) {
+			goTo(
+				`mailto:info@christianheritagelondon.org?subject=${
+					target.subject.value
+				}&body=${encodeURI(`${target.body.value}
 	
 From ${target.name.value}`)}`
-		);
+			);
+		}
 	};
 
 	return (
@@ -38,6 +41,7 @@ From ${target.name.value}`)}`
 							Your Name
 						</Caption>
 						<Form.Input
+							required
 							name="name"
 							type="text"
 							placeholder="e.g. John Doe"
@@ -47,13 +51,14 @@ From ${target.name.value}`)}`
 						<Caption as="label" for="subject">
 							Subject
 						</Caption>
-						<Form.Input name="subject" type="text" />
+						<Form.Input required name="subject" type="text" />
 					</Form.Group>
 					<Form.Group>
 						<Caption as="label" for="body">
 							Message
 						</Caption>
 						<Form.Input
+							required
 							as="textarea"
 							name="body"
 							style={{
@@ -69,6 +74,8 @@ From ${target.name.value}`)}`
 							Continue in your email client
 						</Button>
 					</Form.Group>
+
+					<Image />
 				</Grid>
 			</Section>
 		</React.Fragment>
