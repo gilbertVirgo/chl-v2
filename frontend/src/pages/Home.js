@@ -4,8 +4,25 @@ import Lattice from "../components/Lattice";
 import { Paragraph } from "../components/Text";
 import React from "react";
 import Section from "../components/Section";
+import getEpisodes from "../api/getEpisodes";
 
 export default () => {
+	const [[firstEpisode, ...episodes], setEpisodes] = React.useState([]);
+
+	React.useEffect(() => {
+		(async function () {
+			let episodes = await getEpisodes();
+
+			console.log({ episodes });
+
+			setEpisodes(
+				episodes.sort(
+					(a, b) => new Date(b.pubDate) - new Date(a.pubDate)
+				)
+			);
+		})();
+	}, []);
+
 	return (
 		<React.Fragment>
 			<Section explode>

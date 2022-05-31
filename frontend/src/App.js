@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -18,18 +18,18 @@ function App() {
 			<Nav />
 
 			<ScrollToTop>
-				<Routes>
-					<Route exact path="/" element={<Home />} />
-					<Route path="/about" element={<About />} />
-					<Route path="/podcast" element={<Podcast />} />
-					<Route path="/walks" element={<Walks />} />
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route path="/about" component={About} />
+					<Route path="/podcast" component={Podcast} />
+					<Route path="/walks" component={Walks} />
 					<Route
 						path="/international-tours"
-						element={<InternationalTours />}
+						component={InternationalTours}
 					/>
-					<Route path="/contact" element={<Contact />} />
-					<Route path="/donate" element={<Donate />} />
-				</Routes>
+					<Route path="/contact" component={Contact} />
+					<Route path="/donate" component={Donate} />
+				</Switch>
 			</ScrollToTop>
 			<Footer />
 		</React.Fragment>

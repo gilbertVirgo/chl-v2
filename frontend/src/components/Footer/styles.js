@@ -85,5 +85,9 @@ export const LinksWrapper = styled.div`
 	gap: 30px;
 	row-gap: 30px;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
+
+	${media.minWidth("l")`
+		justify-content: flex-end;
+	`}
 `;

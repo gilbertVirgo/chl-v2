@@ -1,9 +1,20 @@
 import { navBarHeight, navBarZIndex } from "../Nav/styles";
+import styled, { keyframes } from "styled-components";
 
 import media from "../../media";
-import styled from "styled-components";
+
+const fadeIn = keyframes`
+	0% {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+`;
 
 export const Background = styled.div`
+	animation: ${fadeIn} 0.23s forwards;
+
 	position: fixed;
 	left: 0;
 	top: ${navBarHeight}px;
@@ -12,6 +23,7 @@ export const Background = styled.div`
 	z-index: ${navBarZIndex - 1};
 	background-color: #1a1a1add;
 
+	// Solve this issue. Needs to fade out, not blink out.
 	transition: opacity 0.23s;
 
 	${({ active }) =>
@@ -53,7 +65,7 @@ export const FrameWrapper = styled.div`
 	position: relative;
 
 	${media.minWidth("l")`
-		grid-column: 3 / -3;
+		grid-column: 2 / -2;
 	`}
 `;
 

@@ -1,13 +1,21 @@
-import { Background, CloseButton, Frame, FrameWrapper, Player } from "./styles";
+import { Background, CloseButton, Frame, FrameWrapper } from "./styles";
 
 import Grid from "../Grid";
 import React from "react";
 import Section from "../Section";
 
 export default ({ src, onClose, ...props }) => {
+	const [active, setActive] = React.useState(!!src);
+
+	const handleClose = () => {
+		setActive(false);
+
+		setTimeout(onClose, 230);
+	};
+
 	return (
-		<Background active={!!src} onClick={onClose}>
-			<CloseButton onClick={onClose} />
+		<Background active={active} onClick={handleClose}>
+			<CloseButton onClick={handleClose} />
 			<Section
 				outerStyle={{
 					position: "relative",

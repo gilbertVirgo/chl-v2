@@ -21,7 +21,9 @@ export default () => {
 					placeholder="example@example.com"
 					theme="white"
 				/>
-				<Button theme="white">Sign up</Button>
+				<Button style={{ minWidth: "100px" }} theme="white">
+					Sign up
+				</Button>
 			</Wrapper>
 		</Form.Group>
 	);

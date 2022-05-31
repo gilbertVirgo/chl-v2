@@ -1,3 +1,5 @@
+import { Route, Router, Switch, useHistory } from "react-router-dom";
+
 import ActivityIndicator from "../../components/ActivityIndicator";
 import Button from "../../components/Button";
 import Feature from "../../components/Feature";
@@ -11,6 +13,8 @@ import ellipsize from "ellipsize";
 import getEpisodes from "../../api/getEpisodes";
 
 export default () => {
+	const history = useHistory();
+
 	const [[firstEpisode, ...episodes], setEpisodes] = React.useState([]);
 	const [videoPreview, setVideoPreview] = React.useState(null);
 
@@ -38,12 +42,24 @@ export default () => {
 			<ActivityIndicator fullScreen active={!episodes.length}>
 				Loading podcasts...
 			</ActivityIndicator>
-			<VideoSpotlight
-				src={videoPreview}
-				onClose={() => setVideoPreview(null)}
-			/>
+
 			{episodes.length && (
 				<React.Fragment>
+					<Switch>
+						<Route
+							path="/podcast/:ytid"
+							render={({
+								match: {
+									params: { ytid },
+								},
+							}) => (
+								<VideoSpotlight
+									src={ytidToVideo(ytid)}
+									onClose={() => history.push("/podcast")}
+								/>
+							)}
+						/>
+					</Switch>
 					<Section explode>
 						<Feature invert>
 							<Feature.Title>{firstEpisode.title}</Feature.Title>
@@ -60,8 +76,8 @@ export default () => {
 									icon="video"
 									theme="grey"
 									onClick={() =>
-										setVideoPreview(
-											ytidToVideo(firstEpisode.ytid)
+										history.push(
+											`/podcast/${firstEpisode.ytid}`
 										)
 									}
 								>
@@ -103,7 +119,7 @@ export default () => {
 									text: "Watch a highlight",
 									icon: "video",
 									onClick: () =>
-										setVideoPreview(ytidToVideo(ytid)),
+										history.push(`/podcast/${ytid}`),
 								},
 								image: [
 									require("../../assets/faces/leithart.jpg"),

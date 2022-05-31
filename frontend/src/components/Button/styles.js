@@ -27,6 +27,7 @@ export const ButtonTemplate = styled.button`
 	display: flex;
 	column-gap: 8px;
 	align-items: center;
+	justify-content: center;
 
 	background-color: #b02834;
 	color: white;
