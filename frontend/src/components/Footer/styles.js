@@ -40,7 +40,20 @@ export const Reference = styled(Caption)`
 	color: white;
 `;
 
-export const SocialIcon = styled.a`
+export const ConnectWrapper = styled.div`
+	grid-column: 1 / -1;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 15px;
+
+	${media.minWidth("l")`
+		grid-column: -5 / -1;
+		row-gap: 30px;
+	`}
+`;
+
+export const SocialIcon = styled.a.attrs({ target: "_blank" })`
 	text-decoration: none;
 	background-image: url("${({ icon }) => icon}");
 	background-size: cover;
@@ -58,14 +71,19 @@ export const SocialIcon = styled.a`
 export const SocialsWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
-	width: calc(3 * 36px + 2 * 15px);
-	height: 100%;
-	grid-column: 1 / -1;
-	margin: 0 auto;
 	align-items: center;
 	justify-content: space-between;
+	width: calc(3 * 36px + 2 * 15px);
+	margin: 0 auto;
 
 	${media.minWidth("l")`
-		grid-column: -3 / -1;
+		margin-left: auto; margin-right: 0;
 	`}
+`;
+
+export const LinksWrapper = styled.div`
+	gap: 30px;
+	row-gap: 30px;
+	display: flex;
+	justify-content: flex-end;
 `;

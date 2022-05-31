@@ -31,8 +31,9 @@ export default () => (
 				squares
 				panels={Array(9).fill({
 					title: "London & Cambridge",
-					externalLink: {
+					button: {
 						text: "View Guide",
+						icon: "external",
 						href: "https://www.christianheritagelondon.org/pdf/london-cambridge.pdf",
 					},
 					image: require("../../assets/london-cambridge.jpg"),

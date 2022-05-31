@@ -7,7 +7,7 @@ export default ({
 	center,
 	dropdown,
 	options,
-	external,
+	icon,
 	children,
 	href,
 	...props
@@ -40,14 +40,14 @@ export default ({
 
 	return (
 		<ButtonWrapper center={center}>
-			<a target="_blank" href={href}>
+			<a target="_blank" style={{ textDecoration: "none" }} href={href}>
 				<ButtonTemplate
 					data-ref={ref.current}
 					{...props}
-					onClick={handleClick}
+					onPointerDown={handleClick}
 				>
-					{external && <Icon.External />}
-					{children} {dropdown && <Icon.Chevron />}
+					{icon && <Icon type={icon} />}
+					{children} {dropdown && <Icon type="chevron" />}
 				</ButtonTemplate>
 			</a>
 			{dropdown && (

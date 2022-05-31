@@ -3,7 +3,8 @@ import Grid from "../Grid";
 import media from "../../media";
 import styled from "styled-components";
 
-const navBarHeight = 90;
+export const navBarHeight = 90;
+export const navBarZIndex = 1000;
 
 export const Padding = styled.div`
 	height: ${navBarHeight}px;
@@ -17,7 +18,7 @@ export const Wrapper = styled.div`
 	box-sizing: border-box;
 	position: fixed;
 	width: 100%;
-	z-index: 1000;
+	z-index: ${navBarZIndex};
 
 	${Grid} {
 		${media.maxWidth("l")`
@@ -72,6 +73,8 @@ export const Drawer = styled(Grid)`
 	will-change: opacity;
 	transition: opacity 0.23s;
 
+	align-items: center;
+
 	${({ open }) =>
 		open
 			? `
@@ -95,6 +98,8 @@ export const Link = styled(DefaultLink)`
 	${media.maxWidth("l")`
 		font-size: 24px;
 		margin-bottom: 15px;
+
+		${({ donate }) => donate && `margin-top: 45px;`}
 	`}
 
 	${media.minWidth("l")`

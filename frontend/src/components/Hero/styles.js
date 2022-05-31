@@ -13,7 +13,7 @@ export const Background = styled.div`
 export const VideoPlaceholder = styled.div`
 	position: relative;
 
-	padding-bottom: 60%;
+	padding-bottom: calc(9 / 16 * 100%);
 
 	grid-column: 1 / -1;
 	grid-row: 2;

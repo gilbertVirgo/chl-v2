@@ -55,18 +55,15 @@ export const Image = styled.div`
 
 	background-image: url("${({ src }) => src}");
 	background-size: cover;
+	background-position: center;
 	/* border-radius: 3px; */
+
+	// Eyeballed this
+	padding-bottom: calc(9 / 16 * 100%);
 
 	${media.maxWidth("l")`
         width: calc(100% + 30px);
         margin-left: -15px;
-		
-		// 16:9
-        padding-bottom: calc(100 / 16 / 9 * 100%);
-    `}
-
-	${media.minWidth("l")`
-        height: 350px;
     `}
 `;
 

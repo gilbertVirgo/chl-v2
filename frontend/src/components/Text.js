@@ -27,8 +27,13 @@ export const Paragraph = styled.p`
 	font-weight: 300;
 	font-size: 18px;
 	line-height: 130.3%;
-
 	margin: 0 0 15px;
+
+	${({ small }) =>
+		small &&
+		`
+		font-size: 14px;
+	`}
 `;
 
 export const Caption = styled.h5`

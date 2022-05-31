@@ -5,9 +5,11 @@ import Button from "../Button";
 import Grid from "../Grid";
 import React from "react";
 import links from "./links";
+import { useLocation } from "react-router-dom";
 
 export default () => {
-	const [drawerOpen, setDrawerOpen] = React.useState(false);
+	const [drawerOpen, setDrawerOpen] = React.useState(true);
+	const location = useLocation();
 
 	const handleBurgerClicked = () => {
 		setDrawerOpen(!drawerOpen);
@@ -18,11 +20,15 @@ export default () => {
 			{links.map(({ title, href }) => (
 				<Link to={href}>{title}</Link>
 			))}
-			<Link to="/donate">
+			<Link donate to="/donate">
 				<Button>Donate</Button>
 			</Link>
 		</React.Fragment>
 	);
+
+	React.useEffect(() => {
+		setDrawerOpen(false);
+	}, [location]);
 
 	return (
 		<React.Fragment>
@@ -35,7 +41,10 @@ export default () => {
 					}}
 				>
 					<Logo to="/" />
-					<Burger active={drawerOpen} onClick={handleBurgerClicked} />
+					<Burger
+						active={drawerOpen}
+						onPointerDown={handleBurgerClicked}
+					/>
 					<Drawer open={drawerOpen}>
 						<LinkGroup.SmallScreen>
 							{listOfLinks}

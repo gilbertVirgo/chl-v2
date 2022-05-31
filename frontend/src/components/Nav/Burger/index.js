@@ -2,9 +2,9 @@ import { Bars, Inner, Outer } from "./styles";
 
 import React from "react";
 
-export default ({ active, onClick }) => {
+export default ({ active, onPointerDown }) => {
 	return (
-		<Outer onClick={onClick}>
+		<Outer onPointerDown={onPointerDown}>
 			<Inner active={active}>
 				<Bars.Top />
 				<Bars.Middle />

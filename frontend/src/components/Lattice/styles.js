@@ -17,7 +17,7 @@ export const Image = styled.div`
 	background-position: center;
 	background-image: url("${({ src }) => src}");
 	margin-bottom: 12px;
-	padding-bottom: 60%;
+	padding-bottom: calc(9 / 16 * 100%);
 
 	${media.minWidth("l")`
 		${({ circle }) => circle && `width: 75%; padding-bottom: 75%;`}

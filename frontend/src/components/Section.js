@@ -18,9 +18,9 @@ const Inner = styled.div`
 	width: 600px;
 	margin: 0 auto;
 
-	${media.maxWidth("l")`
-		max-width: calc(100% - 30px);
-	`}
+	max-width: calc(100% - 30px);
+	/* ${media.maxWidth("l")`
+	`} */
 
 	${media.minWidth("l")`
 		padding: 75px 15px;

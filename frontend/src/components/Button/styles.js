@@ -1,3 +1,4 @@
+import icons from "./icons";
 import media from "../../media";
 import styled from "styled-components";
 
@@ -23,6 +24,9 @@ export const ButtonTemplate = styled.button`
 	font-weight: 600;
 	font-family: "myriad-pro";
 	width: 100%;
+	display: flex;
+	column-gap: 8px;
+	align-items: center;
 
 	background-color: #b02834;
 	color: white;
@@ -32,6 +36,11 @@ export const ButtonTemplate = styled.button`
 		`
 		font-size: 12px;
 		padding: 8px 12px;
+
+		.icon {
+			width: 8px !important;
+			height: 8px !important;
+		}
 	`}
 
 	${({ theme }) =>
@@ -40,15 +49,21 @@ export const ButtonTemplate = styled.button`
 				background-color: #E1E1E1; 
 				color: #1A1A1A;
 
-				.external-icon, .chevron-icon {
+				.icon {
 					background-color: #1a1a1a;
-					width: 8px;
-					height: 8px;
+				}
+			`,
+			white: `
+				background-color: white; 
+				color: #1A1A1A;
+
+				.icon {
+					background-color: #1a1a1a;
 				}
 			`,
 		}[theme])}
 
-	${media.minWidth("m")`
+	${media.minWidth("s")`
 		width: auto;
 	`}
 
@@ -57,37 +72,30 @@ export const ButtonTemplate = styled.button`
 	`}
 `;
 
-export const Icon = {
-	Chevron: styled.div.attrs({ className: "chevron-icon" })`
-		display: inline-block;
-		background-color: white;
-		mask-image: url("${require("../../assets/icons/chevron-down.svg")
-			.default}");
-		-webkit-mask-image: url("${require("../../assets/icons/chevron-down.svg")
-			.default}");
-		mask-size: cover;
-		width: 11px;
-		height: 8px;
-		margin-left: 8px;
-	`,
-	External: styled.div.attrs({ className: "external-icon" })`
-		display: inline-block;
-		background-color: white;
-		mask-image: url("${require("../../assets/icons/external.svg")
-			.default}");
-		-webkit-mask-image: url("${require("../../assets/icons/external.svg")
-			.default}");
-		mask-size: cover;
-		width: 11px;
-		height: 11px;
-		margin-right: 8px;
-	`,
-};
+export const Icon = styled.div.attrs({ className: "icon" })`
+	display: inline-block;
+	background-color: white;
+
+	${({ type }) =>
+		type &&
+		`
+		mask-image: url("${icons[type].url}");
+		width: ${icons[type].width * 0.11}px;
+		height: ${icons[type].height * 0.11}px;
+	`}
+
+	/* something's gone wrong here. Basically I hate the hover play button thing on podcast videos so I think I'll put a video button (with video icon) beneath/beside each one instead to open up the player */
+
+	/* -webkit-mask-image: url("${require("../../assets/icons/chevron-down.svg")
+		.default}"); */
+	mask-size: cover;
+	mask-position: center;
+`;
 
 export const DropdownLeaf = styled.ul`
 	background-color: white;
 	list-style-type: none;
-	padding: 8px 15px;
+	padding: 0 15px;
 	row-gap: 15px;
 	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 	width: 170px;
@@ -106,6 +114,8 @@ export const DropdownLeaf = styled.ul`
 		&:not(:last-child) {
 			border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 		}
+		display: block;
+		margin: 0 !important;
 		padding: 10px 0 12px;
 
 		a {

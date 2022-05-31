@@ -23,20 +23,20 @@ export const Wrapper = styled.div`
         background-image: url("${image}");
     `}
 
-	${({ area }) => {
-		switch (area) {
-			case "intro":
-				return `grid-area: in;`;
-			case "image":
-				return `grid-area: im;`;
-			case "uk":
-				return `grid-area: uk;`;
-			case "overseas":
-				return `grid-area: os;`;
-		}
-	}}
-
 	${media.minWidth("l")`
         box-sizing: border-box;
+
+		${({ area }) => {
+			switch (area) {
+				case "intro":
+					return `grid-area: in;`;
+				case "image":
+					return `grid-area: im;`;
+				case "uk":
+					return `grid-area: uk;`;
+				case "overseas":
+					return `grid-area: os;`;
+			}
+		}}
     `}
 `;

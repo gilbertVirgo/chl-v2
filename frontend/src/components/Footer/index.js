@@ -1,4 +1,6 @@
 import {
+	ConnectWrapper,
+	LinksWrapper,
 	Reference,
 	SocialIcon,
 	SocialsWrapper,
@@ -7,12 +9,15 @@ import {
 	Wrapper,
 } from "./styles";
 
+import { Caption } from "../Text";
 import Grid from "../Grid";
+import { Link } from "react-router-dom";
+import NewsletterSubscribe from "../NewsletterSubscribe";
 import Section from "../Section";
 import socialInfo from "./social-info";
 
 export default () => (
-	<Section dark style={{ marginBottom: "0" }}>
+	<Section dark style={{ marginBottom: "0", color: "white" }}>
 		<Grid>
 			<Strapline>
 				<Verse>
@@ -22,11 +27,21 @@ export default () => (
 				</Verse>
 				<Reference>Hebrews 13:7 ESV</Reference>
 			</Strapline>
-			<SocialsWrapper>
-				{socialInfo.map((props) => (
-					<SocialIcon target="_blank" {...props} />
-				))}
-			</SocialsWrapper>
+			<ConnectWrapper>
+				<NewsletterSubscribe />
+				<SocialsWrapper>
+					{socialInfo.map((props) => (
+						<SocialIcon {...props} />
+					))}
+				</SocialsWrapper>
+				<LinksWrapper>
+					{["Donate", "Privacy"].map((text) => (
+						<Link to={`/${text.toLowerCase()}`}>
+							<Caption style={{ color: "white" }}>{text}</Caption>
+						</Link>
+					))}
+				</LinksWrapper>
+			</ConnectWrapper>
 		</Grid>
 	</Section>
 );
