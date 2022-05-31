@@ -1,8 +1,17 @@
-import { Drawer, Link, LinkGroup, Logo, Padding, Wrapper } from "./styles";
+import {
+	Drawer,
+	ExternalLink,
+	Link,
+	LinkGroup,
+	Logo,
+	Padding,
+	Wrapper,
+} from "./styles";
 
 import Burger from "./Burger";
 import Button from "../Button";
 import Grid from "../Grid";
+import { Icon } from "../Button/styles";
 import React from "react";
 import links from "./links";
 import { useLocation } from "react-router-dom";
@@ -17,9 +26,22 @@ export default () => {
 
 	const listOfLinks = (
 		<React.Fragment>
-			{links.map(({ title, href }) => (
-				<Link to={href}>{title}</Link>
-			))}
+			{links.map(({ title, href, external }) =>
+				external ? (
+					<ExternalLink target="_blank" href={href}>
+						<Icon
+							type="external"
+							style={{
+								backgroundColor: "#1a1a1a",
+								marginRight: "8px",
+							}}
+						/>
+						{title}
+					</ExternalLink>
+				) : (
+					<Link to={href}>{title}</Link>
+				)
+			)}
 			<Link donate to="/donate">
 				<Button>Donate</Button>
 			</Link>

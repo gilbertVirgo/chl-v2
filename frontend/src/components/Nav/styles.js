@@ -1,7 +1,8 @@
+import styled, { css } from "styled-components";
+
 import { Link as DefaultLink } from "react-router-dom";
 import Grid from "../Grid";
 import media from "../../media";
-import styled from "styled-components";
 
 export const navBarHeight = 90;
 export const navBarZIndex = 1000;
@@ -49,7 +50,7 @@ export const LinkGroup = {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		grid-column: -7 / -1;
+		grid-column: 5 / -1;
 	`,
 };
 
@@ -87,7 +88,7 @@ export const Drawer = styled(Grid)`
 	`}
 `;
 
-export const Link = styled(DefaultLink)`
+const linkStyles = css`
 	color: #1a1a1a;
 	text-decoration: none;
 	font-family: myriad-pro;
@@ -105,6 +106,14 @@ export const Link = styled(DefaultLink)`
 	${media.minWidth("l")`
 		font-size: 16px;
 	`}
+`;
+
+export const Link = styled(DefaultLink)`
+	${linkStyles}
+`;
+
+export const ExternalLink = styled.a`
+	${linkStyles}
 `;
 
 export const Burger = styled.div`

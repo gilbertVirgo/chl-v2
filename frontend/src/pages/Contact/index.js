@@ -7,9 +7,14 @@ import Grid from "../../components/Grid";
 import { Image } from "./styles";
 import React from "react";
 import Section from "../../components/Section";
+import categories from "./categories";
 import { goTo } from "../../functions";
 
-export default () => {
+export default ({
+	match: {
+		params: { category },
+	},
+}) => {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 
@@ -52,7 +57,13 @@ From ${target.name.value}`)}`
 					<Caption as="label" for="subject">
 						Subject
 					</Caption>
-					<Form.Input required name="subject" type="text" />
+					<Form.Select required name="subject">
+						{categories.map(({ text, value }) => (
+							<option selected={category === value} value={value}>
+								{text}
+							</option>
+						))}
+					</Form.Select>
 				</Form.Group>
 				<Form.Group>
 					<Caption as="label" for="body">
@@ -71,12 +82,10 @@ From ${target.name.value}`)}`
 					/>
 				</Form.Group>
 				<Form.Group>
-					<Button external type="submit">
+					<Button icon="external" type="submit">
 						Continue in your email client
 					</Button>
 				</Form.Group>
-
-				<Image />
 
 				<Form.Group>
 					<Paragraph small>
@@ -91,6 +100,8 @@ From ${target.name.value}`)}`
 						.
 					</Paragraph>
 				</Form.Group>
+
+				<Image />
 			</Grid>
 		</Section>
 	);

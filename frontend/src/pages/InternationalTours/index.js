@@ -24,7 +24,9 @@ export default () => (
 				leaders who serve the church in the purpose, perspective and
 				power of the gospel.
 			</Strapline>
-			<Button center>Apply for a tour</Button>
+			<Button center href="/contact/international-tour">
+				Enquire
+			</Button>
 		</Section>
 		<Section innerStyle={{ paddingTop: "0" }}>
 			<Lattice

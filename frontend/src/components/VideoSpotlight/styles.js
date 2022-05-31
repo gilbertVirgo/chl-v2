@@ -3,18 +3,7 @@ import styled, { keyframes } from "styled-components";
 
 import media from "../../media";
 
-const fadeIn = keyframes`
-	0% {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-`;
-
 export const Background = styled.div`
-	animation: ${fadeIn} 0.23s forwards;
-
 	position: fixed;
 	left: 0;
 	top: ${navBarHeight}px;
@@ -23,7 +12,6 @@ export const Background = styled.div`
 	z-index: ${navBarZIndex - 1};
 	background-color: #1a1a1add;
 
-	// Solve this issue. Needs to fade out, not blink out.
 	transition: opacity 0.23s;
 
 	${({ active }) =>
@@ -31,8 +19,22 @@ export const Background = styled.div`
 			? `
 		pointer-events: all;
 		opacity: 1;
+
+		.frame-wrapper {
+			opacity: 1;
+			transform: translateY(0px);
+		}
 	`
-			: `pointer-events: none; opacity: 0;`}
+			: `
+		opacity: 0;
+		pointer-events: none; 
+		
+		.frame-wrapper {
+			opacity: 0;
+			transition-delay: 0.5s;
+			transform: translateY(-100px);
+		}
+	`}
 `;
 
 export const CloseButton = styled.button`
@@ -59,10 +61,14 @@ export const CloseButton = styled.button`
 	}
 `;
 
-export const FrameWrapper = styled.div`
+export const FrameWrapper = styled.div.attrs({ className: "frame-wrapper" })`
 	grid-column: 1 / -1;
 	padding-bottom: calc(9 / 16 * 100%);
 	position: relative;
+	background-color: #1a1a1a;
+
+	will-change: transform;
+	transition: 0.23s transform;
 
 	${media.minWidth("l")`
 		grid-column: 2 / -2;

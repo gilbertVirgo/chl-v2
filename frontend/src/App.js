@@ -27,7 +27,7 @@ function App() {
 						path="/international-tours"
 						component={InternationalTours}
 					/>
-					<Route path="/contact" component={Contact} />
+					<Route path="/contact/:category?" component={Contact} />
 					<Route path="/donate" component={Donate} />
 				</Switch>
 			</ScrollToTop>

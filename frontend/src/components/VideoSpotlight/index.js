@@ -5,13 +5,17 @@ import React from "react";
 import Section from "../Section";
 
 export default ({ src, onClose, ...props }) => {
-	const [active, setActive] = React.useState(!!src);
+	const [active, setActive] = React.useState(false);
 
-	const handleClose = () => {
+	const handleClose = async () => {
 		setActive(false);
 
 		setTimeout(onClose, 230);
 	};
+
+	React.useEffect(() => {
+		setActive(true);
+	}, []);
 
 	return (
 		<Background active={active} onClick={handleClose}>

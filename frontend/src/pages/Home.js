@@ -55,7 +55,9 @@ export default () => {
 					]}
 				/>
 				<br />
-				<Button theme="grey">More episodes</Button>
+				<Button theme="grey" href="podcast">
+					More from the podcast
+				</Button>
 			</Section>
 			<Section dark>
 				<Feature invert>
@@ -92,7 +94,9 @@ export default () => {
 					]}
 				/>
 				<br />
-				<Button theme="grey">More articles</Button>
+				<Button theme="grey" href="articles">
+					More articles
+				</Button>
 			</Section>
 			<Section explode>
 				<Feature invert>

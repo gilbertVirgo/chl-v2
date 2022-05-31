@@ -1,19 +1,24 @@
 export default [
 	{
-		title: "About",
-		href: "/about",
+		title: "Walks",
+		href: "/walks",
 	},
 	{
 		title: "Podcast",
 		href: "/podcast",
 	},
 	{
-		title: "Walks",
-		href: "/walks",
-	},
-	{
 		title: "International Tours",
 		href: "/international-tours",
+	},
+	{
+		title: "London's Church History",
+		href: "https://library.christianheritagelondon.org",
+		external: true,
+	},
+	{
+		title: "About",
+		href: "/about",
 	},
 	{
 		title: "Contact",

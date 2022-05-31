@@ -8,6 +8,7 @@ export default ({
 	dropdown,
 	options,
 	icon,
+	external,
 	children,
 	href,
 	...props
@@ -17,8 +18,6 @@ export default ({
 	const ref = React.useRef(Math.floor(Math.random() * 99999));
 
 	const deactivate = function (event) {
-		console.log("EVENT", event);
-
 		const { target } = event;
 
 		console.log([target.dataset.ref, ref.current]);
@@ -40,7 +39,11 @@ export default ({
 
 	return (
 		<ButtonWrapper center={center}>
-			<a target="_blank" style={{ textDecoration: "none" }} href={href}>
+			<a
+				target={external ? "_blank" : null}
+				style={{ textDecoration: "none" }}
+				href={href}
+			>
 				<ButtonTemplate
 					data-ref={ref.current}
 					{...props}
