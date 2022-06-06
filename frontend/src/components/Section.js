@@ -15,16 +15,14 @@ const Inner = styled.div`
 	height: 100%;
 	padding: 50px 0;
 
-	width: 600px;
+	width: ${({ skinny }) => (skinny ? `560px` : `600px`)};
 	margin: 0 auto;
 
 	max-width: calc(100% - 30px);
-	/* ${media.maxWidth("l")`
-	`} */
 
 	${media.minWidth("l")`
 		padding: 75px 15px;
-		width: 1125px;
+		width: ${({ skinny }) => (skinny ? `560px` : `1125px`)};
 	`}
 
 	${({ deflate }) => deflate && `padding: 0 !important;`}
@@ -34,6 +32,7 @@ export default ({
 	as,
 	children,
 	dark,
+	skinny,
 	deflate,
 	explode,
 	outerStyle,
@@ -41,7 +40,7 @@ export default ({
 }) => {
 	return (
 		<Outer as={as} explode={explode} dark={dark} style={outerStyle}>
-			<Inner style={innerStyle} deflate={deflate}>
+			<Inner style={innerStyle} skinny={skinny} deflate={deflate}>
 				{children}
 			</Inner>
 		</Outer>

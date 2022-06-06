@@ -23,7 +23,7 @@ export default ({
 		if (target.checkValidity()) {
 			goTo(
 				`mailto:info@christianheritagelondon.org?subject=${
-					target.subject.value
+					target.subject.options[target.subject.selectedIndex].text
 				}&body=${encodeURI(`${target.body.value}
 	
 From ${target.name.value}`)}`
