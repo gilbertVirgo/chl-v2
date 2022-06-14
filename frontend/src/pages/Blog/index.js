@@ -10,56 +10,45 @@ import Section from "../../components/Section";
 import Strapline from "../../components/Strapline";
 import VideoSpotlight from "../../components/VideoSpotlight";
 import ellipsize from "ellipsize";
-// import getEpisodes from "../../api/getEpisodes";
-import getPodcast from "./getPodcast";
+import getEpisodes from "../../api/getEpisodes";
 
 export default () => {
 	const history = useHistory();
 
-	const [[firstEpisode, ...episodes], setEpisodes] = React.useState([]);
-	const [videoPreview, setVideoPreview] = React.useState(null);
+	const [[firstArticle, ...articles], setArticles] = React.useState([]);
 
 	React.useEffect(() => {
 		(async function () {
-			let episodes = await getPodcast();
+			let articles = await getEpisodes();
 
 			console.log({ episodes });
 
-			setEpisodes(
-				episodes.sort(
+			setArticles(
+				articles.sort(
 					(a, b) => new Date(b.pubDate) - new Date(a.pubDate)
 				)
 			);
 		})();
 	}, []);
 
-	const youtubeURLToEmbedURL = (url) =>
-		`https://youtu.be/embed/${url.split("/").slice(-1)}`;
-
-	if (episodes.length)
-		console.log(youtubeURLToEmbedURL(episodes[0].youtube_video.url));
-
 	return (
 		<React.Fragment>
-			<ActivityIndicator fullScreen active={!episodes.length}>
-				Loading podcasts...
+			<ActivityIndicator fullScreen active={!articles.length}>
+				Loading articles...
 			</ActivityIndicator>
 
-			{episodes.length && (
+			{articles.length && (
 				<React.Fragment>
 					<Switch>
 						<Route
-							path="/podcast/video/:id"
+							path="/podcast/:ytid"
 							render={({
 								match: {
-									params: { id },
+									params: { ytid },
 								},
 							}) => (
 								<VideoSpotlight
-									src={youtubeURLToEmbedURL(
-										episodes.find((e) => e.id == id)
-											.youtube_embed_url.url
-									)}
+									src={ytidToVideo(ytid)}
 									onClose={() => history.push("/podcast")}
 								/>
 							)}
@@ -67,23 +56,16 @@ export default () => {
 					</Switch>
 					<Section explode>
 						<Feature invert>
-							<Feature.Title>{firstEpisode.title}</Feature.Title>
-							<Feature.Image src={firstEpisode.image.url} />
+							<Feature.Title>{firstArticle.title}</Feature.Title>
+							<Feature.Image
+								src={
+									require("../../assets/faces/marshall-large.jpg") /*ytidToImage(firstArticle.ytid)*/
+								}
+							/>
 							<Feature.Body>
 								<Paragraph>
-									{ellipsize(firstEpisode.desc, 120)}
+									{ellipsize(firstArticle.desc, 120)}
 								</Paragraph>
-								<Button
-									icon="video"
-									theme="grey"
-									onClick={() =>
-										history.push(
-											`/podcast/video/${firstEpisode.id}`
-										)
-									}
-								>
-									Watch a highlight
-								</Button>
 							</Feature.Body>
 						</Feature>
 					</Section>
@@ -114,15 +96,20 @@ export default () => {
 					</Section>
 					<Section explode>
 						<Lattice
-							panels={episodes.map(({ id, title, image }) => ({
+							panels={episodes.map(({ title, ytid }) => ({
 								title,
 								button: {
 									text: "Watch a highlight",
 									icon: "video",
 									onClick: () =>
-										history.push(`/podcast/video/${id}`),
+										history.push(`/podcast/${ytid}`),
 								},
-								image: image.url, //ytidToImage(ytid),
+								image: [
+									require("../../assets/faces/leithart.jpg"),
+									require("../../assets/faces/lucas.jpg"),
+									require("../../assets/faces/marshall.jpg"),
+									require("../../assets/faces/clark.jpg"),
+								][Math.floor(Math.random() * 4)], //ytidToImage(ytid),
 							}))}
 						/>
 					</Section>

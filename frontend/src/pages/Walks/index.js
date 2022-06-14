@@ -1,11 +1,18 @@
-import { Heading, Paragraph, Subheading } from "../../components/Text";
+import "swiper/css";
+import "swiper/css/autoplay";
 
+import { Heading, Paragraph, Subheading } from "../../components/Text";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Autoplay } from "swiper";
 import Button from "../../components/Button";
+import { Card } from "./styles";
 import Feature from "../../components/Feature";
 import Hero from "../../components/Hero";
 import { Link } from "react-router-dom";
 import React from "react";
 import Section from "../../components/Section";
+import images from "./images";
 
 export default () => (
 	<React.Fragment>
@@ -19,7 +26,6 @@ export default () => (
 				</Paragraph>
 			</Hero>
 		</Section>
-
 		<Section skinny>
 			<Heading>London Day</Heading>
 			<Subheading>
@@ -38,6 +44,26 @@ export default () => (
 			</Paragraph>
 			<Button>Apply for a London Day</Button>
 		</Section>
+		<Section span>
+			<Swiper
+				modules={[Autoplay]}
+				autoplay={{ delay: 4000, disableOnInteraction: false }}
+				spaceBetween={15}
+				draggable={false}
+				allowTouchMove={false}
+				speed={1000}
+				freeMode={{ momentum: false, enabled: true }}
+				slidesPerView="auto"
+				centeredSlides
+				loop
+			>
+				{images.map((src) => (
+					<SwiperSlide style={{ width: "500px" }}>
+						<img src={src} width="100%" />
+					</SwiperSlide>
+				))}
+			</Swiper>
+		</Section>
 		<Section skinny>
 			<Heading>Other Tours</Heading>
 			<Subheading>
@@ -49,8 +75,9 @@ export default () => (
 				If you would like to apply for one of these, or if you would
 				like only a City Walk or a British Museum tour, or if you have
 				any other questions please{" "}
-				<a href="/contact/other-tour">get in touch</a>.
+				<a href="/contact/other-tours">get in touch</a>.
 			</Paragraph>
 		</Section>
+		<Section></Section>
 	</React.Fragment>
 );

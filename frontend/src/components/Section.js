@@ -25,6 +25,10 @@ const Inner = styled.div`
 		width: ${({ skinny }) => (skinny ? `560px` : `1125px`)};
 	`}
 
+	${({ span }) =>
+		span &&
+		`width: 100% !important; padding-left: 0 !important; padding-right: 0 !important; max-width: none !important;`}
+
 	${({ deflate }) => deflate && `padding: 0 !important;`}
 `;
 
@@ -33,6 +37,7 @@ export default ({
 	children,
 	dark,
 	skinny,
+	span,
 	deflate,
 	explode,
 	outerStyle,
@@ -40,7 +45,12 @@ export default ({
 }) => {
 	return (
 		<Outer as={as} explode={explode} dark={dark} style={outerStyle}>
-			<Inner style={innerStyle} skinny={skinny} deflate={deflate}>
+			<Inner
+				style={innerStyle}
+				span={span}
+				skinny={skinny}
+				deflate={deflate}
+			>
 				{children}
 			</Inner>
 		</Outer>

@@ -11,4 +11,8 @@ export default [
 		text: "Enquiring About an International Tour",
 		value: "international-tour",
 	},
+	{
+		text: "Enquiring About Other Tours",
+		value: "other-tours",
+	},
 ];
