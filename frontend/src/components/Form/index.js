@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 import { Icon } from "../Button/styles";
 import media from "../../media";
+import theme from "../../theme";
 
 export const Group = styled.section`
 	position: relative;
@@ -26,7 +27,7 @@ const generalStyles = css`
 
 	display: block;
 	box-sizing: border-box;
-	border: 2px solid #e1e1e1; //#b02834;
+	border: 2px solid #e1e1e1;
 	font-family: "myriad-pro";
 	font-weight: 300;
 	font-size: 16px;
@@ -45,7 +46,7 @@ const generalStyles = css`
 	`}
 
 	&:focus {
-		border-color: #b02834;
+		border-color: ${theme.color.red};
 	}
 
 	${({ theme }) =>
@@ -66,7 +67,7 @@ const SelectWrapper = styled.div`
 		right: 15px;
 		top: 50%;
 		transform: translateY(-50%);
-		background-color: #b02834;
+		background-color: ${theme.color.red};
 	}
 `;
 

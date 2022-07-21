@@ -20,6 +20,8 @@ export const ImageTemplate = styled.div`
 	margin-bottom: 12px;
 	padding-bottom: calc(9 / 16 * 100%);
 
+	filter: saturate(40%);
+
 	${media.minWidth("l")`
 		${({ circle }) => circle && `width: 75%; padding-bottom: 75%;`}
 	`}

@@ -1,6 +1,7 @@
 import { Paragraph } from "../Text";
 import media from "../../media";
 import styled from "styled-components";
+import theme from "../../theme";
 
 export const Wrapper = styled.div`
 	grid-column: 1 / -1;
@@ -41,7 +42,7 @@ export const CompletedBar = styled.div`
 	height: ${barHeight}px;
 	margin: ${(barWrapperHeight - barHeight) / 2}px 0;
 	border-radius: ${barHeight}px;
-	background-color: #b02834;
+	background-color: ${theme.color.red};
 
 	position: absolute;
 	left: 0;

@@ -1,6 +1,7 @@
 import icons from "./icons";
 import media from "../../media";
 import styled from "styled-components";
+import theme from "../../theme";
 
 export const ButtonWrapper = styled.div`
 	position: relative;
@@ -29,7 +30,7 @@ export const ButtonTemplate = styled.button`
 	align-items: center;
 	justify-content: center;
 
-	background-color: #b02834;
+	background-color: ${theme.color.red};
 	color: white;
 
 	${({ small }) =>
