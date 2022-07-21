@@ -6,6 +6,7 @@ import Lattice from "../../components/Lattice";
 import React from "react";
 import Section from "../../components/Section";
 import Strapline from "../../components/Strapline";
+import tours from "./tours";
 
 export default () => (
 	<React.Fragment>
@@ -29,18 +30,7 @@ export default () => (
 			</Button>
 		</Section>
 		<Section innerStyle={{ paddingTop: "0" }}>
-			<Lattice
-				squares
-				panels={Array(9).fill({
-					title: "London & Cambridge",
-					button: {
-						text: "View Guide",
-						icon: "external",
-						href: "https://www.christianheritagelondon.org/pdf/london-cambridge.pdf",
-					},
-					image: require("../../assets/london-cambridge.jpg"),
-				})}
-			/>
+			<Lattice squares panels={tours} />
 		</Section>
 	</React.Fragment>
 );
