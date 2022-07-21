@@ -96,12 +96,27 @@ From ${target.name.value}`)}`
 							href="mailto:info@christianheritagelondon.org"
 						>
 							info@christianheritagelondon.org
-						</a>
-						.
+						</a>{" "}
+						or call us at{" "}
+						<a href="tel:+443000301785">0300 030 1785</a>.
 					</Paragraph>
 				</Form.Group>
-
 				<Image />
+
+				<Form.Group>
+					<Subheading>Postal Address</Subheading>
+					<Paragraph>
+						Christian Heritage London
+						<br />
+						ELT Baptist Church
+						<br />
+						Burdett Road
+						<br />
+						London
+						<br />
+						E3 4TU
+					</Paragraph>
+				</Form.Group>
 			</Grid>
 		</Section>
 	);

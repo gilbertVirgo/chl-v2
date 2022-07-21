@@ -4,7 +4,7 @@ import media from "../../media";
 import styled from "styled-components";
 import theme from "../../theme";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.footer`
 	background-color: ${theme.color.dark};
 	padding: 50px 0;
 

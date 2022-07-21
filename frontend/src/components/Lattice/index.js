@@ -4,7 +4,14 @@ import Button from "../Button";
 import Grid from "../Grid";
 import { Link } from "react-router-dom";
 
-export default ({ panels, squares, circles, button, ...props }) => (
+export default ({
+	panels,
+	squares,
+	filterImages,
+	circles,
+	button,
+	...props
+}) => (
 	<Grid {...props}>
 		{panels.map(
 			({ title, subtitle, image, description, button, href }, index) => (
@@ -14,6 +21,7 @@ export default ({ panels, squares, circles, button, ...props }) => (
 						circle={circles}
 						src={image}
 						href={href}
+						filter={filterImages}
 					/>
 					<Title large={!!description}>{title}</Title>
 					{subtitle && <Subtitle>{subtitle}</Subtitle>}

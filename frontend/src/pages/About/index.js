@@ -21,6 +21,31 @@ export default () => (
 				</Paragraph>
 			</Hero>
 		</Section>
+		<Section skinny>
+			<Subheading>
+				When people talk about how the gospel of Jesus Christ can change
+				the world, they start talking about London.
+			</Subheading>
+			<Paragraph>
+				William Wilberforce, Charles Spurgeon, George Whitefield,
+				Elizabeth Fry, John Wycliffe, John Wesley and many, many others
+				have been caught up by God&apos;s grace in this city, and have
+				invested themselves for his glory here. Their stories have
+				inspired people all over the world.
+			</Paragraph>
+			<Paragraph>
+				London is home to extraordinary museums and galleries whose
+				collections contain actual bible items, ancient bible texts, and
+				other awesome items which demonstrate and illustrate the
+				influence of the gospel on the world.
+			</Paragraph>
+			<Paragraph>
+				Christian Heritage London gives <strong>tours</strong> through
+				these, and gives <strong>walks</strong> through London, by
+				telling their stories through walks, tours, events, podcasts and
+				videos.
+			</Paragraph>
+		</Section>
 		<Section explode>
 			<Heading margin>Team</Heading>
 			<Lattice
@@ -53,14 +78,7 @@ export default () => (
 						subtitle: "Speaker, Guide, Trustee",
 						image: require("../../assets/team/ken-brownell.jpg"),
 						description:
-							"Studied at Harvard University and St Andrews University. Pastor of East London Tabernacle Baptist Church.",
-					},
-					{
-						title: "Stuart Currie",
-						subtitle: "Speaker, Guide",
-						image: require("../../assets/team/stuart-currie.jpg"),
-						description:
-							"Studied Art at the University of Kingston, University of Leicester and the University of London.",
+							"Studied at Harvard University and St Andrews University. Church History lecturer, London Seminary; former pastor East London Tabernacle Baptist Church (retired).",
 					},
 				]}
 			/>

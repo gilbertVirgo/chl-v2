@@ -3,6 +3,7 @@ import { Caption, Paragraph } from "../Text";
 import { Link } from "react-router-dom";
 import media from "../../media";
 import styled from "styled-components";
+import theme from "../../theme";
 
 export const Panel = styled.div`
 	grid-column: span 3;
@@ -20,7 +21,7 @@ export const ImageTemplate = styled.div`
 	margin-bottom: 12px;
 	padding-bottom: calc(9 / 16 * 100%);
 
-	filter: saturate(40%);
+	${({ filter }) => filter && `filter: ${theme.imageFilter}`}
 
 	${media.minWidth("l")`
 		${({ circle }) => circle && `width: 75%; padding-bottom: 75%;`}

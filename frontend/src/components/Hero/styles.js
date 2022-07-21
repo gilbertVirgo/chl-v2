@@ -24,8 +24,6 @@ export const VideoPlaceholder = styled.div`
 		grid-row: 1;
 	`}
 
-	/* border-radius: 3px; */
-
 	background-image: url("${require("../../assets/video-placeholder.svg")
 		.default}");
 	background-size: cover;
@@ -43,10 +41,5 @@ export const Caption = styled.div`
 		margin-bottom: 8px !important;
 	}
 
-	${media.minWidth("l")`
-		grid-column: 3 / 7;
-		grid-row: 1;
-
-		margin: auto 0 70px;
-	`}
+	${media.minWidth("l")`display: none;`}
 `;

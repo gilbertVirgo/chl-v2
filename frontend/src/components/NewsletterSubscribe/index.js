@@ -13,7 +13,7 @@ export default () => {
 				as="label"
 				for="newsletter-subscribe-email"
 			>
-				Join our newsletter
+				Recieve our newsletter
 			</Caption>
 			<Wrapper>
 				<Form.Input

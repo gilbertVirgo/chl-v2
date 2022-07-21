@@ -45,7 +45,7 @@ export const ButtonTemplate = styled.button`
 		}
 	`}
 
-	${({ theme }) =>
+	${({ theme: buttonTheme }) =>
 		({
 			grey: `
 				background-color: ${theme.color.light}; 
@@ -63,7 +63,7 @@ export const ButtonTemplate = styled.button`
 					background-color: ${theme.color.dark};
 				}
 			`,
-		}[theme])}
+		}[buttonTheme])}
 
 	${media.minWidth("s")`
 		width: auto;

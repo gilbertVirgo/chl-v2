@@ -20,7 +20,7 @@ export default () => {
 
 	React.useEffect(() => {
 		(async function () {
-			let episodes = await getPodcast();
+			let episodes = await getPodcast(100);
 
 			console.log({ episodes });
 
@@ -44,6 +44,7 @@ export default () => {
 						<Feature invert>
 							<Feature.Title>{firstEpisode.title}</Feature.Title>
 							<Feature.Image
+								filter
 								href={`/podcast/episode/${firstEpisode.id}`}
 								src={firstEpisode.image.url}
 							/>
@@ -69,6 +70,7 @@ export default () => {
 					</Section>
 					<Section explode>
 						<Lattice
+							filterImages
 							panels={episodes.map(({ id, title, image }) => ({
 								title,
 								image: image.url,
