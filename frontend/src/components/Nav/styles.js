@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { Link as DefaultLink } from "react-router-dom";
 import Grid from "../Grid";
 import media from "../../media";
+import theme from "../../theme";
 
 export const navBarHeight = 90;
 export const navBarZIndex = 1000;
@@ -89,7 +90,7 @@ export const Drawer = styled(Grid)`
 `;
 
 const linkStyles = css`
-	color: #1a1a1a;
+	color: ${theme.color.dark};
 	text-decoration: none;
 	font-family: myriad-pro;
 	font-style: normal;

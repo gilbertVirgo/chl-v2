@@ -1,9 +1,10 @@
 import { Heading } from "../Text";
 import media from "../../media";
 import styled from "styled-components";
+import theme from "../../theme";
 
 export const Background = styled.div`
-	background-color: #1a1a1a;
+	background-color: ${theme.color.dark};
 	height: 100%;
 
 	padding: 50px 0;

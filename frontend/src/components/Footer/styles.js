@@ -2,9 +2,10 @@ import { Caption, Paragraph } from "../Text";
 
 import media from "../../media";
 import styled from "styled-components";
+import theme from "../../theme";
 
 export const Wrapper = styled.div`
-	background-color: #1a1a1a;
+	background-color: ${theme.color.dark};
 	padding: 50px 0;
 
 	${media.minWidth("l")`

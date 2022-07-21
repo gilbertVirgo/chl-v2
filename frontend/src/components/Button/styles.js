@@ -48,19 +48,19 @@ export const ButtonTemplate = styled.button`
 	${({ theme }) =>
 		({
 			grey: `
-				background-color: #E1E1E1; 
-				color: #1A1A1A;
+				background-color: ${theme.color.light}; 
+				color: ${theme.color.dark};
 
 				.icon {
-					background-color: #1a1a1a;
+					background-color: ${theme.color.dark};
 				}
 			`,
 			white: `
 				background-color: white; 
-				color: #1A1A1A;
+				color: ${theme.color.dark};
 
 				.icon {
-					background-color: #1a1a1a;
+					background-color: ${theme.color.dark};
 				}
 			`,
 		}[theme])}

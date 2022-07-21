@@ -14,6 +14,7 @@ import Grid from "../Grid";
 import { Icon } from "../Button/styles";
 import React from "react";
 import links from "./links";
+import theme from "../../theme";
 import { useLocation } from "react-router-dom";
 
 export default () => {
@@ -32,7 +33,7 @@ export default () => {
 						<Icon
 							type="external"
 							style={{
-								backgroundColor: "#1a1a1a",
+								backgroundColor: theme.color.dark,
 								marginRight: "8px",
 							}}
 						/>

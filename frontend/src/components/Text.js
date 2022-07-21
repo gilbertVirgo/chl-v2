@@ -1,5 +1,6 @@
 import media from "../media";
 import styled from "styled-components";
+import theme from "../theme";
 
 export const Heading = styled.h1`
 	font-family: "urw-antiqua";
@@ -55,6 +56,6 @@ export const Subheading = styled.h3`
 	font-weight: 300;
 	font-size: 24px;
 	line-height: 130.3%;
-	color: #1a1a1a;
+	color: ${theme.color.dark};
 	margin: 0 0 15px;
 `;

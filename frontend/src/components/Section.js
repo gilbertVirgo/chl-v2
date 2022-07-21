@@ -1,5 +1,6 @@
 import media from "../media";
 import styled from "styled-components";
+import theme from "../theme";
 
 const Outer = styled.section`
 	${media.maxWidth("l")`
@@ -8,7 +9,7 @@ const Outer = styled.section`
 	${media.minWidth("l")`
 		${({ explode }) => explode && `padding: 75px 0;`}
 	`}
-	${({ dark }) => dark && `background-color: #1a1a1a; color: white;`}
+	${({ dark }) => dark && `background-color: ${theme.color.dark}; color: white;`}
 `;
 
 const Inner = styled.div`

@@ -35,7 +35,7 @@ export const Bar = styled.div`
 	height: ${barHeight}px;
 	margin: ${(barWrapperHeight - barHeight) / 2}px 0;
 	border-radius: ${barHeight}px;
-	background-color: #e5e5e5; // #1a1a1a;
+	background-color: ${theme.color.light};
 `;
 
 export const CompletedBar = styled.div`
@@ -58,7 +58,7 @@ export const Handle = styled.div`
 	height: 16px;
 
 	background-color: white;
-	box-shadow: 0 2px 5px #1a1a1a60;
+	box-shadow: 0 2px 5px ${theme.color.dark}60;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -86,7 +86,7 @@ export const Duration = styled(Paragraph)`
 `;
 
 const buttonStyles = `
-	background-color: #1a1a1a;
+	background-color: ${theme.color.dark};
 	mask-position: center;
 	height: 40px;
 	mask-repeat: no-repeat;
