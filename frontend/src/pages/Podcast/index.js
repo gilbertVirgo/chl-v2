@@ -1,7 +1,8 @@
-import { Route, Router, Switch, useHistory } from "react-router-dom";
+import { Route, Switch, useHistory } from "react-router-dom";
 
 import ActivityIndicator from "../../components/ActivityIndicator";
 import Button from "../../components/Button";
+import Episode from "./Episode";
 import Feature from "../../components/Feature";
 import Lattice from "../../components/Lattice";
 import { Paragraph } from "../../components/Text";
@@ -10,14 +11,12 @@ import Section from "../../components/Section";
 import Strapline from "../../components/Strapline";
 import VideoSpotlight from "../../components/VideoSpotlight";
 import ellipsize from "ellipsize";
-// import getEpisodes from "../../api/getEpisodes";
 import getPodcast from "./getPodcast";
 
 export default () => {
 	const history = useHistory();
 
 	const [[firstEpisode, ...episodes], setEpisodes] = React.useState([]);
-	const [videoPreview, setVideoPreview] = React.useState(null);
 
 	React.useEffect(() => {
 		(async function () {
@@ -34,10 +33,7 @@ export default () => {
 	}, []);
 
 	const youtubeURLToEmbedURL = (url) =>
-		`https://youtu.be/embed/${url.split("/").slice(-1)}`;
-
-	if (episodes.length)
-		console.log(youtubeURLToEmbedURL(episodes[0].youtube_video.url));
+		`https://youtube.com/embed/${url.split("/").slice(-1)}`;
 
 	return (
 		<React.Fragment>
@@ -58,11 +54,15 @@ export default () => {
 								<VideoSpotlight
 									src={youtubeURLToEmbedURL(
 										episodes.find((e) => e.id == id)
-											.youtube_embed_url.url
+											.youtube_video.url
 									)}
 									onClose={() => history.push("/podcast")}
 								/>
 							)}
+						/>
+						<Route
+							path="/podcast/episode/:id"
+							component={Episode}
 						/>
 					</Switch>
 					<Section explode>
@@ -122,7 +122,7 @@ export default () => {
 									onClick: () =>
 										history.push(`/podcast/video/${id}`),
 								},
-								image: image.url, //ytidToImage(ytid),
+								image: image.url,
 							}))}
 						/>
 					</Section>

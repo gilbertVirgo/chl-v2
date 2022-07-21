@@ -1,15 +1,15 @@
-import { Background, Caption, VideoPlaceholder } from "./styles";
+import { Caption, VideoPlaceholder } from "./styles";
 import { Heading, Paragraph } from "../Text";
 
 import Grid from "../Grid";
 import React from "react";
 import Section from "../Section";
 
-export default ({ children }) => {
+export default ({ variant, children }) => {
 	return (
 		<Grid style={{ marginBottom: 0 }}>
 			<Caption>{children}</Caption>
-			<VideoPlaceholder />
+			<VideoPlaceholder variant={variant} />
 		</Grid>
 	);
 };
