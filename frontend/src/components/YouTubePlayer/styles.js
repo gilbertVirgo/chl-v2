@@ -5,6 +5,7 @@ import styled from "styled-components";
 export const FrameWrapper = styled.div`
 	grid-column: 1 / -1;
 	position: relative;
+	margin-bottom: 25px;
 
 	${media.minWidth("l")`
         grid-column: 3 / -3;

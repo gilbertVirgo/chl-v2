@@ -1,5 +1,6 @@
 import { Caption, Paragraph } from "../Text";
 
+import { Link } from "react-router-dom";
 import media from "../../media";
 import styled from "styled-components";
 
@@ -12,7 +13,7 @@ export const Panel = styled.div`
     `}
 `;
 
-export const Image = styled.div`
+export const ImageTemplate = styled.div`
 	background-size: cover;
 	background-position: center;
 	background-image: url("${({ src }) => src}");
@@ -36,6 +37,12 @@ ${({ square }) =>
 	padding-bottom: 100%;
 	`}
 `;
+
+export const Image = ({ href, ...props }) => (
+	<Link to={href}>
+		<ImageTemplate {...props} />
+	</Link>
+);
 
 export const Title = styled(Paragraph)`
 	font-size: 16px;

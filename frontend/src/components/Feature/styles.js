@@ -1,6 +1,7 @@
 import { Caption, Heading, Paragraph } from "../Text";
 
 import Grid from "../Grid";
+import { Link } from "react-router-dom";
 import media from "../../media";
 import styled from "styled-components";
 
@@ -50,8 +51,8 @@ export const Title = styled(Heading)`
 	grid-area: title;
 `;
 
-export const Image = styled.div`
-	grid-area: image;
+export const ImageTemplate = styled.div`
+	/* grid-area: image; */
 
 	background-image: url("${({ src }) => src}");
 	background-size: cover;
@@ -66,6 +67,12 @@ export const Image = styled.div`
         margin-left: -15px;
     `}
 `;
+
+export const Image = ({ href, ...props }) => (
+	<Link to={href} style={{ gridArea: "image" }}>
+		<ImageTemplate {...props} />
+	</Link>
+);
 
 export const Body = styled.div`
 	grid-area: body;
