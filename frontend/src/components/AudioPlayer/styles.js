@@ -19,6 +19,19 @@ export const Wrapper = styled.div`
     `}
 
 	user-select: none;
+
+	${({ hidden }) => hidden && `display: none;`}
+`;
+
+export const FallbackWrapper = styled.div`
+	position: relative;
+	grid-column: 1 / -1;
+
+	audio {
+		width: 100%;
+	}
+
+	${({ hidden }) => hidden && `display: none;`}
 `;
 
 const barWrapperHeight = 16;

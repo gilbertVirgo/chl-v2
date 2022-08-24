@@ -4,6 +4,7 @@ import {
 	CompletedBar,
 	CurrentTime,
 	Duration,
+	FallbackWrapper,
 	Forward,
 	Handle,
 	Play,
@@ -19,6 +20,7 @@ import {
 import ActivityIndicator from "../ActivityIndicator";
 import React from "react";
 import format from "format-duration";
+import isMobile from "is-mobile";
 
 export default ({ src }) => {
 	const mounted = React.useRef(false),
@@ -124,31 +126,43 @@ export default ({ src }) => {
 		}
 	}, [canPlay]);
 
-	return (
-		<Wrapper>
-			<audio ref={audio} onLoadedMetadata={() => setCanPlay(true)} hidden>
-				<source src={src} type="audio/mpeg" />
-			</audio>
+	const fallbackToDefaultPlayerStyle = isMobile();
 
-			{canPlay ? (
-				<React.Fragment>
-					<BarWrapper ref={barWrapper}>
-						<Bar />
-						<CompletedBar ref={completedBar} />
-						<Handle ref={handle} />
-					</BarWrapper>
-					<CurrentTime>{format(currentTime * 1000)}</CurrentTime>{" "}
-					<Duration>{format(audio.current.duration * 1000)}</Duration>
-					<Rewind onPointerDown={handleRewind} />
-					<Play
-						paused={isPaused}
-						onPointerDown={() => setIsPaused(!isPaused)}
-					/>
-					<Forward onPointerDown={handleForward} />
-				</React.Fragment>
-			) : (
-				<ActivityIndicator>Loading player...</ActivityIndicator>
-			)}
-		</Wrapper>
+	return (
+		<React.Fragment>
+			<FallbackWrapper hidden={!fallbackToDefaultPlayerStyle}>
+				<audio
+					ref={audio}
+					onLoadedMetadata={() => setCanPlay(true)}
+					controls
+				>
+					<source src={src} type="audio/mpeg" />
+				</audio>
+			</FallbackWrapper>
+
+			<Wrapper hidden={fallbackToDefaultPlayerStyle}>
+				{canPlay && !fallbackToDefaultPlayerStyle ? (
+					<React.Fragment>
+						<BarWrapper ref={barWrapper}>
+							<Bar />
+							<CompletedBar ref={completedBar} />
+							<Handle ref={handle} />
+						</BarWrapper>
+						<CurrentTime>{format(currentTime * 1000)}</CurrentTime>{" "}
+						<Duration>
+							{format(audio.current.duration * 1000)}
+						</Duration>
+						<Rewind onPointerDown={handleRewind} />
+						<Play
+							paused={isPaused}
+							onPointerDown={() => setIsPaused(!isPaused)}
+						/>
+						<Forward onPointerDown={handleForward} />
+					</React.Fragment>
+				) : (
+					<ActivityIndicator>Loading player...</ActivityIndicator>
+				)}
+			</Wrapper>
+		</React.Fragment>
 	);
 };
