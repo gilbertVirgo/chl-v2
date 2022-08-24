@@ -13,13 +13,15 @@ export default ({ onLoad }) => {
 
 	React.useEffect(() => {
 		(async function () {
-			let episodes = await getPodcast(4);
+			let { data: episodes } = await getPodcast({ pageSize: 4 });
 
 			console.log({ episodes });
 
 			setEpisodes(
 				episodes.sort(
-					(a, b) => new Date(b.pubDate) - new Date(a.pubDate)
+					(a, b) =>
+						new Date(b.first_publication_date) -
+						new Date(a.first_publication_date)
 				)
 			);
 		})();

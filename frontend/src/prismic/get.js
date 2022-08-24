@@ -8,24 +8,29 @@ export default async (query, options) => {
 
 	const ref = localStorage.getItem("prismic-ref");
 
-	const json = (
-		await (
-			await fetch(
-				`https://chl-cms.cdn.prismic.io/api/v2/documents/search?ref=${ref}&q=${encodeURIComponent(
-					`[${query}]`
-				)}&${
-					options
-						? `&${formatOptions({
-								orderings: "[document.first_publication_date]",
-								...options,
-						  })}`
-						: ""
-				}`
-			)
-		).json()
-	).results.map(({ id, data }) => ({ id, ...data }));
+	const { results, next_page } = await (
+		await fetch(
+			`https://chl-cms.cdn.prismic.io/api/v2/documents/search?ref=${ref}&q=${encodeURIComponent(
+				`[${query}]`
+			)}&${
+				options
+					? `&${formatOptions({
+							orderings: "[document.last_publication_date desc]",
+							...options,
+					  })}`
+					: ""
+			}`
+		)
+	).json();
 
-	console.log("From GET", json);
+	const data = results.map(
+		({ id, first_publication_date, last_publication_date, data }) => ({
+			id,
+			first_publication_date,
+			last_publication_date,
+			...data,
+		})
+	);
 
-	return json;
+	return { next_page, data };
 };

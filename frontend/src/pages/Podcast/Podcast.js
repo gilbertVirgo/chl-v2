@@ -15,20 +15,48 @@ import VideoSpotlight from "../../components/VideoSpotlight";
 import ellipsize from "ellipsize";
 import getPodcast from "./getPodcast";
 
+const defaultPageSize = 10;
+
 export default () => {
 	const [[firstEpisode, ...episodes], setEpisodes] = React.useState([]);
+	const [currentPage, setCurrentPage] = React.useState(1);
+	const [finalPage, setFinalPage] = React.useState(false);
 
 	React.useEffect(() => {
 		(async function () {
-			let episodes = await getPodcast(100);
+			let { data: newEpisodes, next_page } = await getPodcast({
+				pageSize: defaultPageSize,
+				page: currentPage,
+			});
+
+			setEpisodes((episodes) =>
+				[...episodes, ...newEpisodes].sort(
+					(a, b) =>
+						new Date(b.first_publication_date) -
+						new Date(a.first_publication_date)
+				)
+			);
+			setFinalPage(!next_page);
+		})();
+	}, [currentPage]);
+
+	React.useEffect(() => {
+		(async function () {
+			let { data: episodes, next_page } = await getPodcast({
+				pageSize: defaultPageSize,
+				page: currentPage,
+			});
 
 			console.log({ episodes });
 
 			setEpisodes(
 				episodes.sort(
-					(a, b) => new Date(b.pubDate) - new Date(a.pubDate)
+					(a, b) =>
+						new Date(b.first_publication_date) -
+						new Date(a.first_publication_date)
 				)
 			);
+			setFinalPage(!next_page);
 		})();
 	}, []);
 
@@ -77,6 +105,16 @@ export default () => {
 								href: `/podcast/episode/${id}`,
 							}))}
 						/>
+						{!finalPage && (
+							<a
+								href="javascript:void(0)"
+								onClick={() => setCurrentPage(currentPage + 1)}
+							>
+								<Paragraph style={{ textAlign: "center" }}>
+									More episodes...
+								</Paragraph>
+							</a>
+						)}
 					</Section>
 				</React.Fragment>
 			)}

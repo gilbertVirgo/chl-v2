@@ -10,12 +10,22 @@ app.get("/index/:index", (req, res) => {
         <html>
             <body>
                 ${Object.keys(parsed[+req.params.index])
-					.map(
-						(key) =>
-							`<input type="text" name="${key}" value="${
-								parsed[+req.params.index][key]
-							}" />`
-					)
+					.map((key) => {
+						let val = parsed[+req.params.index][key];
+
+						if (typeof val === "string") {
+							switch (key) {
+								case "audio":
+									val = val.replace("https://", "");
+									break;
+								case "ytid":
+									val = "youtube.com/" + val;
+									break;
+							}
+						}
+
+						return `<input type="text" name="${key}" value="${val}" />`;
+					})
 					.join("")}
 
                 <script>
