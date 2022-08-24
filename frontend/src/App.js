@@ -11,8 +11,13 @@ import Podcast from "./pages/Podcast";
 import React from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import Walks from "./pages/Walks";
+import refreshMasterRef from "./refreshMasterRef";
 
 function App() {
+	React.useEffect(function () {
+		refreshMasterRef();
+	}, []);
+
 	return (
 		<React.Fragment>
 			<Nav />
