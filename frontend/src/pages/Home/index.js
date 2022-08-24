@@ -2,6 +2,7 @@ import ActivityIndicator from "../../components/ActivityIndicator";
 import Button from "../../components/Button";
 import Feature from "../../components/Feature";
 import Lattice from "../../components/Lattice";
+import { Link } from "react-router-dom";
 import { Paragraph } from "../../components/Text";
 import PodcastFeature from "./components/PodcastFeature";
 import PodcastSubscribe from "../../components/PodcastSubscribe";
@@ -42,6 +43,12 @@ export default () => {
 						<Button href="/walks/apply" theme="red" suspend>
 							Apply for a London Day
 						</Button>
+						<Paragraph small>
+							Private tours are also available.{" "}
+							<Link to="/contact/private-tour">
+								Enquire about a private tour
+							</Link>
+						</Paragraph>
 					</Feature.Body>
 				</Feature>
 			</Section>

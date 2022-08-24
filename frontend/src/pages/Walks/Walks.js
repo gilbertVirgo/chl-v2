@@ -50,6 +50,14 @@ export default () => (
 			<Button href="/walks/apply" theme="red" suspend>
 				Apply for a London Day
 			</Button>
+			<br />
+			<Paragraph small>
+				Private tours are also available.{" "}
+				<Link to="/contact/private-tour">
+					Enquire about a private tour
+				</Link>
+				.
+			</Paragraph>
 		</Section>
 		<Section span>
 			<Swiper
