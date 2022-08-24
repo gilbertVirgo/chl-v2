@@ -51,7 +51,7 @@ export const LinkGroup = {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		grid-column: 5 / -1;
+		grid-column: 4 / -1;
 	`,
 };
 
