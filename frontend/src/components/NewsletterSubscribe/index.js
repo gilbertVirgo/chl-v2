@@ -9,7 +9,8 @@ import { Wrapper } from "./styles";
 import theme from "../../theme";
 
 const url =
-	"//christianheritagelondon.us9.list-manage.com/subscribe?u=f18c1c82b624be730c499657e&id=a75d3fa84b";
+	"//christianheritagelondon.us9.list-manage.com/subscribe/post?u=f18c1c82b624be730c499657e&amp;id=a75d3fa84b&amp;f_id=00f607e1f0";
+//"//christianheritagelondon.us9.list-manage.com/subscribe?u=f18c1c82b624be730c499657e&id=a75d3fa84b";
 
 export default () => {
 	const [email, setEmail] = React.useState("");
