@@ -21,6 +21,10 @@ app.get("/index/:index", (req, res) => {
 								case "ytid":
 									val = "youtube.com/" + val;
 									break;
+								case "pubDate":
+									let [y, m, d] = val.split("-");
+									val = [m, d, y].join("-");
+									break;
 							}
 						}
 
@@ -43,4 +47,4 @@ app.get("/index/:index", (req, res) => {
     `);
 });
 
-app.listen(4000, () => console.log("server started"));
+app.listen(4000, () => console.log("Server started on 4000"));

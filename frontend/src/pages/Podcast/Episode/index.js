@@ -30,7 +30,7 @@ export default () => {
 
 	React.useEffect(() => {
 		(async function () {
-			const episode = (await getEpisode(id))[0];
+			const episode = (await getEpisode(id)).data[0];
 
 			console.log({ episode });
 

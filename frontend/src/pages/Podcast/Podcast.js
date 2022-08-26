@@ -15,7 +15,9 @@ import VideoSpotlight from "../../components/VideoSpotlight";
 import ellipsize from "ellipsize";
 import getPodcast from "./getPodcast";
 
-const defaultPageSize = 10;
+const defaultRequestOptions = {
+	orderings: "[my.podcast.original_date_published desc]",
+};
 
 export default () => {
 	const [[firstEpisode, ...episodes], setEpisodes] = React.useState([]);
@@ -25,40 +27,15 @@ export default () => {
 	React.useEffect(() => {
 		(async function () {
 			let { data: newEpisodes, next_page } = await getPodcast({
-				pageSize: defaultPageSize,
 				page: currentPage,
+				pageSize: currentPage === 1 ? 10 : 9,
+				...defaultRequestOptions,
 			});
 
-			setEpisodes((episodes) =>
-				[...episodes, ...newEpisodes].sort(
-					(a, b) =>
-						new Date(b.first_publication_date) -
-						new Date(a.first_publication_date)
-				)
-			);
+			setEpisodes((episodes) => [...episodes, ...newEpisodes]);
 			setFinalPage(!next_page);
 		})();
 	}, [currentPage]);
-
-	React.useEffect(() => {
-		(async function () {
-			let { data: episodes, next_page } = await getPodcast({
-				pageSize: defaultPageSize,
-				page: currentPage,
-			});
-
-			console.log({ episodes });
-
-			setEpisodes(
-				episodes.sort(
-					(a, b) =>
-						new Date(b.first_publication_date) -
-						new Date(a.first_publication_date)
-				)
-			);
-			setFinalPage(!next_page);
-		})();
-	}, []);
 
 	return (
 		<React.Fragment>

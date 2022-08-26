@@ -12,14 +12,7 @@ export default async (query, options) => {
 		await fetch(
 			`https://chl-cms.cdn.prismic.io/api/v2/documents/search?ref=${ref}&q=${encodeURIComponent(
 				`[${query}]`
-			)}&${
-				options
-					? `&${formatOptions({
-							orderings: "[document.last_publication_date desc]",
-							...options,
-					  })}`
-					: ""
-			}`
+			)}&${options ? `&${formatOptions(options)}` : ""}`
 		)
 	).json();
 

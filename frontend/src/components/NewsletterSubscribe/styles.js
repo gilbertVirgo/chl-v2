@@ -20,5 +20,10 @@ export const Wrapper = styled.div`
 	input,
 	button {
 		height: 100% !important;
+		border-radius: 0;
+
+		&:focus {
+			border-color: white !important;
+		}
 	}
 `;

@@ -54,7 +54,7 @@ module.exports = [
 			],
 		},
 		lastModified: 1560347868928,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d013d89ed2e4a252462ece8",
@@ -111,7 +111,7 @@ module.exports = [
 			_id: "5d013d89ed2e4a252462ece8",
 		},
 		lastModified: 1560362377845,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d013e45ed2e4a252462eced",
@@ -168,7 +168,7 @@ module.exports = [
 			_id: "5d013e45ed2e4a252462eced",
 		},
 		lastModified: 1560362565594,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d013fb5ed2e4a252462ecf5",
@@ -225,7 +225,7 @@ module.exports = [
 			_id: "5d013fb5ed2e4a252462ecf5",
 		},
 		lastModified: 1560362933260,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d014081ed2e4a252462ecfe",
@@ -282,7 +282,7 @@ module.exports = [
 			_id: "5d014081ed2e4a252462ecfe",
 		},
 		lastModified: 1560363137016,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d01422fed2e4a252462ed03",
@@ -339,7 +339,7 @@ module.exports = [
 			_id: "5d01422fed2e4a252462ed03",
 		},
 		lastModified: 1560363567014,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d0220f468e4fd3ff83eb1a0",
@@ -396,7 +396,7 @@ module.exports = [
 			_id: "5d0220f468e4fd3ff83eb1a0",
 		},
 		lastModified: 1560420596612,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d02215e68e4fd3ff83eb1a7",
@@ -453,7 +453,7 @@ module.exports = [
 			_id: "5d02215e68e4fd3ff83eb1a7",
 		},
 		lastModified: 1560420702062,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d0224fa1a519e4080891125",
@@ -510,7 +510,7 @@ module.exports = [
 			_id: "5d0224fa1a519e4080891125",
 		},
 		lastModified: 1560421626224,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d0225821a519e408089112a",
@@ -567,7 +567,7 @@ module.exports = [
 			_id: "5d0225821a519e408089112a",
 		},
 		lastModified: 1560421762916,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d0226311a519e408089112f",
@@ -624,7 +624,7 @@ module.exports = [
 			_id: "5d0226311a519e408089112f",
 		},
 		lastModified: 1560421937352,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d0226b81a519e4080891134",
@@ -681,7 +681,7 @@ module.exports = [
 			_id: "5d0226b81a519e4080891134",
 		},
 		lastModified: 1560422072421,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d0227961a519e4080891139",
@@ -738,7 +738,7 @@ module.exports = [
 			_id: "5d0227961a519e4080891139",
 		},
 		lastModified: 1560422294403,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d02284d1a519e408089113e",
@@ -795,7 +795,7 @@ module.exports = [
 			_id: "5d02284d1a519e408089113e",
 		},
 		lastModified: 1560422477249,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d0229a01a519e4080891143",
@@ -852,7 +852,7 @@ module.exports = [
 			_id: "5d0229a01a519e4080891143",
 		},
 		lastModified: 1560422816333,
-		dateCreated: 1654615477438,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d022acb1a519e4080891148",
@@ -909,7 +909,7 @@ module.exports = [
 			_id: "5d022acb1a519e4080891148",
 		},
 		lastModified: 1560423115427,
-		dateCreated: 1654615477439,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d022df71a519e4080891150",
@@ -966,7 +966,7 @@ module.exports = [
 			_id: "5d022df71a519e4080891150",
 		},
 		lastModified: 1560461871202,
-		dateCreated: 1654615477439,
+		dateCreated: 1661505332888,
 	},
 	{
 		_id: "5d1b99b27c437c4f0401e4da",
@@ -2563,5 +2563,62 @@ module.exports = [
 		},
 		dateCreated: 1653343754212,
 		lastModified: 1653343754210,
+	},
+	{
+		_id: "62a348abafbe717a380f1f65",
+		__v: 0,
+		data: {
+			sections: [],
+			id: "episode",
+			title: "Episode - Podcast",
+			fields: [
+				{
+					name: "title",
+					label: "Title",
+					type: "text",
+					value: "Dean Inserra interview",
+					placeholder: "Enter episode title",
+					required: true,
+				},
+				{
+					name: "desc",
+					label: "Description",
+					type: "textarea",
+					value: "Dean Inserra planted City Church Tallahassee 15 years ago and is passionate about reaching the city of Tallahassee with the Gospel, to see a *worldwide* impact made for Jesus. The congregation frequently sees thousands in attendance and is known for its emphasis on local equipping and ministry.\n\nDean has written several books, most recently Pure, published by Moody Publishers. \n\nWe had an outstanding time talking about his story, his influences and about the potent ministry of the local church. ",
+					placeholder: "Enter a brief description",
+					required: true,
+				},
+				{
+					name: "ytid",
+					label: "YouTube Video ID",
+					type: "ytid",
+					value: "EGVOOeBghcw",
+					placeholder: "e.g. Ja5jhSAgWBU",
+					ext: {
+						image: "https://img.youtube.com/vi/EGVOOeBghcw/hqdefault.jpg",
+						embed: "https://www.youtube.com/embed/EGVOOeBghcw",
+					},
+					required: true,
+				},
+				{
+					name: "audio",
+					label: "Audio",
+					type: "audio",
+					value: "https://s3.eu-west-2.amazonaws.com/chlpodcasts/1654868122068.mp3",
+					ext: { length: 1 },
+				},
+				{
+					name: "pubDate",
+					label: "Publish Date",
+					type: "date",
+					value: "2022-06-10",
+					placeholder: "Enter publish date",
+					required: true,
+				},
+			],
+			_id: "62a348abafbe717a380f1f65",
+		},
+		dateCreated: 1654868139433,
+		lastModified: 1654868139431,
 	},
 ];
