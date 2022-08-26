@@ -30,13 +30,16 @@ export default () => (
 			<ConnectWrapper>
 				<NewsletterSubscribe />
 				<SocialsWrapper>
-					{socialInfo.map((props) => (
-						<SocialIcon {...props} />
+					{socialInfo.map((props, index) => (
+						<SocialIcon key={`social-icon-${index}`} {...props} />
 					))}
 				</SocialsWrapper>
 				<LinksWrapper>
-					{["Donate", "Privacy"].map((text) => (
-						<Link to={`/${text.toLowerCase()}`}>
+					{["Donate", "Privacy"].map((text, index) => (
+						<Link
+							to={`/${text.toLowerCase()}`}
+							key={`link-caption-${index}`}
+						>
 							<Caption style={{ color: "white" }}>{text}</Caption>
 						</Link>
 					))}

@@ -27,9 +27,13 @@ export default () => {
 
 	const listOfLinks = (
 		<React.Fragment>
-			{links.map(({ title, href, external }) =>
+			{links.map(({ title, href, external }, index) =>
 				external ? (
-					<ExternalLink target="_blank" href={href}>
+					<ExternalLink
+						target="_blank"
+						href={href}
+						key={`external-link-${index}`}
+					>
 						<Icon
 							type="external"
 							style={{
@@ -40,10 +44,12 @@ export default () => {
 						{title}
 					</ExternalLink>
 				) : (
-					<Link to={href}>{title}</Link>
+					<Link key={`link-${index}`} to={href}>
+						{title}
+					</Link>
 				)
 			)}
-			<Link donate to="/donate">
+			<Link donate="true" to="/donate">
 				<Button>Donate</Button>
 			</Link>
 		</React.Fragment>

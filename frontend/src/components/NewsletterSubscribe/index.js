@@ -26,12 +26,7 @@ export default () => {
 					</Paragraph>
 				);
 			case "success":
-				return (
-					<Paragraph small>
-						Thank you for agreeing to receive our newsletter! Expect
-						to hear from us shortly.
-					</Paragraph>
-				);
+				return <Paragraph small>{message}</Paragraph>;
 		}
 	};
 

@@ -72,8 +72,11 @@ export default () => (
 				centeredSlides
 				loop
 			>
-				{images.map((src) => (
-					<SwiperSlide style={{ width: "500px" }}>
+				{images.map((src, index) => (
+					<SwiperSlide
+						style={{ width: "500px" }}
+						key={`swiper-slide-${index}`}
+					>
 						<img src={src} width="100%" />
 					</SwiperSlide>
 				))}

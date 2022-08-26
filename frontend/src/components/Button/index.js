@@ -55,8 +55,8 @@ export default ({
 			</a>
 			{dropdown && (
 				<DropdownLeaf data-ref={ref.current} active={active}>
-					{options.items.map(({ value, href }) => (
-						<Paragraph as="li">
+					{options.items.map(({ value, href }, index) => (
+						<Paragraph as="li" key={`option-${index}`}>
 							{href ? (
 								<a target="_blank" href={href}>
 									{value}

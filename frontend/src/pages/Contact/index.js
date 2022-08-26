@@ -58,8 +58,12 @@ From ${target.name.value}`)}`
 						Subject
 					</Caption>
 					<Form.Select required name="subject">
-						{categories.map(({ text, value }) => (
-							<option selected={category === value} value={value}>
+						{categories.map(({ text, value }, index) => (
+							<option
+								selected={category === value}
+								value={value}
+								key={`select-option-${index}`}
+							>
 								{text}
 							</option>
 						))}

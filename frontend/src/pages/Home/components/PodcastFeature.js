@@ -35,7 +35,7 @@ export default ({ onLoad }) => {
 					<Feature invert>
 						<Feature.Title>{firstEpisode.title}</Feature.Title>
 						<Feature.Image
-							filter
+							filter="true"
 							href={`/podcast/episode/${firstEpisode.id}`}
 							src={firstEpisode.image.url}
 						/>
@@ -50,7 +50,7 @@ export default ({ onLoad }) => {
 					</Feature>
 
 					<Lattice
-						filterImages
+						filterImages="true"
 						singleRow
 						panels={episodes.map(({ id, title, image }) => ({
 							title,
