@@ -4,7 +4,7 @@ export default [
 		button: {
 			text: "View Guide",
 			icon: "external",
-			href: require("../../assets/pdf/cs-lewis-tour.pdf"),
+			href: "", // require("...")
 		},
 		image: require("../../assets/london-cambridge.jpg"),
 	},
@@ -13,7 +13,7 @@ export default [
 		button: {
 			text: "View Guide",
 			icon: "external",
-			href: require("../../assets/pdf/discovering-italy.pdf"),
+			href: "", // require("...")
 		},
 		image: require("../../assets/london-cambridge.jpg"),
 	},
@@ -22,7 +22,7 @@ export default [
 		button: {
 			text: "View Guide",
 			icon: "external",
-			href: require("../../assets/pdf/european-odyssey.pdf"),
+			href: "", // require("...")
 		},
 		image: require("../../assets/london-cambridge.jpg"),
 	},
@@ -31,7 +31,7 @@ export default [
 		button: {
 			text: "View Guide",
 			icon: "external",
-			href: require("../../assets/pdf/holy-land-starting-in-jerusalem.pdf"),
+			href: "", // require("...")
 		},
 		image: require("../../assets/london-cambridge.jpg"),
 	},
@@ -40,7 +40,7 @@ export default [
 		button: {
 			text: "View Guide",
 			icon: "external",
-			href: require("../../assets/pdf/holy-land-tour.pdf"),
+			href: "", // require("...")
 		},
 		image: require("../../assets/london-cambridge.jpg"),
 	},
@@ -49,7 +49,7 @@ export default [
 		button: {
 			text: "View Guide",
 			icon: "external",
-			href: require("../../assets/pdf/journeys-of-paul.pdf"),
+			href: "", // require("...")
 		},
 		image: require("../../assets/london-cambridge.jpg"),
 	},
@@ -58,7 +58,7 @@ export default [
 		button: {
 			text: "View Guide",
 			icon: "external",
-			href: require("../../assets/pdf/london-cambridge-and-paris.pdf"),
+			href: "", // require("...")
 		},
 		image: require("../../assets/london-cambridge.jpg"),
 	},
@@ -67,7 +67,7 @@ export default [
 		button: {
 			text: "View Guide",
 			icon: "external",
-			href: require("../../assets/pdf/london-oxford-cambridge-edinburgh.pdf"),
+			href: "", // require("...")
 		},
 		image: require("../../assets/london-cambridge.jpg"),
 	},
@@ -76,7 +76,7 @@ export default [
 		button: {
 			text: "View Guide",
 			icon: "external",
-			href: require("../../assets/pdf/reformation.pdf"),
+			href: "", // require("...")
 		},
 		image: require("../../assets/london-cambridge.jpg"),
 	},
@@ -85,7 +85,7 @@ export default [
 		button: {
 			text: "View Guide",
 			icon: "external",
-			href: require("../../assets/pdf/world-wars-I-and-II.pdf"),
+			href: "", // require("...")
 		},
 		image: require("../../assets/london-cambridge.jpg"),
 	},
