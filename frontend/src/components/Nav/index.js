@@ -13,6 +13,7 @@ import Button from "../Button";
 import Grid from "../Grid";
 import { Icon } from "../Button/styles";
 import React from "react";
+import WalksCTA from "./WalksCTA";
 import links from "./links";
 import theme from "../../theme";
 import { useLocation } from "react-router-dom";
@@ -61,6 +62,7 @@ export default () => {
 
 	return (
 		<React.Fragment>
+			{location.pathname !== "/walks" && <WalksCTA />}
 			<Wrapper>
 				<Grid
 					style={{

@@ -18,7 +18,8 @@ export const Wrapper = styled.div`
 	box-shadow: 0 1px 5px #00000020;
 	padding: 15px;
 	box-sizing: border-box;
-	position: fixed;
+	position: sticky;
+	top: 0;
 	width: 100%;
 	z-index: ${navBarZIndex};
 
