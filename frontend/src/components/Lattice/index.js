@@ -21,7 +21,7 @@ export default ({
 						circle={circles}
 						src={image}
 						href={href}
-						filter={(!!filterImages).toString()}
+						filter={filterImages}
 					/>
 					<Title large={!!description}>{title}</Title>
 					{subtitle && <Subtitle>{subtitle}</Subtitle>}
