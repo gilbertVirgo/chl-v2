@@ -41,7 +41,7 @@ export default () => {
 							<a href="/walks">Click here for more details</a>
 						</Paragraph> */}
 						<Button href="/walks/apply" theme="red" suspend>
-							Apply for a London Day
+							Request a London Day
 						</Button>
 						<Paragraph small>
 							Private tours are also available.{" "}

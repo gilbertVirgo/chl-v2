@@ -20,6 +20,22 @@ export const Group = styled.section`
 	&:last-child {
 		margin-bottom: 0;
 	}
+
+	.react-datepicker-wrapper input {
+		width: 100%;
+	}
+
+	.react-datepicker__day--selected,
+	.react-datepicker__day--keyboard-selected {
+		background-color: ${theme.color.red};
+	}
+`;
+
+export const Required = styled.span`
+	&::after {
+		content: "*";
+		color: ${theme.color.red};
+	}
 `;
 
 const generalStyles = css`

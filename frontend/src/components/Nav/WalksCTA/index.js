@@ -7,7 +7,8 @@ export default () => {
 	return (
 		<Wrapper>
 			<Paragraph small style={{ marginBottom: 0 }}>
-				We offer Guided Walks &amp; Tours.{" "}
+				Christian Heritage London gives guided walks and tours through
+				London's Church History.{" "}
 				<strong>
 					<Link to="/walks">Find out more</Link>
 				</strong>

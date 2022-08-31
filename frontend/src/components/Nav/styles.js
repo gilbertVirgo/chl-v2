@@ -67,10 +67,10 @@ export const Logo = styled(DefaultLink)`
 
 export const Drawer = styled(Grid)`
 	position: fixed;
-	top: ${navBarHeight}px;
+	top: 0;
 	left: 0;
 	width: 100%;
-	height: calc(100% - ${navBarHeight}px);
+	height: 100%;
 	background-color: #fff;
 	z-index: 1001;
 	will-change: opacity;

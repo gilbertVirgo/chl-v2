@@ -62,7 +62,7 @@ export default () => {
 
 	return (
 		<React.Fragment>
-			{location.pathname !== "/walks" && <WalksCTA />}
+			{!location.pathname.includes("walks") && <WalksCTA />}
 			<Wrapper>
 				<Grid
 					style={{
@@ -84,7 +84,6 @@ export default () => {
 					<LinkGroup.LargeScreen>{listOfLinks}</LinkGroup.LargeScreen>
 				</Grid>
 			</Wrapper>
-			<Padding />
 		</React.Fragment>
 	);
 };

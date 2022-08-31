@@ -12,7 +12,7 @@ export default () => (
 				},
 				{
 					value: "Spotify",
-					href: "https://podcasts.apple.com/gb/podcast/christian-heritage-london-podcast/id1232042916",
+					href: "https://open.spotify.com/show/3DlsQAEvVPyeElP8klOEoe",
 				},
 			],
 		}}

@@ -59,3 +59,20 @@ export const Subheading = styled.h3`
 	color: ${theme.color.dark};
 	margin: 0 0 15px;
 `;
+
+export const List = styled.ul`
+	li {
+		font-family: "myriad-pro";
+		font-style: normal;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 130.3%;
+		margin: 0 0 5px;
+
+		${({ small }) =>
+			small &&
+			`
+				font-size: 14px;
+			`}
+	}
+`;

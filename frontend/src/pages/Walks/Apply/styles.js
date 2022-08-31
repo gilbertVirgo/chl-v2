@@ -6,11 +6,12 @@ export const Image = styled.div`
 
 	${media.minWidth("l")`
         grid-column: 7 / 12;
-        grid-row: 1 / 7;
+        grid-row: 1 / 9;
         display: block;
-        background-size: cover;
-        background-position: center;
-        background-image: url("${require("../../../assets/walks/2.jpg")}");
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-image: url("${require("../../../assets/walks-apply-image.jpg")}");
         padding-bottom: 150%;
         height: auto;
     `}
