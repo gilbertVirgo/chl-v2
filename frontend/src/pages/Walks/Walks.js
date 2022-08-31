@@ -1,12 +1,12 @@
 import "swiper/css";
 import "swiper/css/autoplay";
 
+import { CarouselImage, CarouselWrapper } from "./styles";
 import { Heading, Paragraph, Subheading } from "../../components/Text";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Autoplay } from "swiper";
 import Button from "../../components/Button";
-import { Card } from "./styles";
 import Feature from "../../components/Feature";
 import Hero from "../../components/Hero";
 import { Link } from "react-router-dom";
@@ -48,7 +48,7 @@ export default () => (
 			</Paragraph>
 
 			<Button href="/walks/apply" theme="red" suspend>
-				Apply for a London Day
+				Request a London Day
 			</Button>
 			<br />
 			<Paragraph small>
@@ -59,7 +59,7 @@ export default () => (
 				.
 			</Paragraph>
 		</Section>
-		<Section span>
+		<CarouselWrapper span>
 			<Swiper
 				modules={[Autoplay]}
 				autoplay={{ delay: 4000, disableOnInteraction: false }}
@@ -77,11 +77,11 @@ export default () => (
 						style={{ width: "500px" }}
 						key={`swiper-slide-${index}`}
 					>
-						<img src={src} width="100%" />
+						<CarouselImage src={src} width="100%" />
 					</SwiperSlide>
 				))}
 			</Swiper>
-		</Section>
+		</CarouselWrapper>
 		<Section skinny>
 			<Heading>Other Tours</Heading>
 			<Paragraph>

@@ -1,17 +1,21 @@
+import Section from "../../components/Section";
 import styled from "styled-components";
 
-export const Card = {
-	Outer: styled.div`
-		padding: 0 5px;
-		display: inline-block;
-	`,
-	Inner: styled.div`
-		width: 300px;
-		padding-bottom: 1%;
-		/* max-height: ${({ height }) => (height ? height : "100%")}; */
-		max-width: 700px;
-		background-image: url(${({ src }) => src});
-		background-size: cover;
-		background-position: center;
-	`,
-};
+export const CarouselWrapper = styled(Section)`
+	.swiper-slide {
+		height: auto;
+	}
+	.swiper-container {
+		img {
+			height: ;
+		}
+	}
+`;
+
+export const CarouselImage = styled.div`
+	background-image: url("${({ src }) => src}");
+	background-size: cover;
+	width: 100%;
+	padding-bottom: calc(100% / (16 / 9));
+	background-repeat: no-repeat;
+`;
