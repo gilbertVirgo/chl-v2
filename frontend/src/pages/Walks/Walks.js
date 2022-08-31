@@ -12,7 +12,9 @@ import Hero from "../../components/Hero";
 import { Link } from "react-router-dom";
 import React from "react";
 import Section from "../../components/Section";
+import Table from "../../components/Table";
 import images from "./images";
+import pricing from "./data/pricing";
 
 export default () => (
 	<React.Fragment>
@@ -136,6 +138,46 @@ export default () => (
 				<a href="/international-tours">International Tours</a> for
 				churches, schools, universities and other larger groups.
 			</Paragraph>
+		</Section>
+		<Section outerStyle={{ overflowX: "scroll" }}>
+			<Heading>Pricing Outline</Heading>
+			{/* borderRight: couldn't do this with padding or margin. This was the only fix. */}
+			<Table
+				style={{
+					minWidth: "1200px",
+				}}
+			>
+				<thead>
+					<tr>
+						{[
+							"",
+							"Historic People",
+							"Locations",
+							"Duration",
+							"Cost",
+						].map((text) => (
+							<td>
+								<Subheading>{text}</Subheading>
+							</td>
+						))}
+					</tr>
+				</thead>
+				<tbody>
+					{pricing.map((row) => (
+						<tr>
+							{Object.keys(row).map((key) => (
+								<td>
+									{key === "title" ? (
+										<Subheading>{row[key]}</Subheading>
+									) : (
+										<Paragraph>{row[key]}</Paragraph>
+									)}
+								</td>
+							))}
+						</tr>
+					))}
+				</tbody>
+			</Table>
 		</Section>
 	</React.Fragment>
 );
