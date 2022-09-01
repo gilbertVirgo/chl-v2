@@ -116,7 +116,7 @@ export default () => (
 			</Paragraph> */}
 		</Section>
 		<Section skinny>
-			<Heading>Tours Outside London</Heading>
+			<Heading>Guided Walks Outside London</Heading>
 			<Subheading>
 				The gospel has also made huge impact on the world in the cities
 				of Oxford and Cambridge.
