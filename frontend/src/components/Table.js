@@ -40,7 +40,7 @@ const Table = styled.table`
 `;
 
 const Wrapper = styled.div`
-	overflow-x: scroll;
+
 `;
 
 export default ({ children, scrollable, ...props }) => (
