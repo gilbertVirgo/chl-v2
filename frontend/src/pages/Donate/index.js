@@ -29,15 +29,13 @@ export default () => {
 						Thank you for your interest in making a gift today.
 					</Subheading>
 					<Paragraph>
-						We are committed to equipping the church to grow wise,
-						faithful Christian disciples in a chaotic age.
-					</Paragraph>
-					<Paragraph>
-						But in order to do this, we rely on support from
-						believers like you, who care about bringing gospel light
-						to the internet and helping people think wisely and
-						biblically.
-					</Paragraph>
+					Christian Heritage London has a unique opportunity to tell people the gospel to large numbers of people. Many churches, families, universities and other groups bring believing and unbelieving friends on our walks and tours, and on each walk and tour we proclaim the gospel and illustrate how it has changed history. 
+</Paragraph>
+		<Paragraph>
+We are not supported by a denomination or network, and we have numerous overheads as well as opportunities. 
+</Paragraph>
+		<Paragraph>
+If you can help us to carry on and develop our ministry, telling the stories of God’s grace to greater numbers, please do support us in this work.</Paragraph>
 				</Wrapper>
 				<Wrapper
 					area="image"
@@ -47,7 +45,12 @@ export default () => {
 					<Subheading>Donating from the UK</Subheading>
 					<Form.Group>
 						<Paragraph>
-							We have chosen to partner with Stewardship for our
+							We have partnered with <a
+								target="_blank"
+								href="https://www.stewardship.org.uk/about-us"
+							>
+								Stewardship
+							</a> for our
 							UK-based donations.
 						</Paragraph>
 					</Form.Group>
@@ -73,13 +76,23 @@ export default () => {
 							Christian ministries in the UK and overseas.
 						</Paragraph>
 					</Form.Group>
+					<br/>
+								<Form.Group>
+								<Paragraph>If you would like to post a cheque, please post to:</Paragraph>
+<Paragraph>
+									Christian Heritage London <br />
+ELT Baptist Church<br />
+Burdett Road<br />
+London <br />
+E3 4TU
+									</Paragraph>
+								</Form.Group>
 				</Wrapper>
 				<Wrapper area="overseas">
-					<Subheading>Donating from overseas</Subheading>
+					<Subheading>Donating from the US</Subheading>
 					<Form.Group>
 						<Paragraph>
-							For donations from overseas, please use the details
-							provided below.
+							To donate from the United States please post cheques to:
 						</Paragraph>
 						<Paragraph>
 							Christian Heritage (USA) Foundation
