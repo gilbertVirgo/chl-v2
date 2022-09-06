@@ -39,7 +39,7 @@ If you can help us to carry on and develop our ministry, telling the stories of 
 				</Wrapper>
 				<Wrapper
 					area="image"
-					image={require("../../assets/donate.jpg")}
+					image={require("../../assets/donate-new.jpg")}
 				/>
 				<Wrapper area="uk">
 					<Subheading>Donating from the UK</Subheading>

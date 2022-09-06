@@ -20,7 +20,7 @@ export default () => (
 	<React.Fragment>
 		<Section dark>
 			<Hero
-				video="https://www.youtube.com/embed/EGVOOeBghcw"
+				video="https://www.youtube.com/embed/iF2ozY92F9w"
 				thumbnail={require("../../assets/thumbnail-test.jpg")}
 			>
 				<Heading>Walks &amp; Tours</Heading>
