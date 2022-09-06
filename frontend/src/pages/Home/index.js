@@ -17,7 +17,7 @@ import getPodcast from "../Podcast/getPodcast";
 
 export default () => {
 	const [podcastLoaded, setPodcastLoaded] = React.useState(false);
-	const [articlesLoaded, setArticlesLoaded] = React.useState(false);
+	const [articlesLoaded, setArticlesLoaded] = React.useState(true);
 
 	const pageLoaded = podcastLoaded && articlesLoaded;
 
