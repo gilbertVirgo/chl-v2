@@ -1,4 +1,5 @@
 import ActivityIndicator from "../../components/ActivityIndicator";
+// import ArticlesFeature from "./components/ArticlesFeature";
 import Button from "../../components/Button";
 import Feature from "../../components/Feature";
 import Lattice from "../../components/Lattice";
@@ -16,7 +17,7 @@ import getPodcast from "../Podcast/getPodcast";
 
 export default () => {
 	const [podcastLoaded, setPodcastLoaded] = React.useState(false);
-	const articlesLoaded = true;
+	const [articlesLoaded, setArticlesLoaded] = React.useState(false);
 
 	const pageLoaded = podcastLoaded && articlesLoaded;
 
@@ -25,7 +26,7 @@ export default () => {
 			<ActivityIndicator fullScreen active={!pageLoaded} />
 
 			<PodcastFeature onLoad={() => setPodcastLoaded(true)} />
-			{/* <ArticlesFeature onLoad={() => ...} */}
+			{/* <ArticlesFeature onLoad={() => setArticlesLoaded(true)} /> */}
 
 			<Section explode>
 				<Feature invert>

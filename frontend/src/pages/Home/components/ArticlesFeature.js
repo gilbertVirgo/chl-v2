@@ -1,6 +1,30 @@
+import Button from "../../../components/Button";
+import Feature from "../../../components/Feature";
+import Lattice from "../../../components/Lattice";
+import { Paragraph } from "../../../components/Text";
 import React from "react";
+import Section from "../../../components/Section";
 
-export default () => {
+export default ({ onLoad }) => {
+	const [[firstArticle, ...articles], setArticles] = React.useState([]);
+
+	React.useEffect(() => {
+		(async function () {
+			let { data: articles } = await getPodcast({
+				pageSize: 4,
+				orderings: "[my.podcast.original_date_published desc]",
+			});
+
+			console.log({ articles });
+
+			setArticles(articles);
+		})();
+	}, []);
+
+	React.useEffect(() => {
+		if (articles.length) onLoad();
+	}, [articles]);
+
 	return (
 		<Section dark>
 			<Feature invert>
@@ -32,7 +56,7 @@ export default () => {
 					{
 						title: "Why You Should Read Revival",
 						subtitle: "Glen Scrivener",
-						image: require("../assets/revival.png"),
+						image: require("../assets/dick-lucas.png"),
 					},
 				]}
 			/>
