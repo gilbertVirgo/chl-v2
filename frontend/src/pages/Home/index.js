@@ -30,7 +30,7 @@ export default () => {
 			<Section explode>
 				<Feature invert>
 					<Feature.Title>London Walks</Feature.Title>
-					<Feature.Embed src="https://www.youtube.com/embed/EGVOOeBghcw" />
+					<Feature.Embed src="https://www.youtube.com/embed/iF2ozY92F9w" />
 					<Feature.Body>
 						<Paragraph>
 							We give walks and tours through the City of London,
