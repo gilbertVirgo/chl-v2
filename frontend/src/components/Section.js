@@ -10,6 +10,12 @@ const Outer = styled.section`
 		${({ explode }) => explode && `padding: 75px 0;`}
 	`}
 	${({ dark }) => dark && `background-color: ${theme.color.dark}; color: white;`}
+
+	.section-inner .section-inner {
+		padding-left: 0;
+		padding-right: 0;
+		max-width: unset;
+	}
 `;
 
 const Inner = styled.div`
@@ -47,6 +53,7 @@ export default ({
 	return (
 		<Outer as={as} explode={explode} dark={dark} style={outerStyle}>
 			<Inner
+				className="section-inner"
 				style={innerStyle}
 				span={span}
 				skinny={skinny}

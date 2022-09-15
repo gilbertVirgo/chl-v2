@@ -1,7 +1,7 @@
 import ActivityIndicator from "../../../components/ActivityIndicator";
 import Article from "../../../components/Article";
 import React from "react";
-import getEpisode from "./getEpisode";
+import getArticle from "./getArticle";
 import { useParams } from "react-router-dom";
 
 export default () => {
@@ -11,7 +11,7 @@ export default () => {
 
 	React.useEffect(() => {
 		(async function () {
-			const props = (await getEpisode(id)).data[0];
+			const props = (await getArticle(id)).data[0];
 
 			setProps(props);
 		})();

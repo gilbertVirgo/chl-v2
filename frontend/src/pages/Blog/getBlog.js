@@ -9,13 +9,13 @@ const parse = (articles) => {
 		title,
 		image: image.url,
 		description,
-		href: `/podcast/episode/${id}`,
+		href: `/blog/article/${id}`,
 	}));
 };
 
 export default async (options) => {
 	const { next_page, data } = await get(
-		[prismic.predicate.at("document.type", "podcast")],
+		[prismic.predicate.at("document.type", "article")],
 		options
 	);
 

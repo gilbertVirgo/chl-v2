@@ -1,6 +1,7 @@
 import { Route, Switch } from "react-router-dom";
 
 import About from "./pages/About";
+import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Donate from "./pages/Donate";
 import Footer from "./components/Footer";
@@ -28,6 +29,7 @@ function App() {
 					<Route exact path="/" component={Home} />
 					<Route path="/about" component={About} />
 					<Route path="/podcast" component={Podcast} />
+					<Route path="/blog" component={Blog} />
 					<Route path="/walks" component={Walks} />
 					<Route
 						path="/international-tours"

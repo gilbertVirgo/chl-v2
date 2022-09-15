@@ -3,24 +3,15 @@ import ContentGrid from "../../components/ContentGrid";
 import PodcastSubscribe from "../../components/PodcastSubscribe";
 import React from "react";
 import Strapline from "../../components/Strapline";
-import getPodcast from "./getPodcast";
+import getBlog from "./getBlog";
 
 const requestOptions = (currentPage) => ({
 	page: currentPage,
 	pageSize: currentPage === 1 ? 10 : 9,
-	orderings: "[my.podcast.original_date_published desc]",
+	orderings: "[my.article.original_date_published desc]",
 });
 
-const sectionBreak = (
-	<React.Fragment>
-		<Strapline>
-			On the Christian Heritage London podcast we meet Christian leaders
-			who serve the church in the purpose, perspective and power of the
-			gospel.
-		</Strapline>
-		<PodcastSubscribe />
-	</React.Fragment>
-);
+// Got here so far. Just fixing a few things to make this work for the blog
 
 export default () => {
 	const [articles, setArticles] = React.useState([]);
@@ -29,9 +20,11 @@ export default () => {
 
 	React.useEffect(() => {
 		(async function () {
-			const { data: newArticles, next_page } = await getPodcast(
+			const { data: newArticles, next_page } = await getBlog(
 				requestOptions(currentPage)
 			);
+
+			console.log({ newArticles });
 
 			setArticles([...articles, ...newArticles]);
 			setNextPage(next_page);
@@ -47,9 +40,7 @@ export default () => {
 			{!loading && (
 				<ContentGrid
 					articles={articles}
-					sectionBreak={sectionBreak}
 					nextPage={nextPage}
-					filterImages
 					onNextPage={() => setCurrentPage(currentPage + 1)}
 				/>
 			)}

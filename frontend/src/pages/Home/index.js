@@ -1,32 +1,56 @@
 import ActivityIndicator from "../../components/ActivityIndicator";
-// import ArticlesFeature from "./components/ArticlesFeature";
 import Button from "../../components/Button";
+import ContentGrid from "../../components/ContentGrid";
 import Feature from "../../components/Feature";
-import Lattice from "../../components/Lattice";
 import { Link } from "react-router-dom";
 import { Paragraph } from "../../components/Text";
-import PodcastFeature from "./components/PodcastFeature";
-import PodcastSubscribe from "../../components/PodcastSubscribe";
 import React from "react";
-import { RichText } from "prismic-reactjs";
 import Section from "../../components/Section";
-import Strapline from "../../components/Strapline";
-import ellipsize from "ellipsize";
-import getEpisodes from "../../api/getEpisodes";
+import getBlog from "../Blog/getBlog";
 import getPodcast from "../Podcast/getPodcast";
 
 export default () => {
-	const [podcastLoaded, setPodcastLoaded] = React.useState(false);
-	const [articlesLoaded, setArticlesLoaded] = React.useState(true);
+	const [podcast, setPodcast] = React.useState(null);
+	const [blog, setBlog] = React.useState(null);
 
-	const pageLoaded = podcastLoaded && articlesLoaded;
+	React.useEffect(() => {
+		(async function () {
+			let { data: podcast } = await getPodcast({
+				pageSize: 4,
+				orderings: "[my.podcast.original_date_published desc]",
+			});
+
+			setPodcast(podcast);
+
+			let { data: blog } = await getBlog({
+				pageSize: 4,
+				orderings: "[my.article.original_date_published desc]",
+			});
+
+			setBlog(blog);
+
+			console.log({ podcast, blog });
+		})();
+	}, []);
+
+	const loading = !podcast || !blog;
 
 	return (
 		<React.Fragment>
-			<ActivityIndicator fullScreen active={!pageLoaded} />
+			<ActivityIndicator fullScreen active={loading} />
 
-			<PodcastFeature onLoad={() => setPodcastLoaded(true)} />
-			{/* <ArticlesFeature onLoad={() => setArticlesLoaded(true)} /> */}
+			<Section>
+				{!loading && <ContentGrid articles={podcast} filterImages />}
+				<Button theme="grey" href="podcast">
+					More from the podcast
+				</Button>
+			</Section>
+			<Section dark>
+				{!loading && <ContentGrid articles={blog} />}
+				<Button theme="grey" href="blog">
+					More from the blog
+				</Button>
+			</Section>
 
 			<Section explode>
 				<Feature invert>
