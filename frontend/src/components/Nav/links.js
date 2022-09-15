@@ -8,6 +8,10 @@ export default [
 		href: "/podcast",
 	},
 	{
+		title: "Blog",
+		href: "/blog",
+	},
+	{
 		title: "International Tours",
 		href: "/international-tours",
 	},
