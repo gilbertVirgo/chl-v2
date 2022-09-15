@@ -14,7 +14,7 @@ const Outer = styled.section`
 	.section-inner .section-inner {
 		padding-left: 0;
 		padding-right: 0;
-		max-width: unset;
+		max-width: 100%;
 	}
 `;
 
