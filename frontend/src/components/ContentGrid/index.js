@@ -15,6 +15,8 @@ export default ({
 	nextPage,
 	onNextPage,
 	filterImages,
+	singleRow,
+	deflate,
 }) => {
 	console.log(articles);
 
@@ -23,8 +25,11 @@ export default ({
 			<Section explode={!!sectionBreak}>
 				<Feature invert>
 					<Feature.Title>{firstArticle.title}</Feature.Title>
+					{firstArticle.author && (
+						<Feature.Author>{firstArticle.author}</Feature.Author>
+					)}
 					<Feature.Image
-						filter
+						filter={filterImages}
 						href={firstArticle.href}
 						src={firstArticle.image}
 					/>
@@ -39,9 +44,10 @@ export default ({
 				</Feature>
 			</Section>
 			{!!sectionBreak && <Section deflate>{sectionBreak}</Section>}
-			<Section explode={!!sectionBreak}>
+			<Section explode={!!sectionBreak} deflate={deflate}>
 				<Lattice
 					filterImages={filterImages}
+					singleRow={singleRow}
 					panels={articles.map(({ title, image, href }) => ({
 						title,
 						image,

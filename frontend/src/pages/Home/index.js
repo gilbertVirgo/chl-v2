@@ -40,13 +40,20 @@ export default () => {
 			<ActivityIndicator fullScreen active={loading} />
 
 			<Section>
-				{!loading && <ContentGrid articles={podcast} filterImages />}
+				{!loading && (
+					<ContentGrid
+						singleRow
+						deflate
+						articles={podcast}
+						filterImages
+					/>
+				)}
 				<Button theme="grey" href="podcast">
 					More from the podcast
 				</Button>
 			</Section>
 			<Section dark>
-				{!loading && <ContentGrid articles={blog} />}
+				{!loading && <ContentGrid singleRow deflate articles={blog} />}
 				<Button theme="grey" href="blog">
 					More from the blog
 				</Button>
