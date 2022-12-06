@@ -1,4 +1,4 @@
-import { Caption, Heading, Paragraph } from "../Text";
+import { Caption, Heading, Paragraph, Subheading } from "../Text";
 
 import Grid from "../Grid";
 import { Link } from "react-router-dom";
@@ -49,6 +49,9 @@ export const FeatureGrid = styled(Grid)`
 `;
 
 export const Title = styled(Heading)`
+	grid-area: title;
+`;
+export const Author = styled(Caption)`
 	grid-area: title;
 `;
 

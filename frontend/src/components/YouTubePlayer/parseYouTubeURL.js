@@ -3,7 +3,7 @@ export default (url) => {
 		url = url.replace("youtu.be", "youtube.com");
 
 		if (url.includes("embed")) {
-			return url;
+			return url + "?modestbranding=1"; // Remove YouTube branding
 		} else {
 			let urlParts = url.split("/");
 			urlParts.splice(urlParts.length - 1, 0, "embed");

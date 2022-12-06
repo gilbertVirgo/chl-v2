@@ -4,8 +4,6 @@ const formatOptions = (options) =>
 		.join("&");
 
 export default async (query, options) => {
-	console.log(encodeURIComponent(query.toString()));
-
 	const ref = localStorage.getItem("prismic-ref");
 
 	const { results, next_page } = await (
