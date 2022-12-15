@@ -9,10 +9,8 @@ import { RichText } from "prismic-reactjs";
 import Section from "../Section";
 import YouTubePlayer from "../YouTubePlayer";
 
-export default ({ title, description, ...props }) => {
-	return (
-		<React.Fragment>
-			{!!props && (
+export default ({ title, description, content, ...props }) => {
+	return !!props && (
 				<React.Fragment>
 					<Section>
 						<DefaultGrid>
@@ -28,7 +26,7 @@ export default ({ title, description, ...props }) => {
 
 						<TextGrid>
 							<Heading>{title}</Heading>
-							<RichText render={description} />
+							<RichText render={content} />
 						</TextGrid>
 						{/* <TextGrid>
 							<PodcastSubscribe />
@@ -38,7 +36,5 @@ export default ({ title, description, ...props }) => {
 						</TextGrid> */}
 					</Section>
 				</React.Fragment>
-			)}
-		</React.Fragment>
 	);
 };
