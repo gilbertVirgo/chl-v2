@@ -5,29 +5,29 @@ import get from "../../prismic/get";
 const parse = (articles) => {
 	if (!articles.length) return [];
 
-	return articles.map(({ id, title, description, author, image }) => ({
-		title,
-		image: image.url,
-		description,
-		// author: JSON.stringify(author),
-		href: `/blog/article/${id}`,
-	}));
+	return articles.map(
+		({
+			id,
+			title,
+			description,
+			author: {
+				data: { name },
+			},
+			image,
+		}) => ({
+			title,
+			image: image.url,
+			description,
+			author: name,
+			href: `/blog/article/${id}`,
+		})
+	);
 };
-
-// I attempted to use graphQuery to grab the author. It's a sham.
-
-// const graphQuery = encodeURIComponent(`{
-// article {
-// author {
-// name
-// }
-// }
-// }`);
 
 export default async (options) => {
 	const { next_page, data } = await get(
 		[prismic.predicate.at("document.type", "article")],
-		options
+		{ ...options, fetchLinks: "author.name" }
 	);
 
 	console.log({ data: parse(data) });

@@ -7,6 +7,7 @@
 		"@fortawesome/react-fontawesome": "^0.1.16",
 		"@prismicio/client": "^6.5.1",
 		"@prismicio/react": "^2.4.2",
+		"@prismicio/richtext": "^2.1.1",
 		"@testing-library/jest-dom": "^5.16.1",
 		"@testing-library/react": "^12.1.2",
 		"@testing-library/user-event": "^13.5.0",

@@ -14,7 +14,10 @@ export default ({
 }) => (
 	<Grid {...props}>
 		{panels.map(
-			({ title, subtitle, image, description, button, href }, index) => (
+			(
+				{ title, subtitle, image, description, author, button, href },
+				index
+			) => (
 				<Panel className="panel" key={`panel-${index}`}>
 					<Image
 						square={squares}
@@ -24,7 +27,8 @@ export default ({
 						filter={filterImages}
 					/>
 					<Title large={!!description}>{title}</Title>
-					{subtitle && <Subtitle>{subtitle}</Subtitle>}
+					{subtitle ||
+						(author && <Subtitle>{subtitle || author}</Subtitle>)}
 					{description && <Description>{description}</Description>}
 					{button && (
 						<Button small theme="grey" {...button}>

@@ -11,7 +11,10 @@ export const FeatureGrid = styled(Grid)`
 	grid-template-areas:
 		"title"
 		"media"
-		"body";
+		"body"
+		"author";
+
+	row-gap: 0;
 
 	margin-bottom: 30px;
 
@@ -33,12 +36,14 @@ export const FeatureGrid = styled(Grid)`
         grid-template-areas: 
             ". . . media"
             ". title . media"
+			". author . media"
             ". body . media"
             ". . . media";`
 				: `grid-template-columns: 6fr 1fr 4fr 1fr;
         grid-template-areas: 
             "media . . ."
             "media . title ."
+			"media . author ."
             "media . body ."
             "media . . .";  `}
     `}
@@ -52,7 +57,8 @@ export const Title = styled(Heading)`
 	grid-area: title;
 `;
 export const Author = styled(Caption)`
-	grid-area: title;
+	padding-top: 15px;
+	grid-area: author;
 `;
 
 export const Body = styled.div`

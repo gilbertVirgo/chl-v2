@@ -48,8 +48,9 @@ export default ({
 				<Lattice
 					filterImages={filterImages}
 					singleRow={singleRow}
-					panels={articles.map(({ title, image, href }) => ({
+					panels={articles.map(({ title, author, image, href }) => ({
 						title,
+						author,
 						image,
 						href,
 					}))}
