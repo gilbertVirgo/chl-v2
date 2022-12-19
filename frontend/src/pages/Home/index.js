@@ -39,21 +39,18 @@ export default () => {
 		<React.Fragment>
 			<ActivityIndicator fullScreen active={loading} />
 
-			<Section>
+			<Section innerStyle={{ paddingTop: 0 }}>
 				{!loading && (
-					<ContentGrid
-						singleRow
-						deflate
-						articles={podcast}
-						filterImages
-					/>
+					<ContentGrid singleRow deflate articles={podcast} />
 				)}
 				<Button theme="grey" href="podcast">
 					More from the podcast
 				</Button>
 			</Section>
-			<Section dark>
-				{!loading && <ContentGrid singleRow deflate articles={blog} />}
+			<Section innerStyle={{ paddingTop: 0 }} dark>
+				{!loading && (
+					<ContentGrid hasAuthor singleRow deflate articles={blog} />
+				)}
 				<Button theme="grey" href="blog">
 					More from the blog
 				</Button>
@@ -69,9 +66,6 @@ export default () => {
 							Westminster, the British Museum, the National
 							Gallery and the V&A Museum.
 						</Paragraph>
-						{/* <Paragraph>
-							<a href="/walks">Click here for more details</a>
-						</Paragraph> */}
 						<Button href="/walks/apply" theme="red" suspend>
 							Request a London Day
 						</Button>

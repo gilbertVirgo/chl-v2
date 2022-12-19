@@ -10,7 +10,7 @@ export default styled.section`
 	align-items: top;
 
 	${media.maxWidth("l")`
-		.panel:nth-child(2) {
+		.panel:nth-child(3) {
 			${({ singleRow }) => singleRow && `display: none;`}
 		}
 	`}

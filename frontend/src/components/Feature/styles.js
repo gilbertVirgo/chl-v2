@@ -14,7 +14,7 @@ export const FeatureGrid = styled(Grid)`
 		"body"
 		"author";
 
-	row-gap: 0;
+	row-gap: 15px;
 
 	margin-bottom: 30px;
 
@@ -30,20 +30,28 @@ export const FeatureGrid = styled(Grid)`
 
         grid-template-rows: auto auto auto auto auto;
 
-        ${({ invert }) =>
+        ${({ invert, hasAuthor }) =>
 			!invert
 				? `grid-template-columns: 1fr 4fr 1fr 6fr;
         grid-template-areas: 
             ". . . media"
-            ". title . media"
-			". author . media"
+            ". title . media"${
+				!!hasAuthor
+					? `
+			". author . media"`
+					: ""
+			}
             ". body . media"
             ". . . media";`
 				: `grid-template-columns: 6fr 1fr 4fr 1fr;
         grid-template-areas: 
             "media . . ."
-            "media . title ."
-			"media . author ."
+            "media . title ."${
+				!!hasAuthor
+					? `
+			"media . author ."`
+					: ""
+			}
             "media . body ."
             "media . . .";  `}
     `}
@@ -55,16 +63,19 @@ export const FeatureGrid = styled(Grid)`
 
 export const Title = styled(Heading)`
 	grid-area: title;
+
+	${media.maxWidth("l")`
+		margin: 0;
+	`}
 `;
 export const Author = styled(Caption)`
-	padding-top: 15px;
 	grid-area: author;
 `;
 
 export const Body = styled.div`
-	grid-area: body;
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
 
-	> * {
-		margin-bottom: 15px;
-	}
+	grid-area: body;
 `;

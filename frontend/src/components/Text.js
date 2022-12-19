@@ -1,3 +1,4 @@
+import Grid from "./Grid";
 import media from "../media";
 import styled from "styled-components";
 import theme from "../theme";
@@ -30,7 +31,7 @@ export const Paragraph = styled.p`
 	font-weight: 300;
 	font-size: 18px;
 	line-height: 140%;
-	margin: 0 0 15px;
+	margin: 0;
 
 	${({ small }) =>
 		small &&
@@ -76,5 +77,36 @@ export const List = styled.ul`
 			`
 				font-size: 14px;
 			`}
+	}
+`;
+
+export const TextGroup = styled(Grid)`
+	margin-top: 50px;
+	row-gap: 0;
+
+	${media.minWidth("l")`
+        margin-top: 75px;
+    `}
+
+	p, blockquote {
+		// Default Paragraph styles
+		font-family: "myriad-pro";
+		font-style: normal;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 150%;
+		margin: 0 0 15px;
+	}
+
+	${Heading}, ${Subheading}, blockquote,
+	p,
+	div {
+		grid-column: 1 / -1;
+		margin-left: unset;
+		margin-right: unset;
+
+		${media.minWidth("l")`
+            grid-column: 4 / -4;
+        `}
 	}
 `;

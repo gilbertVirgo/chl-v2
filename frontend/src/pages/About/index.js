@@ -9,7 +9,7 @@ import Section from "../../components/Section";
 
 export default () => (
 	<React.Fragment>
-		<Section dark>
+		{/* <Section dark>
 			<Hero>
 				<Heading>About Us</Heading>
 				<Paragraph>
@@ -20,8 +20,9 @@ export default () => (
 					.
 				</Paragraph>
 			</Hero>
-		</Section>
+		</Section> */}
 		<Section skinny>
+			<Heading>About Us</Heading>
 			<Subheading>
 				When people talk about how the gospel of Jesus Christ can change
 				the world, they start talking about London.
@@ -46,7 +47,7 @@ export default () => (
 				videos.
 			</Paragraph>
 		</Section>
-		<Section explode>
+		<Section>
 			<Heading margin>Team</Heading>
 			<Lattice
 				style={{ rowGap: "45px" }}

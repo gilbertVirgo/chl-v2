@@ -39,6 +39,7 @@ export default () => {
 
 			{!loading && (
 				<ContentGrid
+					hasAuthor
 					articles={articles}
 					nextPage={nextPage}
 					onNextPage={() => setCurrentPage(currentPage + 1)}

@@ -27,8 +27,9 @@ export default ({
 						filter={filterImages}
 					/>
 					<Title large={!!description}>{title}</Title>
-					{subtitle ||
-						(author && <Subtitle>{subtitle || author}</Subtitle>)}
+					{(subtitle || author) && (
+						<Subtitle>{subtitle || author}</Subtitle>
+					)}
 					{description && <Description>{description}</Description>}
 					{button && (
 						<Button small theme="grey" {...button}>

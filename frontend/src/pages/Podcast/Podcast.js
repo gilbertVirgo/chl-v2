@@ -11,7 +11,7 @@ const requestOptions = (currentPage) => ({
 	orderings: "[my.podcast.original_date_published desc]",
 });
 
-const sectionBreak = (
+const strapline = (
 	<React.Fragment>
 		<Strapline>
 			On the Christian Heritage London podcast we meet Christian leaders
@@ -47,7 +47,7 @@ export default () => {
 			{!loading && (
 				<ContentGrid
 					articles={articles}
-					sectionBreak={sectionBreak}
+					strapline={strapline}
 					nextPage={nextPage}
 					filterImages
 					onNextPage={() => setCurrentPage(currentPage + 1)}

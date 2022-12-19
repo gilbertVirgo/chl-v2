@@ -11,19 +11,20 @@ import ellipsize from "ellipsize";
 
 export default ({
 	articles: [firstArticle, ...articles],
-	sectionBreak,
+	strapline,
 	nextPage,
 	onNextPage,
 	filterImages,
 	singleRow,
 	deflate,
+	hasAuthor,
 }) => {
 	console.log(articles);
 
 	return (
 		<React.Fragment>
-			<Section explode={!!sectionBreak}>
-				<Feature invert>
+			<Section explode={!!strapline}>
+				<Feature hasAuthor={hasAuthor} invert>
 					<Feature.Title>{firstArticle.title}</Feature.Title>
 					{firstArticle.author && (
 						<Feature.Author>{firstArticle.author}</Feature.Author>
@@ -43,8 +44,8 @@ export default ({
 					</Feature.Body>
 				</Feature>
 			</Section>
-			{!!sectionBreak && <Section deflate>{sectionBreak}</Section>}
-			<Section explode={!!sectionBreak} deflate={deflate}>
+			{!!strapline && <Section deflate>{strapline}</Section>}
+			<Section explode={!!strapline} deflate={deflate}>
 				<Lattice
 					filterImages={filterImages}
 					singleRow={singleRow}
