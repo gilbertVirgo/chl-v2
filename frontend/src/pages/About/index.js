@@ -55,31 +55,31 @@ export default () => (
 				panels={[
 					{
 						title: "Ben Virgo",
-						subtitle: "Director, Speaker, Guide",
+						subtitle: "Director",
 						image: require("../../assets/team/ben-virgo.jpg"),
 						description:
 							"Studied Classics at University College London. Church planting in East London.",
 					},
 					{
 						title: "Peter Greyling",
-						subtitle: "Guide, Trustee",
+						subtitle: "Trustee",
 						image: require("../../assets/team/peter-greyling.jpg"),
 						description:
 							"Studied Economics at the University of Natal, South Africa. Worships at All Souls Langham Place.",
 					},
 					{
 						title: "Ilona Greyling",
-						subtitle: "Director of Tours, Guide",
+						subtitle: "Director",
 						image: require("../../assets/team/ilona-greyling.jpg"),
 						description:
 							"Studied at the Durban University of Technology. Worships at All Souls Langham Place.",
 					},
 					{
 						title: "Ken Brownell",
-						subtitle: "Speaker, Guide, Trustee",
+						subtitle: "Trustee",
 						image: require("../../assets/team/ken-brownell.jpg"),
 						description:
-							"Studied at Harvard University and St Andrews University. Church History lecturer, London Seminary; former pastor East London Tabernacle Baptist Church (retired).",
+							"Studied at Harvard University and the University of St Andrews. Church History lecturer, London Seminary; former pastor East London Tabernacle Baptist Church (retired).",
 					},
 				]}
 			/>

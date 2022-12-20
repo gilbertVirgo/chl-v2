@@ -49,7 +49,6 @@ export default () => {
 					articles={articles}
 					strapline={strapline}
 					nextPage={nextPage}
-					filterImages
 					onNextPage={() => setCurrentPage(currentPage + 1)}
 				/>
 			)}

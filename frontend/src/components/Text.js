@@ -51,6 +51,8 @@ export const Caption = styled.h5`
 	color: #5f5f5f;
 
 	margin: 0;
+
+	${({ large }) => large && `font-size: 16px;`}
 `;
 
 export const Subheading = styled.h3`

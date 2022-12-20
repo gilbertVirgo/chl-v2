@@ -2,7 +2,7 @@ import * as Author from "./Author";
 import * as prismicR from "@prismicio/richtext";
 
 import { AudioPlayer, BlockQuote, Image } from "./styles";
-import { Heading, Paragraph, Subheading, TextGroup } from "../Text";
+import { Caption, Heading, Paragraph, Subheading, TextGroup } from "../Text";
 
 import DefaultGrid from "../Grid";
 import { Link } from "react-router-dom";
@@ -29,7 +29,7 @@ export default ({ title, description, author, content, ...props }) => {
 
 						<Author.Head>
 							<img src={author.image.url} />
-							<Paragraph>{author.name}</Paragraph>
+							<Caption large>{author.name}</Caption>
 						</Author.Head>
 
 						<PrismicRichText
@@ -41,16 +41,22 @@ export default ({ title, description, author, content, ...props }) => {
 								heading3: ({ children }) => (
 									<BlockQuote>{children}</BlockQuote>
 								),
+								list: ({ children }) => (
+									<Paragraph>
+										<ul>{children}</ul>
+									</Paragraph>
+								),
 							}}
 						/>
 
 						<Author.Foot>
 							<img src={author.image.url} />
-							<Paragraph>
-								<strong>{author.name}</strong>
-								<br />
-								{prismicR.asText(author.description)}
-							</Paragraph>
+							<div>
+								<Caption large>{author.name}</Caption>
+								<Paragraph>
+									{prismicR.asText(author.description)}
+								</Paragraph>
+							</div>
 						</Author.Foot>
 					</TextGroup>
 				</Section>
