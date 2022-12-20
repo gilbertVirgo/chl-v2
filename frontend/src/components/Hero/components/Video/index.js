@@ -7,7 +7,7 @@ export default ({ src, thumbnail, children }) => {
 
 	return (
 		<Wrapper>
-			{!showOverlay && <Frame src={src + "?autoplay=1&mute=1"} />}
+			{!showOverlay && <Frame src={src + "?autoplay=1"} />}
 			<Thumbnail src={thumbnail} show={showOverlay}>
 				<PlayButton onClick={() => setShowOverlay(false)} />
 				<Caption>{children}</Caption>
