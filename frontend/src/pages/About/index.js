@@ -36,7 +36,7 @@ export default () => (
 			</Paragraph>
 			<Paragraph>
 				London is home to extraordinary museums and galleries whose
-				collections contain actual bible items, ancient bible texts, and
+				collections contain actual Bible items, ancient Bible texts, and
 				other awesome items which demonstrate and illustrate the
 				influence of the gospel on the world.
 			</Paragraph>
