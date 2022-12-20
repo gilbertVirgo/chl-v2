@@ -31,8 +31,7 @@ export default () => (
 			<br />
 			<Paragraph>
 				This is a historical fact. That historical event happened in a
-				physical place—it isn&apos;t just a matter of opinion—and the
-				event has changed the world.
+				physical place and the event has changed the world.
 			</Paragraph>
 			<br />
 			<Paragraph>
@@ -40,9 +39,12 @@ export default () => (
 				Jesus Christ walked, where the Bible was written, where church
 				history happened, where the Reformation broke out, where
 				revivals changed nations—in Israel, Greece, Germany,
-				Switzerland, France, Ireland and Britain. These tours are given
-				to groups and are arranged on a bespoke basis. Get in touch to
-				make enquiries and to arrange bookings.
+				Switzerland, France, Ireland and Britain.
+			</Paragraph>
+			<br />
+			<Paragraph>
+				These tours are given to groups and are arranged on a bespoke
+				basis. Get in touch to make enquiries and to arrange bookings.
 			</Paragraph>
 			<br />
 

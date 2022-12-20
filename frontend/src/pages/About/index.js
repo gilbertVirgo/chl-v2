@@ -34,12 +34,14 @@ export default () => (
 				invested themselves for his glory here. Their stories have
 				inspired people all over the world.
 			</Paragraph>
+			<br />
 			<Paragraph>
 				London is home to extraordinary museums and galleries whose
 				collections contain actual Bible items, ancient Bible texts, and
 				other awesome items which demonstrate and illustrate the
 				influence of the gospel on the world.
 			</Paragraph>
+			<br />
 			<Paragraph>
 				Christian Heritage London draws attention to these by telling
 				the stories through walks, tours, events and through the
