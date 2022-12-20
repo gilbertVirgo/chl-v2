@@ -1,8 +1,16 @@
 export default [
 	{
 		title: "London Day",
-		historicPeople: `City: William Wilberforce, John Wyclif, John Wesley, William Tyndale, George Whitefield, Thomas Watson, Lord Shaftesbury, John Newton.
-        British Museum: Abraham, Hezekiah, Isaiah, Jehu, Elijah, Daniel, Esther, Nehemiah, Paul.`,
+		historicPeople: (
+			<>
+				<strong>City</strong>: William Wilberforce, John Wyclif, John
+				Wesley, William Tyndale, George Whitefield, Thomas Watson, Lord
+				Shaftesbury, John Newton.
+				<br />
+				<strong>British Museum</strong>: Abraham, Hezekiah, Isaiah,
+				Jehu, Elijah, Daniel, Esther, Nehemiah, Paul.
+			</>
+		),
 		locations: `City of London: St Paul’s Cathedral, Paul’s Cross, Cheapside, One New Change, St Mary le Bow, Bow Lane, Watling Street, St Stephen Walbrook, Mansion House, Bank of England, St Mary Woolnoth.
         British Museum.`,
 		duration: `Two hours and two hours, with a two hour break for lunch and travel.`,

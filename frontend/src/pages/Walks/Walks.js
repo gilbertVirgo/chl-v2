@@ -151,7 +151,7 @@ export default () => (
 					<tr>
 						{[
 							"",
-							"Historic People",
+							"Historical Characters",
 							"Locations",
 							"Duration",
 							"Cost",
