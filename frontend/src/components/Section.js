@@ -3,14 +3,13 @@ import styled from "styled-components";
 import theme from "../theme";
 
 const Outer = styled.section`
-	/* ${media.maxWidth("l")`
+	${media.maxWidth("l")`
 		${({ explode }) => explode && `padding: 15px 0;`}
-	`} */
+	`}
 	${media.minWidth("l")`
 		${({ explode }) => explode && `padding: 75px 0;`}
 	`}
-	${({ dark }) =>
-		dark && `background-color: ${theme.color.dark}; color: white;`}
+	${({ dark }) => dark && `background-color: ${theme.color.dark}; color: white;`}
 
 	.section-inner .section-inner {
 		padding-left: 0;
