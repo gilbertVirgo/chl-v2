@@ -41,10 +41,9 @@ export default () => (
 				influence of the gospel on the world.
 			</Paragraph>
 			<Paragraph>
-				Christian Heritage London gives <strong>tours</strong> through
-				these, and gives <strong>walks</strong> through London, by
-				telling their stories through walks, tours, events, podcasts and
-				videos.
+				Christian Heritage London draws attention to these by telling
+				the stories through walks, tours, events and through the
+				Christian Heritage London podcast.
 			</Paragraph>
 		</Section>
 		<Section>

@@ -8,7 +8,7 @@ export default [
 		href: "/podcast",
 	},
 	{
-		title: "Blog",
+		title: "Articles",
 		href: "/blog",
 	},
 	{
