@@ -5,8 +5,8 @@ import React from "react";
 import Strapline from "../../components/Strapline";
 import getPodcast from "./getPodcast";
 
-const requestOptions = (currentPage) => ({
-	page: currentPage,
+const requestOptions = ({ currentPage, after }) => ({
+	after,
 	pageSize: currentPage === 1 ? 10 : 9,
 	orderings: "[my.podcast.original_date_published desc]",
 });
@@ -30,7 +30,12 @@ export default () => {
 	React.useEffect(() => {
 		(async function () {
 			const { data: newArticles, next_page } = await getPodcast(
-				requestOptions(currentPage)
+				requestOptions({
+					currentPage,
+					after: articles.length
+						? articles.slice(-1)[0].id
+						: undefined,
+				})
 			);
 
 			setArticles([...articles, ...newArticles]);

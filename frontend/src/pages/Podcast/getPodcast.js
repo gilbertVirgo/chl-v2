@@ -6,6 +6,7 @@ const parse = (articles) => {
 	if (!articles.length) return [];
 
 	return articles.map(({ id, title, description, image }) => ({
+		id,
 		title,
 		image: image.url,
 		description,

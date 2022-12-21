@@ -15,6 +15,7 @@ const parse = (articles) => {
 			},
 			image,
 		}) => ({
+			id,
 			title,
 			image: image.url,
 			description,
