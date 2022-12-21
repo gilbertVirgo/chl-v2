@@ -1,5 +1,6 @@
 import ActivityIndicator from "../../components/ActivityIndicator";
 import ContentGrid from "../../components/ContentGrid";
+import { Paragraph } from "../../components/Text";
 import PodcastSubscribe from "../../components/PodcastSubscribe";
 import React from "react";
 import Strapline from "../../components/Strapline";
@@ -13,11 +14,15 @@ const requestOptions = ({ currentPage, after }) => ({
 
 const strapline = (
 	<React.Fragment>
-		<Strapline>
-			On the Christian Heritage London podcast we meet Christian leaders
-			who serve the church in the purpose, perspective and power of the
-			gospel.
-		</Strapline>
+		<Paragraph
+			style={{
+				margin: "0 auto 15px",
+				textAlign: "center",
+			}}
+		>
+			Subscribe to the Christian Heritage London podcast on Apple Podcasts
+			or Spotify
+		</Paragraph>
 		<PodcastSubscribe />
 	</React.Fragment>
 );

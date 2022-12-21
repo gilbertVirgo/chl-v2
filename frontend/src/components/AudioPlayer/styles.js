@@ -15,6 +15,7 @@ export const Wrapper = styled.div`
 	row-gap: 12px;
 
 	${media.minWidth("l")`
+		margin-top: 30px;
         grid-column: 4 / -4;
     `}
 

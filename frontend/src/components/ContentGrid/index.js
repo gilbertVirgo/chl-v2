@@ -23,7 +23,7 @@ export default ({
 
 	return (
 		<React.Fragment>
-			<Section explode={!!strapline}>
+			<Section>
 				<Feature hasAuthor={hasAuthor} invert>
 					<Feature.Title>{firstArticle.title}</Feature.Title>
 					{firstArticle.author && (
@@ -45,7 +45,7 @@ export default ({
 				</Feature>
 			</Section>
 			{!!strapline && <Section deflate>{strapline}</Section>}
-			<Section explode={!!strapline} deflate={deflate}>
+			<Section deflate={deflate}>
 				<Lattice
 					filterImages={filterImages}
 					singleRow={singleRow}

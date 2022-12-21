@@ -4,6 +4,7 @@ import ActivityIndicator from "../../../components/ActivityIndicator";
 import Article from "../../../components/Article";
 import AudioPlayer from "../../../components/AudioPlayer";
 import Grid from "../../../components/Grid";
+import PodcastSubscribe from "../../../components/PodcastSubscribe";
 import React from "react";
 import { RichText } from "prismic-reactjs";
 import Section from "../../../components/Section";
@@ -41,6 +42,20 @@ export default () => {
 						<TextGroup>
 							<Heading>{props.title}</Heading>
 							<RichText render={props.description} />
+						</TextGroup>
+
+						<TextGroup>
+							<Paragraph
+								style={{
+									marginBottom: "15px",
+									fontSize: "14px",
+									lineHeight: "18px",
+								}}
+							>
+								Subscribe to the Christian Heritage London
+								podcast on Apple Podcasts or Spotify
+							</Paragraph>
+							<PodcastSubscribe />
 						</TextGroup>
 					</Section>
 				</React.Fragment>
