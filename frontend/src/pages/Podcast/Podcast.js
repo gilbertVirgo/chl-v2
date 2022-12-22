@@ -12,21 +12,6 @@ const requestOptions = ({ currentPage, after }) => ({
 	orderings: "[my.podcast.original_date_published desc]",
 });
 
-const strapline = (
-	<React.Fragment>
-		<Paragraph
-			style={{
-				margin: "0 auto 15px",
-				textAlign: "center",
-			}}
-		>
-			Subscribe to the Christian Heritage London podcast on Apple Podcasts
-			or Spotify
-		</Paragraph>
-		<PodcastSubscribe />
-	</React.Fragment>
-);
-
 export default () => {
 	const [articles, setArticles] = React.useState([]);
 	const [nextPage, setNextPage] = React.useState();
@@ -57,7 +42,7 @@ export default () => {
 			{!loading && (
 				<ContentGrid
 					articles={articles}
-					strapline={strapline}
+					strapline={<PodcastSubscribe />}
 					nextPage={nextPage}
 					onNextPage={() => setCurrentPage(currentPage + 1)}
 				/>
