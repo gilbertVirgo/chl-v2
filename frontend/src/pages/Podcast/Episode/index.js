@@ -33,7 +33,7 @@ export default () => {
 
 			{!!props && (
 				<React.Fragment>
-					<Section>
+					<Section deflate>
 						<Grid>
 							<YouTubePlayer src={props.youtube_video.url} />
 							<AudioPlayer src={props.audio_url.url} />
@@ -43,20 +43,9 @@ export default () => {
 							<Heading>{props.title}</Heading>
 							<RichText render={props.description} />
 						</TextGroup>
-
-						<TextGroup>
-							<Paragraph
-								style={{
-									marginBottom: "15px",
-									fontSize: "14px",
-									lineHeight: "18px",
-								}}
-							>
-								Subscribe to the Christian Heritage London
-								podcast on Apple Podcasts or Spotify
-							</Paragraph>
-							<PodcastSubscribe />
-						</TextGroup>
+					</Section>
+					<Section>
+						<PodcastSubscribe />
 					</Section>
 				</React.Fragment>
 			)}
