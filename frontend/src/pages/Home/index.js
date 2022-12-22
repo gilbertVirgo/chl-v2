@@ -44,7 +44,7 @@ export default () => {
 					<ContentGrid singleRow deflate articles={podcast} />
 				)}
 				<Button theme="grey" href="podcast">
-					More from the podcast
+					See more episodes
 				</Button>
 			</Section>
 			<Section innerStyle={{ paddingTop: 0 }} dark>
@@ -52,7 +52,7 @@ export default () => {
 					<ContentGrid hasAuthor singleRow deflate articles={blog} />
 				)}
 				<Button theme="grey" href="blog">
-					More from the blog
+					See more articles
 				</Button>
 			</Section>
 
