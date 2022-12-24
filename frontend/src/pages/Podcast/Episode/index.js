@@ -33,7 +33,7 @@ export default () => {
 
 			{!!props && (
 				<React.Fragment>
-					<Section deflate>
+					<Section>
 						<Grid>
 							<YouTubePlayer src={props.youtube_video.url} />
 							<AudioPlayer src={props.audio_url.url} />
