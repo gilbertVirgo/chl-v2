@@ -20,7 +20,7 @@ const parse = (articles) => {
 			image: image.url,
 			description,
 			author: name,
-			href: `/blog/article/${id}`,
+			href: `/articles/${id}`,
 		})
 	);
 };

@@ -9,7 +9,7 @@ export default [
 	},
 	{
 		title: "Articles",
-		href: "/blog",
+		href: "/articles",
 	},
 	{
 		title: "International Tours",

@@ -5,8 +5,8 @@ import Blog from "./Blog";
 
 export default () => (
 	<Switch>
-		<Route exact path="/blog" component={Blog} />
-		<Route path="/blog/article/:id" component={Article} />
+		<Route exact path="/articles" component={Blog} />
+		<Route path="/articles/:id" component={Article} />
 	</Switch>
 );
 
