@@ -25,7 +25,7 @@ export default () => (
 					God. Consider the outcome of their way of life, and imitate
 					their faith.
 				</Verse>
-				<Reference>Hebrews 13:7 ESV</Reference>
+				<Reference>Hebrews 13:7</Reference>
 			</Strapline>
 			<ConnectWrapper>
 				<NewsletterSubscribe />
