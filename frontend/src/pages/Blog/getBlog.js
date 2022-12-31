@@ -31,7 +31,7 @@ export default async (options) => {
 		{ ...options, fetchLinks: "author.name" }
 	);
 
-	console.log({ data: parse(data) });
+	console.log({ data });
 
 	return { next_page, data: parse(data) };
 };

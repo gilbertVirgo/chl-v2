@@ -6,7 +6,7 @@ import getBlog from "./getBlog";
 const requestOptions = ({ currentPage, after }) => ({
 	after,
 	pageSize: currentPage === 1 ? 10 : 9,
-	orderings: "[my.article.original_date_published desc]",
+	orderings: "[document.first_publication_date desc]",
 });
 
 export default () => {
