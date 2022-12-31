@@ -17,14 +17,14 @@ export default () => {
 		(async function () {
 			let { data: podcast } = await getPodcast({
 				pageSize: 4,
-				orderings: "[my.podcast.original_date_published desc]",
+				orderings: "[document.first_publication_date desc]",
 			});
 
 			setPodcast(podcast);
 
 			let { data: blog } = await getBlog({
 				pageSize: 4,
-				orderings: "[my.article.original_date_published desc]",
+				orderings: "[document.first_publication_date desc]",
 			});
 
 			setBlog(blog);
