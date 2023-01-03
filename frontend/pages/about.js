@@ -1,4 +1,3 @@
-import { Banner, Names, Text } from "./styles";
 import { Heading, Paragraph, Subheading } from "../../components/Text";
 
 import Grid from "../../components/Grid";

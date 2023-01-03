@@ -1,14 +1,47 @@
-import * as Form from "../../components/Form";
+import * as Form from "../components/Form";
 
-import { Caption, Heading, Paragraph, Subheading } from "../../components/Text";
+import { Caption, Heading, Paragraph, Subheading } from "../components/Text";
 
-import Button from "../../components/Button";
-import Grid from "../../components/Grid";
-import { Image } from "./styles";
+import Button from "../components/Button";
+import Grid from "../components/Grid";
 import React from "react";
-import Section from "../../components/Section";
-import categories from "./categories";
+import Section from "../components/Section";
 import { goTo } from "../../functions";
+import media from "../../media";
+import styled from "styled-components";
+
+const categories = [
+	{
+		text: "General Enquiry",
+		value: "general",
+	},
+	{
+		text: "Enquiring About a Private Tour",
+		value: "private-tour",
+	},
+	{
+		text: "Enquiring About an International Tour",
+		value: "international-tour",
+	},
+	{
+		text: "Enquiring About Other Tours",
+		value: "other-tours",
+	},
+];
+
+export const Image = styled.div`
+	display: none;
+
+	${media.minWidth("l")`
+        grid-column: 7 / 12;
+        grid-row: 1 / 7;
+        display: block;
+        background-size: cover;
+        background-image: url("${require("../../assets/contact-us.png")}");
+        padding-bottom: 150%;
+        height: auto;
+    `}
+`;
 
 export default ({
 	match: {
