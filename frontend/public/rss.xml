@@ -1,0 +1,449 @@
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+    <title>Christian Heritage London Podcast</title>
+    <link>http://www.christianheritagelondon.org/index.html</link>
+    <description> Christian Heritage London exists to serve London&apos;s churches and visitors, offering equipping events and telling the stories of the massive impact of the gospel in this city. </description>
+    <language>en-gb</language>
+    <copyright>Copyright Christian Heritage London 2017</copyright>
+    <lastBuildDate>Mon, 17 Apr 2017 20:00:00 GMT</lastBuildDate>
+    <itunes:author>Christian Heritage London</itunes:author>
+    <itunes:summary> Christian Heritage London exists to serve London&apos;s churches and visitors, offering equipping events and telling the stories of the massive impact of the gospel in this city. On the Christian Heritage London podcast we meet Christian leaders who serve the church in the purpose, perspective and power of the gospel. </itunes:summary>
+    <itunes:owner>
+    <itunes:name>Christian Heritage London</itunes:name>
+    <itunes:email>enquiries@christianheritagelondon.org</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>No</itunes:explicit>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <itunes:category text="Religion &amp; Spirituality"/>
+    <itunes:subtitle> Christian Heritage London exists to serve London&apos;s churches and visitors, offering equipping events and telling the stories of the massive impact of the gospel in this city. </itunes:subtitle>
+    <atom:link href="http://www.christianheritagelondon.org/rss.xml" rel="self" type="application/rss+xml"/><item><title>Terry Virgo</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560347831335.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560347831335.mp3
+    </guid>
+    <pubDate>Fri, 09 Feb 2018 00:00:00 GMT</pubDate></item><item><title>Rico Tice</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560362348640.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560362348640.mp3
+    </guid>
+    <pubDate>Fri, 05 Jan 2018 00:00:00 GMT</pubDate></item><item><title>Pete Woodcock</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560362560779.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560362560779.mp3
+    </guid>
+    <pubDate>Sat, 13 Jan 2018 00:00:00 GMT</pubDate></item><item><title>Glen Scrivener</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560362928224.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560362928224.mp3
+    </guid>
+    <pubDate>Fri, 26 Jan 2018 00:00:00 GMT</pubDate></item><item><title>Trevor Archer</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560363131891.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560363131891.mp3
+    </guid>
+    <pubDate>Sat, 24 Feb 2018 00:00:00 GMT</pubDate></item><item><title>Joe Boot</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560363557661.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560363557661.mp3
+    </guid>
+    <pubDate>Mon, 12 Mar 2018 00:00:00 GMT</pubDate></item><item><title>Richard Borgonon</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560420593186.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560420593186.mp3
+    </guid>
+    <pubDate>Sun, 25 Mar 2018 00:00:00 GMT</pubDate></item><item><title>Bill Edgar</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560420686662.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560420686662.mp3
+    </guid>
+    <pubDate>Fri, 06 Apr 2018 00:00:00 GMT</pubDate></item><item><title>Roger Carswell</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560421593051.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560421593051.mp3
+    </guid>
+    <pubDate>Sat, 21 Apr 2018 00:00:00 GMT</pubDate></item><item><title>Andrea Williams</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560421693955.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560421693955.mp3
+    </guid>
+    <pubDate>Tue, 15 May 2018 00:00:00 GMT</pubDate></item><item><title>Garry Williams</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560421877068.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560421877068.mp3
+    </guid>
+    <pubDate>Sat, 09 Jun 2018 00:00:00 GMT</pubDate></item><item><title>William Taylor</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560422028160.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560422028160.mp3
+    </guid>
+    <pubDate>Sat, 08 Dec 2018 00:00:00 GMT</pubDate></item><item><title>Gavin Peacock</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560422136019.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560422136019.mp3
+    </guid>
+    <pubDate>Mon, 21 Jan 2019 00:00:00 GMT</pubDate></item><item><title>Mark Jackson and Pete Nicholas</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560422362262.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560422362262.mp3
+    </guid>
+    <pubDate>Mon, 04 Feb 2019 00:00:00 GMT</pubDate></item><item><title>Adrian Reynolds</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560422579155.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560422579155.mp3
+    </guid>
+    <pubDate>Mon, 25 Feb 2019 00:00:00 GMT</pubDate></item><item><title>Melvyn Bragg and Ben Virgo discuss William Tyndale. The Unbelievable Show.</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560422995462.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560422995462.mp3
+    </guid>
+    <pubDate>Thu, 11 Apr 2019 00:00:00 GMT</pubDate></item><item><title>Dick Lucas</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560423855842.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1560423855842.mp3
+    </guid>
+    <pubDate>Thu, 13 Jun 2019 00:00:00 GMT</pubDate></item><item><title>Dan Strange</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1562089144798.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1562089144798.mp3
+    </guid>
+    <pubDate>Tue, 02 Jul 2019 00:00:00 GMT</pubDate></item><item><title>Dan Strange Plugged In book launch - audio now available</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1572642477101.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1572642477101.mp3
+    </guid>
+    <pubDate>Fri, 01 Nov 2019 00:00:00 GMT</pubDate></item><item><title>Jeremy Marshall interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1576173549940.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1576173549940.mp3
+    </guid>
+    <pubDate>Thu, 12 Dec 2019 00:00:00 GMT</pubDate></item><item><title>Stephen Clark</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1581689566526.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1581689566526.mp3
+    </guid>
+    <pubDate>Fri, 14 Feb 2020 00:00:00 GMT</pubDate></item><item><title>Peter Leithart interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1585761712297.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1585761712297.mp3
+    </guid>
+    <pubDate>Wed, 01 Apr 2020 00:00:00 GMT</pubDate></item><item><title>Andrew Sach interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1588400764636.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1588400764636.mp3
+    </guid>
+    <pubDate>Sat, 02 May 2020 00:00:00 GMT</pubDate></item><item><title>David Jackman interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1599578033265.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1599578033265.mp3
+    </guid>
+    <pubDate>Tue, 08 Sep 2020 00:00:00 GMT</pubDate></item><item><title>Guy Miller interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1602530430844.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1602530430844.mp3
+    </guid>
+    <pubDate>Mon, 12 Oct 2020 00:00:00 GMT</pubDate></item><item><title>Kenneth Brownell interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1605643409897.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1605643409897.mp3
+    </guid>
+    <pubDate>Tue, 17 Nov 2020 00:00:00 GMT</pubDate></item><item><title>Tony Lane interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1607015294652.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1607015294652.mp3
+    </guid>
+    <pubDate>Thu, 03 Dec 2020 00:00:00 GMT</pubDate></item><item><title>Jennie Pollock interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1610790468865.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1610790468865.mp3
+    </guid>
+    <pubDate>Fri, 15 Jan 2021 00:00:00 GMT</pubDate></item><item><title>Ian Dobbie interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1618378845921.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1618378845921.mp3
+    </guid>
+    <pubDate>Wed, 14 Apr 2021 00:00:00 GMT</pubDate></item><item><title>Neil Powell interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1620685053081.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1620685053081.mp3
+    </guid>
+    <pubDate>Mon, 10 May 2021 00:00:00 GMT</pubDate></item><item><title>Terry Virgo on God&apos;s Treasured Possession</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1629226577499.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1629226577499.mp3
+    </guid>
+    <pubDate>Tue, 17 Aug 2021 00:00:00 GMT</pubDate></item><item><title>Kevin Belmonte interview </title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1631919130454.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1631919130454.mp3
+    </guid>
+    <pubDate>Fri, 17 Sep 2021 00:00:00 GMT</pubDate></item><item><title>Joel Morris interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1635194334657.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1635194334657.mp3
+    </guid>
+    <pubDate>Mon, 25 Oct 2021 00:00:00 GMT</pubDate></item><item><title>Dan Strange&apos;s Making Faith Magnetic book launch.</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1635928322408.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1635928322408.mp3
+    </guid>
+    <pubDate>Wed, 03 Nov 2021 00:00:00 GMT</pubDate></item><item><title>Al Barth interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1639080820649.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1639080820649.mp3
+    </guid>
+    <pubDate>Wed, 15 Dec 2021 00:00:00 GMT</pubDate></item><item><title>Dustin Benge interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1642029906154.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1642029906154.mp3
+    </guid>
+    <pubDate>Wed, 12 Jan 2022 00:00:00 GMT</pubDate></item><item><title>Chris Green podcast</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1644274622684.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1644274622684.mp3
+    </guid>
+    <pubDate>Mon, 07 Feb 2022 00:00:00 GMT</pubDate></item><item><title>Andrew Sach and Jonathan Gemmell book launch - Are You 100% Sure You Want To Be An Agnostic?</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1645824575445.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1645824575445.mp3
+    </guid>
+    <pubDate>Fri, 25 Feb 2022 00:00:00 GMT</pubDate></item><item><title>Michael McMullen interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1646688678053.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1646688678053.mp3
+    </guid>
+    <pubDate>Mon, 07 Mar 2022 00:00:00 GMT</pubDate></item><item><title>James Eglinton interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1647286579248.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1647286579248.mp3
+    </guid>
+    <pubDate>Mon, 14 Mar 2022 00:00:00 GMT</pubDate></item><item><title>Sharon James book launch</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1648507512872.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1648507512872.mp3
+    </guid>
+    <pubDate>Tue, 29 Mar 2022 00:00:00 GMT</pubDate></item><item><title>Mez McConnell interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1649748003780.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1649748003780.mp3
+    </guid>
+    <pubDate>Tue, 12 Apr 2022 00:00:00 GMT</pubDate></item><item><title>Alun Ebenezer interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1650900355838.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1650900355838.mp3
+    </guid>
+    <pubDate>Mon, 25 Apr 2022 00:00:00 GMT</pubDate></item><item><title>Iain Murray interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1652162929059.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1652162929059.mp3
+    </guid>
+    <pubDate>Tue, 10 May 2022 00:00:00 GMT</pubDate></item><item><title>Chris Larson interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1653342077101.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1653342077101.mp3
+    </guid>
+    <pubDate>Tue, 24 May 2022 00:00:00 GMT</pubDate></item><item><title>Dean Inserra interview</title>
+    <itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+    <link>http://www.christianheritagelondon.org</link>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1654868122068.mp3" length="0" type="audio/mpeg"/>
+    <itunes:duration>00:00:00</itunes:duration>
+    <guid>
+        https://s3.eu-west-2.amazonaws.com/chlpodcasts/1654868122068.mp3
+    </guid>
+    <pubDate>Fri, 10 Jun 2022 00:00:00 GMT</pubDate></item>
+<item>
+    
+<title>Tim Dieppe interview</title>
+<itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+<link>http://www.christianheritagelondon.org</link>
+<enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1669111429006.mp3" length="2752052" type="audio/mpeg"/>
+<itunes:duration>00:45:52</itunes:duration>
+<guid>
+    https://s3.eu-west-2.amazonaws.com/chlpodcasts/1669111429006.mp3
+</guid>
+<pubDate>Tue, 22 Nov 2022 00:00:00 GMT</pubDate>
+        
+</item>
+<item>
+<title>Allen McClymont interview</title>
+<itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+<link>http://www.christianheritagelondon.org</link>
+<enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1670244296077.mp3" length="2424059" type="audio/mpeg"/>
+<itunes:duration>00:40:24</itunes:duration>
+<guid>
+    https://s3.eu-west-2.amazonaws.com/chlpodcasts/1670244296077.mp3
+</guid>
+<pubDate>Mon, 05 Dec 2022 00:00:00 GMT</pubDate>
+        </item>
+<item>
+    
+<title>Bill Edgar interview: A Supreme Love</title>
+<itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+<link>http://www.christianheritagelondon.org</link>
+<enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1670979642703.mp3" length="2064048" type="audio/mpeg"/>
+<itunes:duration>00:34:24</itunes:duration>
+<guid>
+    https://s3.eu-west-2.amazonaws.com/chlpodcasts/1670979642703.mp3
+</guid>
+<pubDate>Wed, 14 Dec 2022 00:00:00 GMT</pubDate>
+        
+</item>
+<item>
+<title>Ian Galloway interview</title>
+<itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+<link>http://www.christianheritagelondon.org</link>
+<enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1672782381891.mp3" length="2492056" type="audio/mpeg"/>
+<itunes:duration>00:41:32</itunes:duration>
+<guid>
+    https://s3.eu-west-2.amazonaws.com/chlpodcasts/1672782381891.mp3
+</guid>
+<pubDate>Tue, 03 Jan 2023 00:00:00 GMT</pubDate>
+        </item>
+<item>
+    
+<title>Ian Galloway interview</title>
+<itunes:image href="http://www.christianheritagelondon.org/assets/images/podcastimage.jpg"/>
+<link>http://www.christianheritagelondon.org</link>
+<enclosure url="https://s3.eu-west-2.amazonaws.com/chlpodcasts/1672870741328.mp3" length="2492056" type="audio/mpeg"/>
+<itunes:duration>00:41:32</itunes:duration>
+<guid>
+    https://s3.eu-west-2.amazonaws.com/chlpodcasts/1672870741328.mp3
+</guid>
+<pubDate>Wed, 04 Jan 2023 00:00:00 GMT</pubDate>
+        
+</item></channel>
+    </rss>
