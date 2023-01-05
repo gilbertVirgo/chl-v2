@@ -2,7 +2,7 @@ import { Description, Image, Panel, Subtitle, Title } from "./styles";
 
 import Button from "../Button";
 import Grid from "../Grid";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default ({
 	panels,

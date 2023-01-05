@@ -1,10 +1,14 @@
+import Footer from "../components/Footer";
 import Nav from "../components/Nav";
+import { PrismicProvider } from "@prismicio/react";
+import { client } from "../prismic";
 
 export default function MyApp({ Component, pageProps }) {
 	return (
-		<React.Fragment>
+		<PrismicProvider client={client}>
 			<Nav />
 			<Component {...pageProps} />
-		</React.Fragment>
+			<Footer />
+		</PrismicProvider>
 	);
 }

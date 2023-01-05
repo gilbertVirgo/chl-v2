@@ -1,39 +1,18 @@
-import ActivityIndicator from "../../components/ActivityIndicator";
-import Button from "../../components/Button";
-import ContentGrid from "../../components/ContentGrid";
-import Feature from "../../components/Feature";
-import { Link } from "react-router-dom";
-import { Paragraph } from "../../components/Text";
+import ActivityIndicator from "../components/ActivityIndicator";
+import Button from "../components/Button";
+import ContentGrid from "../components/ContentGrid";
+import Feature from "../components/Feature";
+import Link from "next/link";
+import { Paragraph } from "../components/Text";
 import React from "react";
-import Section from "../../components/Section";
-import getBlog from "../Blog/getBlog";
-import getPodcast from "../Podcast/getPodcast";
+import Section from "../components/Section";
+import { useAllPrismicDocumentsByType } from "@prismicio/react";
 
 export default () => {
-	const [podcast, setPodcast] = React.useState(null);
-	const [blog, setBlog] = React.useState(null);
+	const [podcast] = useAllPrismicDocumentsByType("podcast", { pageSize: 4 });
+	const [articles] = useAllPrismicDocumentsByType("article", { pageSize: 4 });
 
-	React.useEffect(() => {
-		(async function () {
-			let { data: podcast } = await getPodcast({
-				pageSize: 4,
-				orderings: "[my.podcast.original_date_published desc]",
-			});
-
-			setPodcast(podcast);
-
-			let { data: blog } = await getBlog({
-				pageSize: 4,
-				orderings: "[document.first_publication_date desc]",
-			});
-
-			setBlog(blog);
-
-			console.log({ podcast, blog });
-		})();
-	}, []);
-
-	const loading = !podcast || !blog;
+	const loading = !podcast || !articles;
 
 	return (
 		<React.Fragment>
@@ -49,9 +28,14 @@ export default () => {
 			</Section>
 			<Section innerStyle={{ paddingTop: 0 }} dark>
 				{!loading && (
-					<ContentGrid hasAuthor singleRow deflate articles={blog} />
+					<ContentGrid
+						hasAuthor
+						singleRow
+						deflate
+						articles={articles}
+					/>
 				)}
-				<Button theme="grey" href="blog">
+				<Button theme="grey" href="articles">
 					See more articles
 				</Button>
 			</Section>
@@ -71,7 +55,7 @@ export default () => {
 						</Button>
 						<Paragraph small>
 							Private tours are also available.{" "}
-							<Link to="/contact/private-tour">
+							<Link href="/contact/private-tour">
 								Enquire about a private tour
 							</Link>
 						</Paragraph>

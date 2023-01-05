@@ -1,7 +1,6 @@
-import { Caption, Heading, Paragraph, Subheading } from "../Text";
+import { Caption, Heading } from "../Text";
 
 import Grid from "../Grid";
-import { Link } from "react-router-dom";
 import media from "../../media";
 import styled from "styled-components";
 import theme from "../../theme";
