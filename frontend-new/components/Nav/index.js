@@ -73,12 +73,12 @@ export default () => {
 						active={drawerOpen}
 						onPointerDown={handleBurgerClicked}
 					/>
-					<Drawer open={drawerOpen}>
+					{/* <Drawer open={drawerOpen}>
 						<LinkGroup.SmallScreen>
 							{listOfLinks}
 						</LinkGroup.SmallScreen>
-					</Drawer>
-					<LinkGroup.LargeScreen>{listOfLinks}</LinkGroup.LargeScreen>
+					</Drawer> */}
+					{/* <LinkGroup.LargeScreen>{listOfLinks}</LinkGroup.LargeScreen> */}
 				</Grid>
 			</Wrapper>
 		</React.Fragment>

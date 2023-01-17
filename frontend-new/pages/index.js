@@ -6,6 +6,7 @@ import { Paragraph } from "../components/Text";
 import React from "react";
 import Section from "../components/Section";
 import { createClient } from "../prismicio";
+import parseMany from "../scripts/parseMany";
 import parseResults from "../../frontend/prismic/parseResults";
 
 export default ({ podcast, articles }) => {
@@ -14,22 +15,13 @@ export default ({ podcast, articles }) => {
 	return (
 		<React.Fragment>
 			<Section innerStyle={{ paddingTop: 0 }}>
-				<ContentGrid
-					singleRow
-					deflate
-					articles={parseResults(podcast.results)}
-				/>
+				<ContentGrid singleRow deflate articles={podcast} />
 				<Button theme="grey" href="podcast">
 					See more episodes
 				</Button>
 			</Section>
 			<Section innerStyle={{ paddingTop: 0 }} dark>
-				{/* <ContentGrid
-					hasAuthor
-					singleRow
-					deflate
-					articles={parseResults(articles.results)}
-				/> */}
+				<ContentGrid hasAuthor singleRow deflate articles={articles} />
 
 				<Button theme="grey" href="articles">
 					See more articles
@@ -65,19 +57,30 @@ export default ({ podcast, articles }) => {
 export async function getStaticProps() {
 	const client = createClient();
 
-	const articles = await client.getByType("article", {
-		fetchLinks: "author.name,author.description,author.image",
+	const podcast = await client.getByType("podcast", {
 		pageSize: 4,
 	});
 
-	const podcast = await client.getByType("podcast", {
+	const articles = await client.getByType("article", {
+		graphQuery: `{
+	article {
+		title
+		image
+		description
+		author {
+			name
+			description
+			image
+		}
+	}
+}`,
 		pageSize: 4,
 	});
 
 	return {
 		props: {
-			articles,
-			podcast,
+			articles: parseMany(articles.results).asArticles(),
+			podcast: parseMany(podcast.results).asEpisodes(),
 		},
 	};
 }

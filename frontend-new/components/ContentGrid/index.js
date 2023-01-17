@@ -19,15 +19,15 @@ export default ({
 	deflate,
 	hasAuthor,
 }) => {
-	console.log(articles);
-
 	return (
 		<React.Fragment>
 			<Section>
 				<Feature hasAuthor={hasAuthor} invert>
 					<Feature.Title>{firstArticle.title}</Feature.Title>
 					{firstArticle.author && (
-						<Feature.Author>{firstArticle.author}</Feature.Author>
+						<Feature.Author>
+							{firstArticle.author.name}
+						</Feature.Author>
 					)}
 					<Feature.Image
 						filter={filterImages}
@@ -49,12 +49,14 @@ export default ({
 				<Lattice
 					filterImages={filterImages}
 					singleRow={singleRow}
-					panels={articles.map(({ title, author, image, href }) => ({
-						title,
-						author,
-						image,
-						href,
-					}))}
+					panels={articles.map(
+						({ id, title, author, image, href }) => ({
+							title,
+							author: author && author.name,
+							image: image,
+							href,
+						})
+					)}
 				/>
 				{!!nextPage && (
 					<a href="javascript:void(0)" onClick={onNextPage}>

@@ -1,4 +1,5 @@
 import Grid from "./Grid";
+import { PrismicRichText } from "@prismicio/react";
 import media from "../media";
 import styled from "styled-components";
 import theme from "../theme";
@@ -23,10 +24,18 @@ export const Heading = styled.h1`
 	`}
 `;
 
+export const BlockQuote = styled.blockquote`
+	margin: 0;
+	padding: 0 15px;
+	border-left: 2px solid ${theme.color.light};
+	line-height: 140%;
+
+	font-family: ${({ serif }) => (serif ? "Lora" : "myriad-pro")} !important;
+`;
+
 export const Paragraph = styled.p`
-	font-family: "myriad-pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-		sans-serif;
+	font-family: ${({ serif }) => (serif ? "Lora" : "myriad-pro")} !important;
+
 	font-style: normal;
 	font-weight: 300;
 	font-size: 18px;
@@ -90,9 +99,10 @@ export const TextGroup = styled(Grid)`
         margin-top: 75px;
     `}
 
-	p, blockquote {
+	p,
+	blockquote {
 		// Default Paragraph styles
-		font-family: "myriad-pro";
+
 		font-style: normal;
 		font-weight: 300;
 		font-size: 18px;

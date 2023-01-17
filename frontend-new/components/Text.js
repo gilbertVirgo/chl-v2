@@ -23,10 +23,31 @@ export const Heading = styled.h1`
 	`}
 `;
 
+export const BlockQuote = styled.blockquote`
+	margin: 0;
+	padding: 0 15px;
+	border-left: 2px solid ${theme.color.light};
+	line-height: 140%;
+
+	${({ serif }) =>
+		serif
+			? `
+		font-size: 16px !important;
+		line-height: 175% !important;
+		font-family: "Noto Serif KR" !important;
+	`
+			: "font-family: 'myriad-pro'"};
+`;
+
 export const Paragraph = styled.p`
-	font-family: "myriad-pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-		sans-serif;
+	${({ serif }) =>
+		serif
+			? `
+		font-size: 16px !important;
+		line-height: 175% !important;
+		font-family: "Noto Serif KR" !important;
+	`
+			: "font-family: 'myriad-pro'"};
 	font-style: normal;
 	font-weight: 300;
 	font-size: 18px;
@@ -100,7 +121,7 @@ export const TextGroup = styled(Grid)`
 		margin: 0 0 15px;
 	}
 
-	${Heading}, ${Subheading}, blockquote,
+	${Heading}, ${Subheading}, ${Caption}, blockquote,
 	p,
 	div {
 		grid-column: 1 / -1;

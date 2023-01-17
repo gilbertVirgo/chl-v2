@@ -54,7 +54,7 @@ module.exports = [
 			],
 		},
 		lastModified: 1560347868928,
-		dateCreated: 1671487897506,
+		dateCreated: 1673966820604,
 	},
 	{
 		_id: "5d013d89ed2e4a252462ece8",
@@ -111,7 +111,7 @@ module.exports = [
 			_id: "5d013d89ed2e4a252462ece8",
 		},
 		lastModified: 1560362377845,
-		dateCreated: 1671487897506,
+		dateCreated: 1673966820604,
 	},
 	{
 		_id: "5d013e45ed2e4a252462eced",
@@ -168,7 +168,7 @@ module.exports = [
 			_id: "5d013e45ed2e4a252462eced",
 		},
 		lastModified: 1560362565594,
-		dateCreated: 1671487897506,
+		dateCreated: 1673966820604,
 	},
 	{
 		_id: "5d013fb5ed2e4a252462ecf5",
@@ -225,7 +225,7 @@ module.exports = [
 			_id: "5d013fb5ed2e4a252462ecf5",
 		},
 		lastModified: 1560362933260,
-		dateCreated: 1671487897506,
+		dateCreated: 1673966820604,
 	},
 	{
 		_id: "5d014081ed2e4a252462ecfe",
@@ -282,7 +282,7 @@ module.exports = [
 			_id: "5d014081ed2e4a252462ecfe",
 		},
 		lastModified: 1560363137016,
-		dateCreated: 1671487897506,
+		dateCreated: 1673966820604,
 	},
 	{
 		_id: "5d01422fed2e4a252462ed03",
@@ -339,7 +339,7 @@ module.exports = [
 			_id: "5d01422fed2e4a252462ed03",
 		},
 		lastModified: 1560363567014,
-		dateCreated: 1671487897506,
+		dateCreated: 1673966820606,
 	},
 	{
 		_id: "5d0220f468e4fd3ff83eb1a0",
@@ -396,7 +396,7 @@ module.exports = [
 			_id: "5d0220f468e4fd3ff83eb1a0",
 		},
 		lastModified: 1560420596612,
-		dateCreated: 1671487897506,
+		dateCreated: 1673966820606,
 	},
 	{
 		_id: "5d02215e68e4fd3ff83eb1a7",
@@ -453,7 +453,7 @@ module.exports = [
 			_id: "5d02215e68e4fd3ff83eb1a7",
 		},
 		lastModified: 1560420702062,
-		dateCreated: 1671487897507,
+		dateCreated: 1673966820606,
 	},
 	{
 		_id: "5d0224fa1a519e4080891125",
@@ -510,7 +510,7 @@ module.exports = [
 			_id: "5d0224fa1a519e4080891125",
 		},
 		lastModified: 1560421626224,
-		dateCreated: 1671487897507,
+		dateCreated: 1673966820606,
 	},
 	{
 		_id: "5d0225821a519e408089112a",
@@ -567,7 +567,7 @@ module.exports = [
 			_id: "5d0225821a519e408089112a",
 		},
 		lastModified: 1560421762916,
-		dateCreated: 1671487897507,
+		dateCreated: 1673966820606,
 	},
 	{
 		_id: "5d0226311a519e408089112f",
@@ -624,7 +624,7 @@ module.exports = [
 			_id: "5d0226311a519e408089112f",
 		},
 		lastModified: 1560421937352,
-		dateCreated: 1671487897507,
+		dateCreated: 1673966820606,
 	},
 	{
 		_id: "5d0226b81a519e4080891134",
@@ -681,7 +681,7 @@ module.exports = [
 			_id: "5d0226b81a519e4080891134",
 		},
 		lastModified: 1560422072421,
-		dateCreated: 1671487897507,
+		dateCreated: 1673966820606,
 	},
 	{
 		_id: "5d0227961a519e4080891139",
@@ -738,7 +738,7 @@ module.exports = [
 			_id: "5d0227961a519e4080891139",
 		},
 		lastModified: 1560422294403,
-		dateCreated: 1671487897507,
+		dateCreated: 1673966820606,
 	},
 	{
 		_id: "5d02284d1a519e408089113e",
@@ -795,7 +795,7 @@ module.exports = [
 			_id: "5d02284d1a519e408089113e",
 		},
 		lastModified: 1560422477249,
-		dateCreated: 1671487897507,
+		dateCreated: 1673966820606,
 	},
 	{
 		_id: "5d0229a01a519e4080891143",
@@ -852,7 +852,7 @@ module.exports = [
 			_id: "5d0229a01a519e4080891143",
 		},
 		lastModified: 1560422816333,
-		dateCreated: 1671487897507,
+		dateCreated: 1673966820607,
 	},
 	{
 		_id: "5d022acb1a519e4080891148",
@@ -909,7 +909,7 @@ module.exports = [
 			_id: "5d022acb1a519e4080891148",
 		},
 		lastModified: 1560423115427,
-		dateCreated: 1671487897507,
+		dateCreated: 1673966820607,
 	},
 	{
 		_id: "5d022df71a519e4080891150",
@@ -966,7 +966,7 @@ module.exports = [
 			_id: "5d022df71a519e4080891150",
 		},
 		lastModified: 1560461871202,
-		dateCreated: 1671487897507,
+		dateCreated: 1673966820607,
 	},
 	{
 		_id: "5d1b99b27c437c4f0401e4da",
@@ -2791,5 +2791,119 @@ module.exports = [
 		},
 		dateCreated: 1670979760386,
 		lastModified: 1670979760384,
+	},
+	{
+		_id: "63b4a2327ad8a878056cce2a",
+		__v: 0,
+		data: {
+			sections: [],
+			id: "episode",
+			title: "Episode - Podcast",
+			fields: [
+				{
+					name: "title",
+					label: "Title",
+					type: "text",
+					value: "Ian Galloway interview",
+					placeholder: "Enter episode title",
+					required: true,
+				},
+				{
+					name: "desc",
+					label: "Description",
+					type: "textarea",
+					value: 'Ian Galloway studied Medicine at Newcastle and started following Jesus in his first year, "after discovering that the resurrection was true, Jesus was alive and was inviting Ian to be his friend."\nIan and his wife Heather started a new church in Byker with four friends. This became what is now City Church. Ian served as lead pastor for thirty-three years and an influential church grew.\nHe now teaches at the University of Durham where he is Director Of The Free Church Track, and has lately written Called to be Friends (Hodder and Stoughton) on John\'s gospel.',
+					placeholder: "Enter a brief description",
+					required: true,
+				},
+				{
+					name: "ytid",
+					label: "YouTube Video ID",
+					type: "ytid",
+					value: "zVngsIxBfz8",
+					placeholder: "e.g. Ja5jhSAgWBU",
+					ext: {
+						image: "https://img.youtube.com/vi/zVngsIxBfz8/hqdefault.jpg",
+						embed: "https://www.youtube.com/embed/zVngsIxBfz8",
+					},
+					required: true,
+				},
+				{
+					name: "audio",
+					label: "Audio",
+					type: "audio",
+					value: "https://s3.eu-west-2.amazonaws.com/chlpodcasts/1672782381891.mp3",
+					ext: { length: 1 },
+				},
+				{
+					name: "pubDate",
+					label: "Publish Date",
+					type: "date",
+					value: "2023-01-03",
+					placeholder: "Enter publish date",
+					required: true,
+				},
+			],
+			_id: "63b4a2327ad8a878056cce2a",
+		},
+		dateCreated: 1672782386394,
+		lastModified: 1672855664467,
+	},
+	{
+		_id: "63b5fb5b7ad8a878056cce41",
+		__v: 0,
+		data: {
+			sections: [],
+			id: "episode",
+			title: "Episode - Podcast",
+			fields: [
+				{
+					name: "title",
+					label: "Title",
+					type: "text",
+					value: "Ian Galloway interview",
+					placeholder: "Enter episode title",
+					required: true,
+				},
+				{
+					name: "desc",
+					label: "Description",
+					type: "textarea",
+					value: 'Ian Galloway studied Medicine at Newcastle and started following Jesus in his first year, "after discovering that the resurrection was true, Jesus was alive and was inviting Ian to be his friend."\nIan and his wife Heather started a new church in Byker with four friends. This became what is now City Church. Ian served as lead pastor for thirty-three years and an influential church grew.\nHe now teaches at the University of Durham where he is Director Of The Free Church Track, and has lately written Called to be Friends (Hodder and Stoughton) on John\'s gospel.',
+					placeholder: "Enter a brief description",
+					required: true,
+				},
+				{
+					name: "ytid",
+					label: "YouTube Video ID",
+					type: "ytid",
+					value: "zVngsIxBfz8",
+					placeholder: "e.g. Ja5jhSAgWBU",
+					ext: {
+						image: "https://img.youtube.com/vi/zVngsIxBfz8/hqdefault.jpg",
+						embed: "https://www.youtube.com/embed/zVngsIxBfz8",
+					},
+					required: true,
+				},
+				{
+					name: "audio",
+					label: "Audio",
+					type: "audio",
+					value: "https://s3.eu-west-2.amazonaws.com/chlpodcasts/1672870741328.mp3",
+					ext: { length: 1 },
+				},
+				{
+					name: "pubDate",
+					label: "Publish Date",
+					type: "date",
+					value: "2023-01-04",
+					placeholder: "Enter publish date",
+					required: true,
+				},
+			],
+			_id: "63b5fb5b7ad8a878056cce41",
+		},
+		dateCreated: 1672870747514,
+		lastModified: 1672870747513,
 	},
 ];

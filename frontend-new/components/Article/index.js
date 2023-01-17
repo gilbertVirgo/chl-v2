@@ -1,17 +1,20 @@
 import * as Author from "./Author";
 import * as prismicR from "@prismicio/richtext";
 
-import { AudioPlayer, BlockQuote, Image } from "./styles";
-import { Caption, Heading, Paragraph, Subheading, TextGroup } from "../Text";
+import {
+	BlockQuote,
+	Caption,
+	Heading,
+	Paragraph,
+	Subheading,
+	TextGroup,
+} from "../Text";
 
 import DefaultGrid from "../Grid";
-import Link from "next/link";
-import PodcastSubscribe from "../PodcastSubscribe";
+import { Image } from "./styles";
 import { PrismicRichText } from "@prismicio/react";
 import React from "react";
-import { RichText } from "prismic-reactjs";
 import Section from "../Section";
-import YouTubePlayer from "../YouTubePlayer";
 
 export default ({ title, description, author, content, ...props }) => {
 	if (author && author.data) author = author.data;
@@ -21,28 +24,38 @@ export default ({ title, description, author, content, ...props }) => {
 			<React.Fragment>
 				<Section>
 					<DefaultGrid>
-						<Image src={props.image.url} />
+						<Image src={props.image} />
 					</DefaultGrid>
 
 					<TextGroup>
 						<Heading>{title}</Heading>
+						<Caption
+							style={{ marginTop: "-8px", marginBottom: "15px" }}
+						>
+							{author.name}
+						</Caption>
 
-						<Author.Head>
+						{/* <Author.Head>
 							<img src={author.image.url} />
-							<Caption large>{author.name}</Caption>
-						</Author.Head>
+							<Paragraph>{author.name}</Paragraph>
+						</Author.Head> */}
 
 						<PrismicRichText
 							field={content}
 							components={{
+								paragraph: ({ children }) => (
+									<Paragraph serif>{children}</Paragraph>
+								),
 								heading2: ({ children }) => (
-									<Subheading>{children}</Subheading>
+									<Subheading style={{ marginTop: "30px" }}>
+										{children}
+									</Subheading>
 								),
 								heading3: ({ children }) => (
-									<BlockQuote>{children}</BlockQuote>
+									<BlockQuote serif>{children}</BlockQuote>
 								),
 								list: ({ children }) => (
-									<Paragraph>
+									<Paragraph serif>
 										<ul>{children}</ul>
 									</Paragraph>
 								),
@@ -52,7 +65,9 @@ export default ({ title, description, author, content, ...props }) => {
 						<Author.Foot>
 							<img src={author.image.url} />
 							<div>
-								<Caption large>{author.name}</Caption>
+								<Paragraph style={{ fontWeight: "bold" }}>
+									{author.name}
+								</Paragraph>
 								<Paragraph>
 									{prismicR.asText(author.description)}
 								</Paragraph>

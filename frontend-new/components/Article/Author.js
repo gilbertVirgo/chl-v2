@@ -10,6 +10,10 @@ export const Head = styled.div`
 
 	margin: 5px 0 15px;
 
+	${media.minWidth("l")`
+		margin-bottom: 30px;
+	`}
+
 	img {
 		object-fit: cover;
 		width: 45px;

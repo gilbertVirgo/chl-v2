@@ -118,6 +118,17 @@ export default function Document() {
 				<script src="https://www.google.com/recaptcha/api.js"></script>
 
 				<link rel="stylesheet" href="/global.css" />
+
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link
+					rel="preconnect"
+					href="https://fonts.gstatic.com"
+					crossorigin
+				/>
+				<link
+					href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap"
+					rel="stylesheet"
+				/>
 			</Head>
 			<body>
 				<Main />

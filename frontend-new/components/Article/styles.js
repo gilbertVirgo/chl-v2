@@ -19,6 +19,11 @@ export const Image = styled.div`
 	grid-column: 1 / -1;
 	position: relative;
 
+	${media.maxWidth("s")`
+		margin-left: -15px;
+		width: calc(100% + 30px);
+	`}
+
 	${media.minWidth("l")`
         grid-column: 3 / -3;
     `}
@@ -30,10 +35,4 @@ export const Image = styled.div`
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-`;
-
-export const BlockQuote = styled.blockquote`
-	margin: 0;
-	padding: 0 15px;
-	border-left: 2px solid ${theme.color.light};
 `;
