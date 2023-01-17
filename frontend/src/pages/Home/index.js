@@ -51,7 +51,7 @@ export default () => {
 				{!loading && (
 					<ContentGrid hasAuthor singleRow deflate articles={blog} />
 				)}
-				<Button theme="grey" href="blog">
+				<Button theme="grey" href="articles">
 					See more articles
 				</Button>
 			</Section>
