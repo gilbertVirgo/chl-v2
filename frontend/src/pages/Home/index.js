@@ -17,7 +17,7 @@ export default () => {
 		(async function () {
 			let { data: podcast } = await getPodcast({
 				pageSize: 4,
-				orderings: "[document.first_publication_date desc]",
+				orderings: "[my.podcast.original_date_published desc]",
 			});
 
 			setPodcast(podcast);
