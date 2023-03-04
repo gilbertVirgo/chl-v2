@@ -22,6 +22,8 @@ import Section from "../../../components/Section";
 import datetime from "date-and-time";
 
 export default () => {
+	const [isBackendOnline, setIsBackendOnline] = React.useState(false);
+
 	const [requestedDate, setRequestedDate] = React.useState();
 	const [client, setClient] = React.useState({
 		name: "",
@@ -123,119 +125,143 @@ export default () => {
 						<Subheading>Request a London Day</Subheading>
 					</Form.Group>
 
-					<Form.Group>
-						<Caption as="label" htmlFor="name" name="firstname">
-							Your name <Form.Required />
-						</Caption>
-						<Form.Input
-							required
-							placeholder="e.g. John Doe"
-							name="name"
-							type="text"
-							value={client.firstname}
-							onChange={handleClientChange}
-						/>
-					</Form.Group>
-					<Form.Group>
-						<Caption as="label" htmlFor="email">
-							Your Email <Form.Required />
-						</Caption>
-						<Form.Input
-							required
-							name="email"
-							type="email"
-							placeholder="e.g. johndoe@example.com"
-							value={client.email}
-							onChange={handleClientChange}
-						/>
-					</Form.Group>
-					<Form.Group>
-						<Caption as="label" htmlFor="email">
-							Your Phone Number
-						</Caption>
-						<Form.Input
-							name="tel"
-							type="tel"
-							placeholder="e.g. +44 1234 567 890"
-							value={client.tel}
-							onChange={handleClientChange}
-						/>
-					</Form.Group>
-					<Form.Group>
-						<Caption as="label" htmlFor="date">
-							Requested Date <Form.Required />
-						</Caption>
-						<DatePicker
-							selected={requestedDate}
-							onChange={setRequestedDate}
-							dateFormat="dd/MM/yyyy"
-							minDate={new Date().setDate(
-								new Date().getDate() + 1
-							)}
-							customInput={
-								<Form.Input required value={requestedDate} />
-							}
-							filterDate={(date) => {
-								// Sunday is a no-go.
-								return new Date(date).getDay() !== 0;
-							}}
-						/>
-					</Form.Group>
-					<Form.Group>
-						<Caption as="label" htmlFor="groupSize">
-							Number of Guests (can be approximate){" "}
-							<Form.Required />
-						</Caption>
-						<Form.Input
-							min="1"
-							required
-							name="groupSize"
-							type="number"
-							value={client.groupSize}
-							onChange={handleClientChange}
-						/>
-					</Form.Group>
-					<Form.Group>
-						<Caption as="label" htmlFor="comments">
-							Comments or Questions
-						</Caption>
-						<Form.Input
-							as="textarea"
-							name="comments"
-							style={{
-								height: "auto",
-								resize: "vertical",
-								minHeight: "120px",
-								maxHeight: "300px",
-							}}
-							value={client.comments}
-							onChange={handleClientChange}
-						/>
-					</Form.Group>
-					{/* Still needs: Ts and Cs */}
+					{isBackendOnline ? (
+						<React.Fragment>
+							<Form.Group>
+								<Caption
+									as="label"
+									htmlFor="name"
+									name="firstname"
+								>
+									Your name <Form.Required />
+								</Caption>
+								<Form.Input
+									required
+									placeholder="e.g. John Doe"
+									name="name"
+									type="text"
+									value={client.firstname}
+									onChange={handleClientChange}
+								/>
+							</Form.Group>
+							<Form.Group>
+								<Caption as="label" htmlFor="email">
+									Your Email <Form.Required />
+								</Caption>
+								<Form.Input
+									required
+									name="email"
+									type="email"
+									placeholder="e.g. johndoe@example.com"
+									value={client.email}
+									onChange={handleClientChange}
+								/>
+							</Form.Group>
+							<Form.Group>
+								<Caption as="label" htmlFor="email">
+									Your Phone Number
+								</Caption>
+								<Form.Input
+									name="tel"
+									type="tel"
+									placeholder="e.g. +44 1234 567 890"
+									value={client.tel}
+									onChange={handleClientChange}
+								/>
+							</Form.Group>
+							<Form.Group>
+								<Caption as="label" htmlFor="date">
+									Requested Date <Form.Required />
+								</Caption>
+								<DatePicker
+									selected={requestedDate}
+									onChange={setRequestedDate}
+									dateFormat="dd/MM/yyyy"
+									minDate={new Date().setDate(
+										new Date().getDate() + 1
+									)}
+									customInput={
+										<Form.Input
+											required
+											value={requestedDate}
+										/>
+									}
+									filterDate={(date) => {
+										// Sunday is a no-go.
+										return new Date(date).getDay() !== 0;
+									}}
+								/>
+							</Form.Group>
+							<Form.Group>
+								<Caption as="label" htmlFor="groupSize">
+									Number of Guests (can be approximate){" "}
+									<Form.Required />
+								</Caption>
+								<Form.Input
+									min="1"
+									required
+									name="groupSize"
+									type="number"
+									value={client.groupSize}
+									onChange={handleClientChange}
+								/>
+							</Form.Group>
+							<Form.Group>
+								<Caption as="label" htmlFor="comments">
+									Comments or Questions
+								</Caption>
+								<Form.Input
+									as="textarea"
+									name="comments"
+									style={{
+										height: "auto",
+										resize: "vertical",
+										minHeight: "120px",
+										maxHeight: "300px",
+									}}
+									value={client.comments}
+									onChange={handleClientChange}
+								/>
+							</Form.Group>
+							{/* Still needs: Ts and Cs */}
 
-					<Form.Group>
-						<ReCAPTCHA
-							sitekey="6LerWZkUAAAAABke7MMkRINL7lpgTXTjyD10zWtW"
-							grecaptcha={window.grecaptcha}
-						/>
-					</Form.Group>
+							<Form.Group>
+								<ReCAPTCHA
+									sitekey="6LerWZkUAAAAABke7MMkRINL7lpgTXTjyD10zWtW"
+									grecaptcha={window.grecaptcha}
+								/>
+							</Form.Group>
 
-					<Form.Group>
-						<Button type="submit">Request a booking</Button>
-					</Form.Group>
-					<Form.Group>
-						<Paragraph small>
-							By requesting a booking, you agree to our{" "}
-							<Link to="/privacy">terms and conditions</Link>{" "}
-							regarding the data that you have provided.
-						</Paragraph>
-						<Paragraph small>
-							You will recieve an email to confirm whether your
-							application has been successful, and we will be in
-							touch regarding timings and locations for meeting.
-						</Paragraph>
-					</Form.Group>
+							<Form.Group>
+								<Button type="submit">Request a booking</Button>
+							</Form.Group>
+							<Form.Group>
+								<Paragraph small>
+									By requesting a booking, you agree to our{" "}
+									<Link to="/privacy">
+										terms and conditions
+									</Link>{" "}
+									regarding the data that you have provided.
+								</Paragraph>
+								<Paragraph small>
+									You will recieve an email to confirm whether
+									your application has been successful, and we
+									will be in touch regarding timings and
+									locations for meeting.
+								</Paragraph>
+							</Form.Group>
+						</React.Fragment>
+					) : (
+						<Form.Group>
+							<Paragraph>
+								We are currently experiencing problems with our
+								booking system. If you would like to book a
+								walk, please use our{" "}
+								<Link to="contact">contact form</Link> to
+								request one manually.
+							</Paragraph>
+						</Form.Group>
+					)}
 					<Image />
 				</Grid>
 			</Section>
