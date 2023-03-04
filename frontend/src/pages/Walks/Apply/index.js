@@ -22,7 +22,7 @@ import Section from "../../../components/Section";
 import datetime from "date-and-time";
 
 export default () => {
-	const [isBackendOnline, setIsBackendOnline] = React.useState(false);
+	const isBackendOnline = false;
 
 	const [requestedDate, setRequestedDate] = React.useState();
 	const [client, setClient] = React.useState({
@@ -257,7 +257,7 @@ export default () => {
 								We are currently experiencing problems with our
 								booking system. If you would like to book a
 								walk, please use our{" "}
-								<Link to="contact">contact form</Link> to
+								<Link to="/contact">contact form</Link> to
 								request one manually.
 							</Paragraph>
 						</Form.Group>
