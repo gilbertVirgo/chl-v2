@@ -10,15 +10,18 @@ import tours from "./tours";
 
 export default () => (
 	<React.Fragment>
-		{/* <Section dark>
-			<Hero>
+		<Section dark>
+			<Hero
+				video="https://youtube.com/embed/3pEPbAQrYNA?modestbranding=1"
+				thumbnail={require("../../assets/international-tours-thumbnail.jpg")}
+			>
 				<Heading>International Tours</Heading>
 				<Paragraph>
 					When people talk about how the gospel can change the world
 					they start talking about what God has done in London.
 				</Paragraph>
 			</Hero>
-		</Section> */}
+		</Section>
 		<Section skinny>
 			<Heading>International Tours</Heading>
 			<Paragraph>
