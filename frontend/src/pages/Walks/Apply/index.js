@@ -22,7 +22,7 @@ import Section from "../../../components/Section";
 import datetime from "date-and-time";
 
 export default () => {
-	const isBackendOnline = false;
+	const isBackendOnline = true;
 
 	const [requestedDate, setRequestedDate] = React.useState();
 	const [client, setClient] = React.useState({
