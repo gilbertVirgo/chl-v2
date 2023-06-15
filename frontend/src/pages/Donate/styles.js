@@ -1,6 +1,8 @@
 import DefaultGrid from "../../components/Grid";
+import { Paragraph } from "../../components/Text";
 import media from "../../media";
 import styled from "styled-components";
+import theme from "../../theme";
 
 export const Grid = styled(DefaultGrid)`
 	row-gap: 30px;
@@ -22,6 +24,10 @@ export const Wrapper = styled.div`
         background-size: cover;
         background-image: url("${image}");
     `}
+
+	${Paragraph} + ${Paragraph} {
+		margin-top: ${theme.gutter}px;
+	}
 
 	${media.minWidth("l")`
         box-sizing: border-box;
