@@ -15,6 +15,7 @@ import Section from "../../components/Section";
 import Table from "../../components/Table";
 import images from "./images";
 import pricing from "./data/pricing";
+import theme from "../../theme";
 
 export default () => (
 	<React.Fragment>
@@ -50,7 +51,7 @@ export default () => (
 			</Paragraph>
 
 			<Button href="/walks/apply" theme="red" suspend>
-				Request a London Day
+				Apply for a London Day
 			</Button>
 			<br />
 			<Paragraph small>
@@ -154,7 +155,7 @@ export default () => (
 							"Historical Characters",
 							"Locations",
 							"Duration",
-							"Cost",
+							"Cost (per person)",
 						].map((text) => (
 							<td>
 								<Subheading>{text}</Subheading>
@@ -178,6 +179,13 @@ export default () => (
 					))}
 				</tbody>
 			</Table>
+			<br />
+			<Paragraph>
+				<em>
+					<span style={{ color: theme.color.red }}>*</span> An
+					additional £2 on Saturdays
+				</em>
+			</Paragraph>
 		</Section>
 	</React.Fragment>
 );

@@ -1,3 +1,6 @@
+import React from "react";
+import theme from "../../../theme";
+
 export default [
 	{
 		title: "London Day",
@@ -14,14 +17,22 @@ export default [
 		locations: `City of London: St Paul’s Cathedral, Paul’s Cross, Cheapside, One New Change, St Mary le Bow, Bow Lane, Watling Street, St Stephen Walbrook, Mansion House, Bank of England, St Mary Woolnoth.
         British Museum.`,
 		duration: `Two hours and two hours, with a two hour break for lunch and travel.`,
-		cost: "£25",
+		cost: (
+			<React.Fragment>
+				£25 <span style={{ color: theme.color.red }}>*</span>
+			</React.Fragment>
+		),
 	},
 	{
 		title: "City Walk",
 		historicPeople: `William Wilberforce, John Wyclif, John Wesley, William Tyndale, George Whitefield, Thomas Watson, Lord Shaftesbury, John Newton.`,
 		locations: `City of London, St Paul’s Cathedral, Paul’s Cross, Cheapside, One New Change, St Mary le Bow, Bow Lane, Watling Street, St Stephen Walbrook, Mansion House, Bank of England, St Mary Woolnoth.`,
 		duration: "Two hours",
-		cost: "£15",
+		cost: (
+			<React.Fragment>
+				£15 <span style={{ color: theme.color.red }}>*</span>
+			</React.Fragment>
+		),
 	},
 	{
 		title: `British Museum`,
@@ -35,7 +46,11 @@ export default [
 		historicPeople: `William Wilberforce, John Wyclif, John Wesley, William Tyndale, George Whitefield, Thomas Watson, Lord Shaftesbury, John Newton, Thomas Cranmer, Nicholas Ridley, Hugh Latimer, John Owen, Charles Spurgeon, Richard Baxter, Charles Wesley, Rahere, the Smithfield Martyrs, John Bunyan, Elizabeth Fry.`,
 		locations: `City of London: St Paul’s Cathedral, Paul’s Cross, Cheapside, One New Change, St Mary le Bow, Bow Lane, Watling Street, St Stephen Walbrook, Mansion House, Bank of England, St Mary Woolnoth, Royal Exchange, Coleman Street, Guildhall, St Mary Aldermanbury (site of), London Wall, Museum of London, Cloth Fair, St Bartholomew the Great, Smithfield, Snow Fair, St Sepulchre.`,
 		duration: `Two hours and two hours, with a two hour break for lunch and travel.`,
-		cost: "£25",
+		cost: (
+			<React.Fragment>
+				£25 <span style={{ color: theme.color.red }}>*</span>
+			</React.Fragment>
+		),
 	},
 	{
 		title: `Westminster Walk`,
