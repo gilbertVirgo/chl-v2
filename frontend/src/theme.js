@@ -5,4 +5,5 @@ export default {
 		light: "#e5e5e5",
 	},
 	imageFilter: `grayscale(100%) contrast(75%);`,
+	gutter: 15,
 };
