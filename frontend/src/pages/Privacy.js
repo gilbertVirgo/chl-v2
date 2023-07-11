@@ -80,6 +80,7 @@ export default () => {
 
 				<List>
 					<li>Make a donation;</li>
+					<li>Apply for a London Day;</li>
 					<li>
 						Register to take part in our events (including
 						simulations and fundraising)

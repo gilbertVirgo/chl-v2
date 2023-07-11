@@ -82,6 +82,13 @@ export default () => (
 						description:
 							"Studied at Harvard University and the University of St Andrews. Church History lecturer, London Seminary; former pastor East London Tabernacle Baptist Church (retired).",
 					},
+					{
+						title: "Gil Virgo",
+						subtitle: "Digital Manager",
+						image: require("../../assets/team/gil-virgo.jpg"),
+						description:
+							"Studying at Union School of Theology. Church planting in East London.",
+					},
 				]}
 			/>
 		</Section>

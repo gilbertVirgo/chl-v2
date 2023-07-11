@@ -121,8 +121,8 @@ export default () => {
 			<Section explode>
 				<Grid as="form" onSubmit={handleSubmit}>
 					<Form.Group>
-						<Heading>Request</Heading>
-						<Subheading>Request a London Day</Subheading>
+						<Heading>Apply</Heading>
+						<Subheading>Apply for a London Day</Subheading>
 					</Form.Group>
 
 					{isBackendOnline ? (
@@ -171,7 +171,7 @@ export default () => {
 							</Form.Group>
 							<Form.Group>
 								<Caption as="label" htmlFor="date">
-									Requested Date <Form.Required />
+									Date <Form.Required />
 								</Caption>
 								<DatePicker
 									selected={requestedDate}
@@ -223,8 +223,6 @@ export default () => {
 									onChange={handleClientChange}
 								/>
 							</Form.Group>
-							{/* Still needs: Ts and Cs */}
-
 							<Form.Group>
 								<ReCAPTCHA
 									sitekey="6LerWZkUAAAAABke7MMkRINL7lpgTXTjyD10zWtW"
@@ -233,11 +231,12 @@ export default () => {
 							</Form.Group>
 
 							<Form.Group>
-								<Button type="submit">Request a booking</Button>
+								<Button type="submit">Apply</Button>
 							</Form.Group>
 							<Form.Group>
 								<Paragraph small>
-									By requesting a booking, you agree to our{" "}
+									By applying for a London Day, you agree to
+									our{" "}
 									<Link to="/privacy">
 										terms and conditions
 									</Link>{" "}
@@ -257,8 +256,8 @@ export default () => {
 								We are currently experiencing problems with our
 								booking system. If you would like to book a
 								walk, please use our{" "}
-								<Link to="/contact">contact form</Link> to
-								request one manually.
+								<Link to="/contact">contact form</Link> to apply
+								for a London Day manually.
 							</Paragraph>
 						</Form.Group>
 					)}
