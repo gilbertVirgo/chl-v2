@@ -223,8 +223,6 @@ export default () => {
 									onChange={handleClientChange}
 								/>
 							</Form.Group>
-							{/* Still needs: Ts and Cs */}
-
 							<Form.Group>
 								<ReCAPTCHA
 									sitekey="6LerWZkUAAAAABke7MMkRINL7lpgTXTjyD10zWtW"
