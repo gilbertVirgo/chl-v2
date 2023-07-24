@@ -62,7 +62,7 @@ export default () => (
 							<React.Fragment>
 								Studied Classics at University College London.
 								Pastor of{" "}
-								<a href="https://vpcc.church">
+								<a href="https://vpcc.church" target="_blank">
 									Victoria Park Community Church
 								</a>
 								.
@@ -94,8 +94,16 @@ export default () => (
 						title: "Gil Virgo",
 						subtitle: "Digital Manager",
 						image: require("../../assets/team/gil-virgo.jpg"),
-						description:
-							"Studying at Union School of Theology. Church planting in East London.",
+						description: (
+							<React.Fragment>
+								Studying at Union School of Theology. Worships
+								at{" "}
+								<a href="https://vpcc.church" target="_blank">
+									Victoria Park Community Church
+								</a>
+								.
+							</React.Fragment>
+						),
 					},
 				]}
 			/>
