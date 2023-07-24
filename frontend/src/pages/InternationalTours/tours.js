@@ -26,15 +26,6 @@ export default [
 		},
 		image: require("../../assets/tours/european-odyssey.png"),
 	},
-	// {
-	// 	title: "Holy Land Starting in Jerusalem",
-	// 	button: {
-	// 		text: "View Guide",
-	// 		icon: "external",
-	// 		href: "", // require("...")
-	// 	},
-	// 	image: require("../../assets/london-cambridge.jpg"),
-	// },
 	{
 		title: "Holy Land Tour",
 		button: {

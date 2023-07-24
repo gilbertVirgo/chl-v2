@@ -5,7 +5,6 @@ import Hero from "../../components/Hero";
 import Lattice from "../../components/Lattice";
 import React from "react";
 import Section from "../../components/Section";
-import Strapline from "../../components/Strapline";
 import tours from "./tours";
 
 export default () => (
@@ -51,7 +50,7 @@ export default () => (
 			</Paragraph>
 			<br />
 
-			<Button href="/contact/international-tours" theme="red" suspend>
+			<Button href="/contact/international-tour" theme="red" suspend>
 				Enquire
 			</Button>
 		</Section>

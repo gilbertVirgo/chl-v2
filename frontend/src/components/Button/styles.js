@@ -76,7 +76,7 @@ export const ButtonTemplate = styled.button`
 
 export const Icon = styled.div.attrs({ className: "icon" })`
 	display: inline-block;
-	background-color: white;
+	background-color: ${({ color }) => (color ? color : "white")};
 
 	${({ type }) =>
 		type &&

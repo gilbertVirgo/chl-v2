@@ -20,8 +20,6 @@ export default ({
 	const deactivate = function (event) {
 		const { target } = event;
 
-		console.log([target.dataset.ref, ref.current]);
-
 		if (target.dataset.ref != ref.current) {
 			setActive(false);
 			window.removeEventListener("click", this);

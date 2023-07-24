@@ -58,8 +58,16 @@ export default () => (
 						title: "Ben Virgo",
 						subtitle: "Director",
 						image: require("../../assets/team/ben-virgo.jpg"),
-						description:
-							"Studied Classics at University College London. Church planting in East London.",
+						description: (
+							<React.Fragment>
+								Studied Classics at University College London.
+								Pastor of{" "}
+								<a href="https://vpcc.church">
+									Victoria Park Community Church
+								</a>
+								.
+							</React.Fragment>
+						),
 					},
 					{
 						title: "Peter Greyling",

@@ -11,7 +11,6 @@ import {
 
 import ActivityIndicator from "../../../components/ActivityIndicator";
 import Button from "../../../components/Button";
-import DatePicker from "react-datepicker";
 import Grid from "../../../components/Grid";
 import { Image } from "./styles";
 import { Link } from "react-router-dom";
@@ -19,37 +18,33 @@ import Modal from "../../../components/Modal";
 import { ReCAPTCHA } from "react-google-recaptcha";
 import React from "react";
 import Section from "../../../components/Section";
+import Tip from "../../../components/Tip";
 import datetime from "date-and-time";
+import formStructure from "./formStructure";
+import parseFieldsForPost from "./helpers/parseFieldsForPost";
+import put from "../../../api/booking-system/put";
 
 export default () => {
 	const isBackendOnline = true;
 
-	const [requestedDate, setRequestedDate] = React.useState();
-	const [client, setClient] = React.useState({
-		name: "",
-		email: "",
-		tel: "",
-		groupSize: "",
-		comments: "",
-	});
-
+	const [fields, setFields] = React.useState(formStructure);
 	const [showModal, setShowModal] = React.useState(false);
 	const [loading, setLoading] = React.useState(false);
 	const [responseText, setResponseText] = React.useState("");
 
-	const handleClientChange = ({ target: { name, value } }) =>
-		setClient((currentForm) => ({ ...currentForm, [name]: value }));
+	const handleChangeField = (name, fromInput) => {
+		let value = fromInput;
 
-	const formatDateToSend = (date) => {
-		// My old backend code is making me bend over backwards here...
-		// It's making me go .toJSON -> d/m/y.
+		if (fromInput.hasOwnProperty("target")) value = fromInput.target.value;
 
-		console.log("untarnished", { date });
-		console.log("formatted", datetime.format(date, "DD/MM/YYYY"));
+		setFields((fields) =>
+			fields.map((field) => {
+				if (field.name !== name) return field;
 
-		//const [y, m, d] = datetime.format(date, "DD/MM/YYYY").split("T")[0].split("-");
-
-		return datetime.format(date, "DD/MM/YYYY");
+				field.value = value;
+				return field;
+			})
+		);
 	};
 
 	const handleSubmit = async (event) => {
@@ -60,41 +55,13 @@ export default () => {
 		if (target.checkValidity()) {
 			setLoading(true);
 
-			const body = JSON.stringify({
-				client: {
-					firstname: client.name.split(" ")[0],
-					lastname: client.name.split(" ")[1] || "",
-					...client,
-				},
-				event: {
-					summary: `LD, ${client.name}`,
-					description: `Client contact info:, \nTel: ${
-						client.tel || "[N/A]"
-					}, \nEmail: ${client.email}, \nGroup Size: ${
-						client.groupSize
-					}, \nComments: ${client.comments || "[N/A]"}`,
-					date: formatDateToSend(requestedDate),
-				},
-				"g-recaptcha-response": window.grecaptcha.getResponse(),
-			});
+			console.log("ready to send", parseFieldsForPost(fields));
 
-			console.log("POSTing the following", body);
-
-			const req = await fetch(
-				"https://api.christianheritagelondon.org/api/v1/booking",
-				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body,
-				}
+			// TODO - Build an error modal
+			await put("/booking", parseFieldsForPost(fields)).catch(
+				console.error
 			);
 
-			let responseText = await req.text();
-
-			// Had an issue with things coming back in quotes....
-			setResponseText(responseText.replace(/"/g, ""));
 			setLoading(false);
 		}
 	};
@@ -127,102 +94,47 @@ export default () => {
 
 					{isBackendOnline ? (
 						<React.Fragment>
-							<Form.Group>
-								<Caption
-									as="label"
-									htmlFor="name"
-									name="firstname"
-								>
-									Your name <Form.Required />
-								</Caption>
-								<Form.Input
-									required
-									placeholder="e.g. John Doe"
-									name="name"
-									type="text"
-									value={client.firstname}
-									onChange={handleClientChange}
-								/>
-							</Form.Group>
-							<Form.Group>
-								<Caption as="label" htmlFor="email">
-									Your Email <Form.Required />
-								</Caption>
-								<Form.Input
-									required
-									name="email"
-									type="email"
-									placeholder="e.g. johndoe@example.com"
-									value={client.email}
-									onChange={handleClientChange}
-								/>
-							</Form.Group>
-							<Form.Group>
-								<Caption as="label" htmlFor="email">
-									Your Phone Number
-								</Caption>
-								<Form.Input
-									name="tel"
-									type="tel"
-									placeholder="e.g. +44 1234 567 890"
-									value={client.tel}
-									onChange={handleClientChange}
-								/>
-							</Form.Group>
-							<Form.Group>
-								<Caption as="label" htmlFor="date">
-									Date <Form.Required />
-								</Caption>
-								<DatePicker
-									selected={requestedDate}
-									onChange={setRequestedDate}
-									dateFormat="dd/MM/yyyy"
-									minDate={new Date().setDate(
-										new Date().getDate() + 1
-									)}
-									customInput={
-										<Form.Input
-											required
-											value={requestedDate}
+							{fields.map(
+								(
+									{
+										label,
+										required,
+										Element = Form.Input,
+										tip,
+										name,
+										value,
+										...inputProps
+									},
+									index
+								) => (
+									<Form.Group
+										key={`fg-${index}`}
+										style={{ gridTemplateColumns: "1fr" }}
+									>
+										<Caption
+											as="label"
+											htmlFor={name}
+											style={{ gridColumn: "1 / -1" }}
+										>
+											{label}{" "}
+											{required && <Form.Required />}
+										</Caption>
+										{tip && <Tip>{tip}</Tip>}
+										<Element
+											{...{
+												required,
+												name,
+												...inputProps,
+											}}
+											value={value || ""}
+											onChange={handleChangeField.bind(
+												null,
+												name
+											)}
 										/>
-									}
-									filterDate={(date) => {
-										// Sunday is a no-go.
-										return new Date(date).getDay() !== 0;
-									}}
-								/>
-							</Form.Group>
-							<Form.Group>
-								<Caption as="label" htmlFor="groupSize">
-									Number of Guests (can be approximate){" "}
-									<Form.Required />
-								</Caption>
-								<Form.Input
-									min="1"
-									required
-									name="groupSize"
-									type="number"
-									value={client.groupSize}
-									onChange={handleClientChange}
-								/>
-							</Form.Group>
-							<Form.Group>
-								<Caption as="label" htmlFor="comments">
-									Comments or Questions
-								</Caption>
-								<Form.Input
-									as="textarea"
-									name="comments"
-									style={{
-										height: "auto",
-										resize: "vertical",
-										minHeight: "120px",
-										maxHeight: "300px",
-									}}
-									value={client.comments}
-									onChange={handleClientChange}
-								/>
-							</Form.Group>
+									</Form.Group>
+								)
+							)}
 							<Form.Group>
 								<ReCAPTCHA
 									sitekey="6LerWZkUAAAAABke7MMkRINL7lpgTXTjyD10zWtW"
