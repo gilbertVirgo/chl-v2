@@ -41,11 +41,12 @@ ${({ square }) =>
 	`}
 `;
 
-export const Image = ({ href, ...props }) => (
-	<Link to={href}>
-		<ImageTemplate {...props} />
-	</Link>
-);
+export const Image = ({ href, ...props }) => {
+	const t = <ImageTemplate {...props} />;
+
+	if (href) return <Link to={href}>{t}</Link>;
+	else return t;
+};
 
 export const Title = styled(Paragraph)`
 	font-size: 16px;
