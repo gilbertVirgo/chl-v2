@@ -67,7 +67,7 @@ export default () => {
 							Gallery and the V&A Museum.
 						</Paragraph>
 						<Button href="/walks/apply" theme="red" suspend>
-							Request a London Day
+							Apply for a London Day
 						</Button>
 						<Paragraph small>
 							Private tours are also available.{" "}
