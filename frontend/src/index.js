@@ -17,7 +17,7 @@ const init = async () => {
 				</p>
 				<p>
 					If this problem persists, please{" "}
-					<a href="mailto:ben@christianheritagelondon.org?subject=Site%20failed%20to%20load">
+					<a href="mailto:info@christianheritagelondon.org?subject=Site%20failed%20to%20load">
 						send a quick email
 					</a>{" "}
 					to our team informing them of the problem.
