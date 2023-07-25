@@ -8,8 +8,9 @@ const cellWidth = 35;
 
 const Wrapper = styled(Paragraph)`
 	${media.maxWidth("s")`
-        line-height: 45px;
-        height: 45px;
+		/* Squares! .. sorta */
+        line-height: calc((100vw / 7) - ${theme.gutter / 2}px);
+        height: calc((100vw / 7) - ${theme.gutter / 2}px);
     `}
 
 	${media.minWidth("s")`
