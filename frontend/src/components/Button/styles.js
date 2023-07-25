@@ -45,6 +45,13 @@ export const ButtonTemplate = styled.button`
 		}
 	`}
 
+	${({ disabled }) =>
+		disabled &&
+		`
+		opacity: 0.65;
+		pointer-events: none;
+		`}
+
 	${({ theme: buttonTheme }) =>
 		({
 			grey: `

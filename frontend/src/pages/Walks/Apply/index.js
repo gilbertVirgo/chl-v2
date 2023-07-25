@@ -27,10 +27,13 @@ import put from "../../../api/booking-system/put";
 export default () => {
 	const isBackendOnline = true;
 
+	const form = React.useRef(null);
+
 	const [fields, setFields] = React.useState(formStructure);
 	const [showModal, setShowModal] = React.useState(false);
 	const [loading, setLoading] = React.useState(false);
 	const [responseText, setResponseText] = React.useState("");
+	const [formValid, setFormValid] = React.useState(false);
 
 	const handleChangeField = (name, fromInput) => {
 		let value = fromInput;
@@ -67,6 +70,12 @@ export default () => {
 	};
 
 	React.useEffect(() => {
+		if (form.current) {
+			setFormValid(form.current.checkValidity());
+		}
+	}, [fields]);
+
+	React.useEffect(() => {
 		if (loading) {
 			setShowModal(true);
 		} else {
@@ -86,7 +95,7 @@ export default () => {
 				)}
 			</Modal>
 			<Section explode>
-				<Grid as="form" onSubmit={handleSubmit}>
+				<Grid as="form" onSubmit={handleSubmit} ref={form}>
 					<Form.Group>
 						<Heading>Apply</Heading>
 						<Subheading>Apply for a London Day</Subheading>
@@ -142,8 +151,16 @@ export default () => {
 								/>
 							</Form.Group>
 
-							<Form.Group>
-								<Button type="submit">Apply</Button>
+							<Form.Group
+								title={
+									!formValid
+										? "Please fill in all the required fields"
+										: ""
+								}
+							>
+								<Button disabled={!formValid} type="submit">
+									Apply
+								</Button>
 							</Form.Group>
 							<Form.Group>
 								<Paragraph small>
