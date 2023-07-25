@@ -16,6 +16,8 @@ const Wrapper = styled.div`
 	transition: all 0.23s;
 	pointer-events: none;
 	z-index: -1;
+
+	${media.maxWidth("s")`display: none;`}
 `;
 
 const Tooltip = (p) => {
