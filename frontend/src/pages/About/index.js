@@ -9,18 +9,6 @@ import Section from "../../components/Section";
 
 export default () => (
 	<React.Fragment>
-		{/* <Section dark>
-			<Hero>
-				<Heading>About Us</Heading>
-				<Paragraph>
-					When people talk about how the gospel can change the world{" "}
-					<em>
-						they start talking about what God has done in London
-					</em>
-					.
-				</Paragraph>
-			</Hero>
-		</Section> */}
 		<Section skinny>
 			<Heading>About Us</Heading>
 			<Subheading>
