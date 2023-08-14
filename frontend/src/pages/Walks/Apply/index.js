@@ -19,7 +19,6 @@ import { ReCAPTCHA } from "react-google-recaptcha";
 import React from "react";
 import Section from "../../../components/Section";
 import Tip from "../../../components/Tip";
-import datetime from "date-and-time";
 import formStructure from "./formStructure";
 import parseFieldsForPost from "./helpers/parseFieldsForPost";
 import put from "../../../api/booking-system/put";
@@ -103,6 +102,23 @@ export default () => {
 
 					{isBackendOnline ? (
 						<React.Fragment>
+							{/* <Form.Group>
+								<Caption as="label">Walk type</Caption>
+								<Form.Select
+									onChange={() => {}}
+									recommendedIndex={0}
+								>
+									{[
+										"London Day",
+										"City Walk only",
+										"British Museum only",
+										// "Westminster Walk",
+									].map((k) => (
+										<option value={k}>{k}</option>
+									))}
+								</Form.Select>
+							</Form.Group> */}
+
 							{fields.map(
 								(
 									{

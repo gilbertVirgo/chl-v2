@@ -1,4 +1,6 @@
 import { Icon } from "../../Button/styles";
+import { Paragraph } from "../../Text";
+import React from "react";
 import generalStyles from "./generalStyles";
 import styled from "styled-components";
 import theme from "../../../theme";
@@ -24,10 +26,43 @@ const SelectTemplate = styled.select`
 	appearance: none;
 `;
 
-export default ({ children, ...props }) => {
+const RecommendedBadge = styled(Paragraph)`
+	position: absolute;
+	right: ${15 + 11 + 5}px;
+	top: 50%;
+	transform: translateY(-50%);
+
+	display: block;
+	padding: 2px 8px;
+	font-size: 12px;
+	font-weight: bolder;
+	border-radius: 20px;
+	background-color: ${theme.color.red};
+	color: white;
+
+	&::before {
+		content: "Recommended";
+	}
+`;
+
+export default ({ children, recommendedIndex, onChange, ...props }) => {
+	const [showRecommendedBadge, setShowRecommendedBadge] = React.useState(
+		recommendedIndex === 0
+	);
+
+	const handleChange = (event) => {
+		const { target } = event;
+		setShowRecommendedBadge(target.selectedIndex === recommendedIndex);
+
+		onChange(event);
+	};
+
 	return (
 		<SelectWrapper>
-			<SelectTemplate {...props}>{children}</SelectTemplate>
+			<SelectTemplate onChange={handleChange} {...props}>
+				{children}
+			</SelectTemplate>
+			{showRecommendedBadge && <RecommendedBadge />}
 			<Icon type="chevron" />
 		</SelectWrapper>
 	);
