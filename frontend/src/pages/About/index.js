@@ -73,22 +73,50 @@ export default () => (
 						title: "Peter Greyling",
 						subtitle: "Trustee",
 						image: require("../../assets/team/peter-greyling.jpg"),
-						description:
-							"Studied Economics at the University of Natal, South Africa. Worships at All Souls Langham Place.",
+						description: (
+							<React.Fragment>
+								Studied Economics at the University of Natal,
+								South Africa. Worships at{" "}
+								<a href="https://allsouls.org" target="_blank">
+									All Souls Langham Place
+								</a>
+								.
+							</React.Fragment>
+						),
 					},
 					{
 						title: "Ilona Greyling",
 						subtitle: "Director",
 						image: require("../../assets/team/ilona-greyling.jpg"),
-						description:
-							"Studied at the Durban University of Technology. Worships at All Souls Langham Place.",
+						description: (
+							<React.Fragment>
+								Studied at the Durban University of Technology.
+								Worships at{" "}
+								<a href="https://allsouls.org" target="_blank">
+									All Souls Langham Place
+								</a>
+								.
+							</React.Fragment>
+						),
 					},
 					{
 						title: "Ken Brownell",
 						subtitle: "Trustee",
 						image: require("../../assets/team/ken-brownell.jpg"),
-						description:
-							"Studied at Harvard University and the University of St Andrews. Church History lecturer, London Seminary; former pastor East London Tabernacle Baptist Church (retired).",
+						description: (
+							<React.Fragment>
+								Studied at Harvard University and the University
+								of St Andrews. Church History lecturer, London
+								Seminary; former pastor{" "}
+								<a
+									href="https://www.eltbaptistchurch.org"
+									target="_blank"
+								>
+									East London Tabernacle Baptist Church
+								</a>{" "}
+								(retired).
+							</React.Fragment>
+						),
 					},
 					{
 						title: "Gil Virgo",
