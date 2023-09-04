@@ -41,7 +41,7 @@ export default () => (
 				Christian Heritage London gives tours through the places where
 				Jesus Christ walked, where the Bible was written, where church
 				history happened, where the Reformation broke out, where
-				revivals changed nations—in Israel, Greece, Germany,
+				revivals changed nations in Israel, Greece, Germany,
 				Switzerland, France, Ireland and Britain.
 			</Paragraph>
 			<br />

@@ -56,7 +56,7 @@ export default () => {
 				</Button>
 			</Section>
 
-			<Section explode>
+			<Section>
 				<Feature invert>
 					<Feature.Title>London Walks</Feature.Title>
 					<Feature.Embed src="https://www.youtube.com/embed/iF2ozY92F9w" />
@@ -75,6 +75,29 @@ export default () => {
 								Enquire about a private tour
 							</Link>
 						</Paragraph>
+					</Feature.Body>
+				</Feature>
+			</Section>
+
+			<Section>
+				<Feature invert>
+					<Feature.Title>International Tours</Feature.Title>
+					<Feature.Embed src="https://www.youtube.com/embed/3pEPbAQrYNA" />
+					<Feature.Body>
+						<Paragraph>
+							Christian Heritage London gives tours through the
+							places where Jesus Christ walked, where the Bible
+							was written, where church history happened, where
+							the Reformation broke out and where revivals changed
+							nations.
+						</Paragraph>
+						<Button
+							href="/contact/international-tour"
+							theme="red"
+							suspend
+						>
+							Enquire about an International Tour
+						</Button>
 					</Feature.Body>
 				</Feature>
 			</Section>
