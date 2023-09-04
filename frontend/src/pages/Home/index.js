@@ -81,7 +81,9 @@ export default () => {
 
 			<Section>
 				<Feature invert>
-					<Feature.Title>International Tours</Feature.Title>
+					<Feature.Title>
+						National & International Tours
+					</Feature.Title>
 					<Feature.Embed src="https://www.youtube.com/embed/3pEPbAQrYNA" />
 					<Feature.Body>
 						<Paragraph>
