@@ -102,23 +102,6 @@ export default () => {
 
 					{isBackendOnline ? (
 						<React.Fragment>
-							{/* <Form.Group>
-								<Caption as="label">Walk type</Caption>
-								<Form.Select
-									onChange={() => {}}
-									recommendedIndex={0}
-								>
-									{[
-										"London Day",
-										"City Walk only",
-										"British Museum only",
-										// "Westminster Walk",
-									].map((k) => (
-										<option value={k}>{k}</option>
-									))}
-								</Form.Select>
-							</Form.Group> */}
-
 							{fields.map(
 								(
 									{
