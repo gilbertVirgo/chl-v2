@@ -45,10 +45,11 @@ export default ({ onChange, required }) => {
 		<React.Fragment>
 			<Wrapper>
 				<div style={{ position: "relative" }}>
-					<Form.Select style={{ border: "none" }}>
+					<Form.Select tabIndex="-1" style={{ border: "none" }}>
 						<option value={areaCode}>{areaCode}</option>
 					</Form.Select>
 					<HiddenSelect
+						tabIndex="-1"
 						value={areaCode}
 						onChange={({ target }) =>
 							setAreaCode(
