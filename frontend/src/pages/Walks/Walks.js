@@ -49,7 +49,7 @@ export default () => (
 				We give walking tours through London&apos;s church history and
 				the British Museum to groups as small as four people.
 			</Paragraph>
-
+			<br />
 			<Button href="/walks/apply" theme="red" suspend>
 				Apply for a London Day
 			</Button>

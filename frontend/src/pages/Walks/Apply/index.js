@@ -11,10 +11,11 @@ import {
 
 import ActivityIndicator from "../../../components/ActivityIndicator";
 import Button from "../../../components/Button";
+import ErrorContext from "../../../ErrorContext";
 import Grid from "../../../components/Grid";
 import { Image } from "./styles";
 import { Link } from "react-router-dom";
-import Modal from "../../../components/Modal";
+import LoadingWheel from "../../../components/LoadingWheel";
 import { ReCAPTCHA } from "react-google-recaptcha";
 import React from "react";
 import Section from "../../../components/Section";
@@ -22,16 +23,19 @@ import Tip from "../../../components/Tip";
 import formStructure from "./formStructure";
 import parseFieldsForPost from "./helpers/parseFieldsForPost";
 import put from "../../../api/booking-system/put";
+import { useHistory } from "react-router-dom";
 
 export default () => {
+	const history = useHistory();
+
+	const { setError } = React.useContext(ErrorContext);
+
 	const isBackendOnline = true;
 
 	const form = React.useRef(null);
 
 	const [fields, setFields] = React.useState(formStructure);
-	const [showModal, setShowModal] = React.useState(false);
 	const [loading, setLoading] = React.useState(false);
-	const [responseText, setResponseText] = React.useState("");
 	const [formValid, setFormValid] = React.useState(false);
 
 	const handleChangeField = (name, fromInput) => {
@@ -59,12 +63,9 @@ export default () => {
 
 			console.log("ready to send", parseFieldsForPost(fields));
 
-			// TODO - Build an error modal
-			await put("/booking", parseFieldsForPost(fields)).catch(
-				console.error
-			);
-
-			setLoading(false);
+			put("/booking", parseFieldsForPost(fields))
+				.then(history.push.bind(null, "/walks/success"))
+				.catch(console.error);
 		}
 	};
 
@@ -74,25 +75,8 @@ export default () => {
 		}
 	}, [fields]);
 
-	React.useEffect(() => {
-		if (loading) {
-			setShowModal(true);
-		} else {
-			setTimeout(() => setShowModal(false), 2000);
-		}
-	}, [loading]);
-
 	return (
 		<React.Fragment>
-			<Modal show={showModal}>
-				{loading ? (
-					<React.Fragment>
-						<ActivityIndicator active>Loading...</ActivityIndicator>
-					</React.Fragment>
-				) : (
-					<Paragraph>{responseText}</Paragraph>
-				)}
-			</Modal>
 			<Section explode>
 				<Grid as="form" onSubmit={handleSubmit} ref={form}>
 					<Form.Group>
@@ -157,8 +141,15 @@ export default () => {
 										: ""
 								}
 							>
-								<Button disabled={!formValid} type="submit">
-									Apply
+								<Button
+									type="submit"
+									disabled={loading || !formValid}
+								>
+									{loading ? (
+										<LoadingWheel size="sm" color="white" />
+									) : (
+										"Apply"
+									)}
 								</Button>
 							</Form.Group>
 							<Form.Group>
