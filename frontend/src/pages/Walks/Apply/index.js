@@ -65,7 +65,7 @@ export default () => {
 
 			put("/booking", parseFieldsForPost(fields))
 				.then(history.push.bind(null, "/walks/success"))
-				.catch(console.error);
+				.catch(setError);
 		}
 	};
 
