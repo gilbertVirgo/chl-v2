@@ -4,10 +4,14 @@ import { Link } from "react-router-dom";
 
 export default [
 	{
-		label: "Your Name",
-		name: "name",
+		label: "Your First Name",
+		name: "firstname",
 		required: true,
-		placeholder: "e.g. John Doe",
+	},
+	{
+		label: "Your Last Name",
+		name: "lastname",
+		required: true,
 	},
 	{
 		label: "Your Email",

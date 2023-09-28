@@ -5,12 +5,7 @@ export default (fields) => {
 		parsedFields[name] = value;
 	});
 
-	const nameParts = parsedFields.name.split(" ");
-	parsedFields.lastname = nameParts.slice(-1).toString();
-	nameParts.pop();
-	parsedFields.firstname = nameParts.join(" ");
-
-	delete parsedFields.name;
+	// could do some other parsing here.
 
 	return parsedFields;
 };
