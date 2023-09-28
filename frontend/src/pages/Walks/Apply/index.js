@@ -9,7 +9,6 @@ import {
 	Subheading,
 } from "../../../components/Text";
 
-import ActivityIndicator from "../../../components/ActivityIndicator";
 import Button from "../../../components/Button";
 import ErrorContext from "../../../ErrorContext";
 import Grid from "../../../components/Grid";
