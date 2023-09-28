@@ -15,4 +15,8 @@ export default [
 		text: "Enquiring About Other Tours",
 		value: "other-tours",
 	},
+	{
+		text: "Reporting A Problem",
+		value: "report-problem",
+	},
 ];

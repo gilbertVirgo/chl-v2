@@ -15,7 +15,7 @@ export const Padding = styled.div`
 export const Wrapper = styled.div`
 	background-color: white;
 	height: ${navBarHeight}px;
-	box-shadow: 0 1px 5px #00000020;
+	box-shadow: ${theme.boxShadow};
 	padding: 15px;
 	box-sizing: border-box;
 	position: sticky;

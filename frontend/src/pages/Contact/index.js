@@ -36,11 +36,15 @@ From ${target.name.value}`)}`
 			<Grid as="form" onSubmit={handleSubmit}>
 				<Form.Group>
 					<Heading>Contact Us</Heading>
-					<Subheading>Got a question?</Subheading>
-					<Paragraph>
-						Don't hesitate to get in touch with us using the contact
-						form provided.
-					</Paragraph>
+					{category !== "report-problem" && (
+						<React.Fragment>
+							<Subheading>Got a question?</Subheading>
+							<Paragraph>
+								Don't hesitate to get in touch with us using the
+								contact form provided.
+							</Paragraph>
+						</React.Fragment>
+					)}
 				</Form.Group>
 				<Form.Group>
 					<Caption as="label" for="name">
