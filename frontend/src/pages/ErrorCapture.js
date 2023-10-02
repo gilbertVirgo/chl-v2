@@ -11,12 +11,11 @@ export default () => {
 	const history = useHistory();
 	const { error, setError } = React.useContext(ErrorContext);
 
-	React.useEffect(() => {
-		console.log({ error });
-	}, []);
-
 	const handleGoBack = (e) => {
 		e.preventDefault();
+
+		setError(null);
+
 		history.go(-1);
 	};
 
@@ -24,7 +23,17 @@ export default () => {
 		<React.Fragment>
 			<Section explode>
 				<Heading>Something went wrong</Heading>
-				<Subheading>{error}</Subheading>
+				<Subheading>
+					Server Error:{" "}
+					<em>
+						"
+						{error &&
+							(error.hasOwnProperty("message")
+								? error.message
+								: JSON.stringify(error))}
+						"
+					</em>
+				</Subheading>
 				<br />
 				<Paragraph>
 					If the problem persists, please take a minute to{" "}
