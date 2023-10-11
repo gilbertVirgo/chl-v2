@@ -1,20 +1,38 @@
+import * as prismic from "@prismicio/client";
+
 import ActivityIndicator from "../../components/ActivityIndicator";
 import Button from "../../components/Button";
 import ContentGrid from "../../components/ContentGrid";
 import Feature from "../../components/Feature";
+import HighlightedEvent from "../../components/HighlightedEvent";
 import { Link } from "react-router-dom";
 import { Paragraph } from "../../components/Text";
 import React from "react";
 import Section from "../../components/Section";
+import dayjs from "dayjs";
+import get from "../../prismic/get";
 import getBlog from "../Blog/getBlog";
 import getPodcast from "../Podcast/getPodcast";
 
 export default () => {
 	const [podcast, setPodcast] = React.useState(null);
 	const [blog, setBlog] = React.useState(null);
+	const [highlightedEvent, setHighlightedEvent] = React.useState(null);
 
 	React.useEffect(() => {
 		(async function () {
+			let {
+				data: [highlighted_event],
+			} = await get(
+				[prismic.predicate.at("document.type", "highlighted_event")],
+				{
+					fetchLinks:
+						"event.title,event.image,event.content,event.date_and_time",
+				}
+			);
+
+			setHighlightedEvent(highlighted_event);
+
 			let { data: podcast } = await getPodcast({
 				pageSize: 4,
 				orderings: "[my.podcast.original_date_published desc]",
@@ -35,9 +53,18 @@ export default () => {
 
 	const loading = !podcast || !blog;
 
+	console.log({ highlightedEvent });
+
 	return (
 		<React.Fragment>
 			<ActivityIndicator fullScreen active={loading} />
+
+			{!loading &&
+				!!highlightedEvent &&
+				highlightedEvent.visibility &&
+				dayjs().isBefore(highlightedEvent.finish_timestamp) && (
+					<HighlightedEvent event={highlightedEvent.event} />
+				)}
 
 			<Section innerStyle={{ paddingTop: 0 }}>
 				{!loading && (

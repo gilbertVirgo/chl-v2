@@ -35,7 +35,7 @@ export default () => {
 	if (props) {
 		const dayjsInstance = dayjs(props.date_and_time);
 
-		props.date = dayjsInstance.format("DD/MM/YYYY");
+		props.date = dayjsInstance.format("DD MMMM YYYY");
 		props.time = dayjsInstance.format("h:mma"); // e.g. 7:00pm
 	}
 

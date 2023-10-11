@@ -1,4 +1,4 @@
-import { Author, Body, FeatureGrid, Title } from "./styles";
+import { Author, Body, FeatureGrid, Header, Title } from "./styles";
 
 import { Embed } from "./components/Embed";
 import { Image } from "./components/Image";
@@ -8,6 +8,7 @@ const Feature = ({ children, ...props }) => {
 	return <FeatureGrid {...props}>{children}</FeatureGrid>;
 };
 
+Feature.Header = Header;
 Feature.Title = Title;
 Feature.Author = Author;
 Feature.Embed = Embed;

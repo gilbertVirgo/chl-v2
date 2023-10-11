@@ -34,7 +34,7 @@ export const FeatureGrid = styled(Grid)`
 			!invert
 				? `grid-template-columns: 1fr 4fr 1fr 6fr;
         grid-template-areas: 
-            ". . . media"
+            ". header . media"
             ". title . media"${
 				!!hasAuthor
 					? `
@@ -45,7 +45,7 @@ export const FeatureGrid = styled(Grid)`
             ". . . media";`
 				: `grid-template-columns: 6fr 1fr 4fr 1fr;
         grid-template-areas: 
-            "media . . ."
+            "media . header ."
             "media . title ."${
 				!!hasAuthor
 					? `
@@ -59,6 +59,14 @@ export const FeatureGrid = styled(Grid)`
 	&:last-child {
 		margin-bottom: 0;
 	}
+`;
+
+export const Header = styled(Caption)`
+	grid-area: header;
+
+	color: inherit;
+
+	margin: 0 !important;
 `;
 
 export const Title = styled(Heading)`

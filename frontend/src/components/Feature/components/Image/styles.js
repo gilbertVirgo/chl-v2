@@ -11,6 +11,7 @@ export const Template = styled.div`
 	${media.maxWidth("l")`
         width: calc(100% + 30px);
         margin-left: -15px;
+		padding-bottom: calc(9 / 16 * (100% + 30px));
     `}
 
 	${({ filter }) => filter && `filter: ${theme.imageFilter};`}

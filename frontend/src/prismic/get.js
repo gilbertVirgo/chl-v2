@@ -10,9 +10,11 @@ export default async (query, options) => {
 		await fetch(
 			`https://chl-cms.cdn.prismic.io/api/v2/documents/search?ref=${ref}&q=${encodeURIComponent(
 				`[${query}]`
-			)}&${options ? `&${formatOptions(options)}` : ""}`
+			)}${options ? `&${formatOptions(options)}` : ""}`
 		)
 	).json();
+
+	// I removed an & from before ${options ..
 
 	const data = results.map(
 		({ id, first_publication_date, last_publication_date, data }) => ({
