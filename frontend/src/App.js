@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Donate from "./pages/Donate";
 import ErrorCapture from "./pages/ErrorCapture";
 import ErrorContext from "./ErrorContext";
+import Event from "./pages/Event";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import InternationalTours from "./pages/InternationalTours";
@@ -35,6 +36,7 @@ function App() {
 						<Route path="/about" component={About} />
 						<Route path="/podcast" component={Podcast} />
 						<Route path="/articles" component={Blog} />
+						<Route path="/event/:uid" component={Event} />
 						<Route path="/walks" component={Walks} />
 						<Route
 							path="/international-tours"

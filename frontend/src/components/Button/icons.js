@@ -24,4 +24,19 @@ export default {
 		width: 100,
 		height: 100,
 	},
+	calendar: {
+		url: require("../../assets/icons/calendar.svg").default,
+		width: 100,
+		height: 100,
+	},
+	clock: {
+		url: require("../../assets/icons/clock.svg").default,
+		width: 100,
+		height: 100,
+	},
+	pin: {
+		url: require("../../assets/icons/pin.svg").default,
+		width: 75,
+		height: 100,
+	},
 };

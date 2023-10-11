@@ -12,7 +12,7 @@
 		"@testing-library/react": "^12.1.2",
 		"@testing-library/user-event": "^13.5.0",
 		"date-and-time": "^2.4.1",
-		"dayjs": "^1.11.9",
+		"dayjs": "^1.11.10",
 		"ellipsize": "^0.5.1",
 		"format-duration": "^2.0.0",
 		"is-mobile": "^3.1.1",

@@ -1,19 +1,15 @@
 import * as Author from "./Author";
 import * as prismicR from "@prismicio/richtext";
 
-import { AudioPlayer, BlockQuote, Image } from "./styles";
+import { BlockQuote, Image } from "./styles";
 import { Caption, Heading, Paragraph, Subheading, TextGroup } from "../Text";
 
 import DefaultGrid from "../Grid";
-import { Link } from "react-router-dom";
-import PodcastSubscribe from "../PodcastSubscribe";
 import { PrismicRichText } from "@prismicio/react";
 import React from "react";
-import { RichText } from "prismic-reactjs";
 import Section from "../Section";
-import YouTubePlayer from "../YouTubePlayer";
 
-export default ({ title, description, author, content, ...props }) => {
+export default ({ title, description, image, author, content, ...props }) => {
 	if (author && author.data) author = author.data;
 
 	return (
@@ -21,7 +17,7 @@ export default ({ title, description, author, content, ...props }) => {
 			<React.Fragment>
 				<Section>
 					<DefaultGrid>
-						<Image src={props.image.url} />
+						<Image src={image.url} />
 					</DefaultGrid>
 
 					<TextGroup>
