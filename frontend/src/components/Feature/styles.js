@@ -10,6 +10,7 @@ export const FeatureGrid = styled(Grid)`
 	grid-template-columns: 1fr;
 	grid-template-areas:
 		"title"
+		"header"
 		"media"
 		"body"
 		"author";
