@@ -24,18 +24,23 @@ import parseFieldsForPost from "./helpers/parseFieldsForPost";
 import put from "../../../api/booking-system/put";
 import { useHistory } from "react-router-dom";
 
+const TESTING = false;
+const isBackendOnline = true;
+
 export default () => {
 	const history = useHistory();
 
 	const { setError } = React.useContext(ErrorContext);
 
-	const isBackendOnline = true;
-
 	const form = React.useRef(null);
 
-	const [fields, setFields] = React.useState(formStructure);
+	const [fields, setFields] = React.useState(
+		TESTING ? formStructureTest : formStructure
+	);
 	const [loading, setLoading] = React.useState(false);
 	const [formValid, setFormValid] = React.useState(false);
+
+	const [recaptcha, setRecaptcha] = React.useState(false);
 
 	const handleChangeField = (name, fromInput) => {
 		let value = fromInput;
@@ -57,12 +62,10 @@ export default () => {
 
 		const { target } = event;
 
-		if (target.checkValidity()) {
+		if (target.checkValidity() && recaptcha) {
 			setLoading(true);
 
-			console.log("ready to send", parseFieldsForPost(fields));
-
-			put("/booking", parseFieldsForPost(fields))
+			put("/booking", parseFieldsForPost(fields, recaptcha))
 				.then(history.push.bind(null, "/walks/success"))
 				.catch(setError);
 		}
@@ -70,9 +73,9 @@ export default () => {
 
 	React.useEffect(() => {
 		if (form.current) {
-			setFormValid(form.current.checkValidity());
+			setFormValid(form.current.checkValidity() && recaptcha);
 		}
-	}, [fields]);
+	}, [fields, recaptcha]);
 
 	return (
 		<React.Fragment>
@@ -130,16 +133,11 @@ export default () => {
 								<ReCAPTCHA
 									sitekey="6LerWZkUAAAAABke7MMkRINL7lpgTXTjyD10zWtW"
 									grecaptcha={window.grecaptcha}
+									onChange={setRecaptcha}
 								/>
 							</Form.Group>
 
-							<Form.Group
-								title={
-									!formValid
-										? "Please fill in all the required fields"
-										: ""
-								}
-							>
+							<Form.Group>
 								<Button
 									type="submit"
 									disabled={loading || !formValid}
@@ -150,6 +148,15 @@ export default () => {
 										"Apply"
 									)}
 								</Button>
+								{!formValid && (
+									<Paragraph small>
+										<em>
+											Please fill in all the required
+											fields and confirm that you are not
+											a robot
+										</em>
+									</Paragraph>
+								)}
 							</Form.Group>
 							<Form.Group>
 								<Paragraph small>
