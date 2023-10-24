@@ -1,5 +1,7 @@
-export default (fields) => {
-	const parsedFields = {};
+export default (fields, recaptcha) => {
+	const parsedFields = {
+		"g-recaptcha-response": recaptcha,
+	};
 
 	fields.forEach(({ name, value }) => {
 		parsedFields[name] = value;
