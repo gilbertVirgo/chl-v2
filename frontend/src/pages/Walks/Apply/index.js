@@ -20,6 +20,7 @@ import React from "react";
 import Section from "../../../components/Section";
 import Tip from "../../../components/Tip";
 import formStructure from "./formStructure";
+import formStructureTest from "./formStructureTest";
 import parseFieldsForPost from "./helpers/parseFieldsForPost";
 import put from "../../../api/booking-system/put";
 import { useHistory } from "react-router-dom";
