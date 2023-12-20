@@ -9,12 +9,52 @@ import React from "react";
 import Section from "../../components/Section";
 import categories from "./categories";
 import { goTo } from "../../functions";
+import { useHistory } from "react-router-dom";
 
 export default ({
 	match: {
 		params: { category },
 	},
 }) => {
+	const history = useHistory();
+
+	const contact = {
+		phone:
+			category === "international-tour"
+				? "+447528661048"
+				: "+443000301785",
+		email:
+			category === "international-tour"
+				? "ilona@christianheritagelondon.org"
+				: "info@christianheritagelondon.org",
+		physical:
+			category === "international-tour" ? (
+				<>
+					33 Upper Meadows
+					<br />
+					Gerrards Cross
+					<br />
+					Bucks
+					<br />
+					SL9 7EY
+					<br />
+					United Kingdom
+				</>
+			) : (
+				<>
+					Christian Heritage London
+					<br />
+					ELT Baptist Church
+					<br />
+					Burdett Road
+					<br />
+					London
+					<br />
+					E3 4TU
+				</>
+			),
+	};
+
 	const handleSubmit = (event) => {
 		event.preventDefault();
 
@@ -22,7 +62,7 @@ export default ({
 
 		if (target.checkValidity()) {
 			goTo(
-				`mailto:info@christianheritagelondon.org?subject=${
+				`mailto:${contact.email}?subject=${
 					target.subject.options[target.subject.selectedIndex].text
 				}&body=${encodeURI(`${target.body.value}
 	
@@ -61,7 +101,17 @@ From ${target.name.value}`)}`
 					<Caption as="label" for="subject">
 						Subject
 					</Caption>
-					<Form.Select required name="subject">
+					<Form.Select
+						required
+						name="subject"
+						onChange={({ target }) =>
+							history.push(
+								`/contact/${
+									target.options[target.selectedIndex].value
+								}`
+							)
+						}
+					>
 						{categories.map(({ text, value }, index) => (
 							<option
 								selected={category === value}
@@ -99,31 +149,18 @@ From ${target.name.value}`)}`
 					<Paragraph small>
 						Or if you would prefer to email us without using this
 						form, reach us at{" "}
-						<a
-							target="_blank"
-							href="mailto:info@christianheritagelondon.org"
-						>
-							info@christianheritagelondon.org
+						<a target="_blank" href={`mailto:${contact.email}`}>
+							{contact.email}
 						</a>{" "}
 						or call us at{" "}
-						<a href="tel:+443000301785">0300 030 1785</a>.
+						<a href={`tel:${contact.phone}`}>{contact.phone}</a>.
 					</Paragraph>
 				</Form.Group>
 				<Image />
 
 				<Form.Group>
 					<Subheading>Postal Address</Subheading>
-					<Paragraph>
-						Christian Heritage London
-						<br />
-						ELT Baptist Church
-						<br />
-						Burdett Road
-						<br />
-						London
-						<br />
-						E3 4TU
-					</Paragraph>
+					<Paragraph>{contact.physical}</Paragraph>
 				</Form.Group>
 			</Grid>
 		</Section>
