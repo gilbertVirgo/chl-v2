@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import InternationalTours from "./pages/InternationalTours";
 import Nav from "./components/Nav";
 import Podcast from "./pages/Podcast";
+import PostTourSignup from "./pages/PostTourSignup";
 import Privacy from "./pages/Privacy";
 import React from "react";
 import ScrollToTop from "./components/ScrollToTop";
@@ -45,6 +46,10 @@ function App() {
 						<Route path="/contact/:category?" component={Contact} />
 						<Route path="/donate" component={Donate} />
 						<Route path="/privacy" component={Privacy} />
+						<Route
+							path="/post-tour-signup"
+							component={PostTourSignup}
+						/>
 						<Route path="/error" component={ErrorCapture} />
 					</Switch>
 				</ErrorContext.Provider>

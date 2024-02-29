@@ -6,6 +6,7 @@ import Button from "../Button";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import React from "react";
 import { Wrapper } from "./styles";
+import parseMailchimpSubscribeStatus from "../../parseMailchimpSubscribeStatus";
 import theme from "../../theme";
 
 const url =
@@ -14,21 +15,6 @@ const url =
 
 export default () => {
 	const [email, setEmail] = React.useState("");
-
-	const parseStatus = (status, message) => {
-		switch (status) {
-			case "sending":
-				return <Paragraph small>Sending request...</Paragraph>;
-			case "error":
-				return (
-					<Paragraph style={{ color: theme.color.red }}>
-						There was an error: {message}
-					</Paragraph>
-				);
-			case "success":
-				return <Paragraph small>{message}</Paragraph>;
-		}
-	};
 
 	return (
 		<MailchimpSubscribe
@@ -60,7 +46,7 @@ export default () => {
 						</Button>
 					</Wrapper>
 
-					{parseStatus(status, message)}
+					{parseMailchimpSubscribeStatus(status, message)}
 				</Form.Group>
 			)}
 		/>
