@@ -12,12 +12,12 @@ export default ({ event }) => {
 		<Section dark>
 			<React.Fragment>
 				<Feature invert>
-					<Feature.Header>
+					{/* <Feature.Header>
 						Upcoming event:{" "}
 						{dayjs(event.data.date_and_time).format(
 							"h:mma[, ]D MMM"
 						)}
-					</Feature.Header>
+					</Feature.Header> */}
 					<Feature.Title>{event.data.title}</Feature.Title>
 					<Feature.Image
 						href={`/event/${event.uid}`}
