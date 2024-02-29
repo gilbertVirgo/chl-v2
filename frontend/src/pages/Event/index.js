@@ -57,15 +57,15 @@ export default () => {
 
 							<Paragraph>
 								{[
-									{
-										icon: "calendar",
-										prop: "date",
-									},
+									// {
+									// 	icon: "calendar",
+									// 	prop: "date",
+									// },
 
-									{
-										icon: "clock",
-										prop: "time",
-									},
+									// {
+									// 	icon: "clock",
+									// 	prop: "time",
+									// },
 									{
 										icon: "pin",
 										prop: "address",
