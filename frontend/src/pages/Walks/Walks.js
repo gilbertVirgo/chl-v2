@@ -183,7 +183,7 @@ export default () => (
 			<Paragraph>
 				<em>
 					<span style={{ color: theme.color.red }}>*</span> An
-					additional £2 on Saturdays
+					additional £5 on Saturdays
 				</em>
 			</Paragraph>
 		</Section>
