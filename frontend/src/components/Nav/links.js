@@ -1,6 +1,6 @@
 export default [
 	{
-		title: "Guided Walks & Tours",
+		title: "Walks",
 		href: "/walks",
 	},
 	{
