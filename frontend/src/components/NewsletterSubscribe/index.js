@@ -8,12 +8,13 @@ import React from "react";
 import { Wrapper } from "./styles";
 import theme from "../../theme";
 
-const url =
+const defaultURL =
 	"//christianheritagelondon.us9.list-manage.com/subscribe/post?u=f18c1c82b624be730c499657e&amp;id=a75d3fa84b&amp;f_id=00f607e1f0";
-//"//christianheritagelondon.us9.list-manage.com/subscribe?u=f18c1c82b624be730c499657e&id=a75d3fa84b";
 
-export default () => {
+export default ({ dark, customURL }) => {
 	const [email, setEmail] = React.useState("");
+
+	let url = customURL || defaultURL;
 
 	const parseStatus = (status, message) => {
 		switch (status) {
@@ -36,24 +37,24 @@ export default () => {
 			render={({ subscribe, status, message }) => (
 				<Form.Group style={{ gridColumn: "1 / -1", marginBottom: "0" }}>
 					<Caption
-						style={{ color: "white" }}
+						style={{ color: dark ? theme.color.dark : "white" }}
 						as="label"
 						htmlFor="newsletter-subscribe-email"
 					>
-						Recieve our newsletter
+						Subscribe
 					</Caption>
 					<Wrapper>
 						<Form.Input
 							name="newsletter-subscribe-email"
 							placeholder="example@example.com"
-							theme="white"
+							theme={dark ? "" : "white"}
 							type="email"
 							value={email}
 							onChange={({ target }) => setEmail(target.value)}
 						/>
 						<Button
 							style={{ minWidth: "100px" }}
-							theme="white"
+							theme={dark ? "" : "white"}
 							onClick={() => subscribe({ EMAIL: email })}
 						>
 							Sign up

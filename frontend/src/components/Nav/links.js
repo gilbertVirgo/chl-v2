@@ -16,6 +16,10 @@ export default [
 		href: "/international-tours",
 	},
 	{
+		title: "Intelligencer",
+		href: "/intelligencer",
+	},
+	{
 		title: "London's Church History",
 		href: "https://library.christianheritagelondon.org",
 		external: true,

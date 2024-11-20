@@ -40,6 +40,7 @@ export const Thumbnail = styled.div`
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	-webkit-backdrop-filter: brightness(60%);
 	backdrop-filter: brightness(60%);
 
 	display: flex;

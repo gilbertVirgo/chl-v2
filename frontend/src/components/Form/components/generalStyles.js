@@ -29,11 +29,10 @@ export default css`
 		border-color: ${theme.color.red};
 	}
 
-	${({ theme }) =>
-		({
-			white: `
-				border-color: white;
-				color: white;
-			`,
-		}[theme])}
+	${({ theme }) => {
+		if (theme === "white") {
+			return `border-color: white;
+				color: white;`;
+		}
+	}}
 `;

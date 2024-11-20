@@ -9,6 +9,7 @@ import ErrorContext from "./ErrorContext";
 import Event from "./pages/Event";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Intelligencer from "./pages/Intelligencer";
 import InternationalTours from "./pages/InternationalTours";
 import Nav from "./components/Nav";
 import Podcast from "./pages/Podcast";
@@ -41,6 +42,10 @@ function App() {
 						<Route
 							path="/international-tours"
 							component={InternationalTours}
+						/>
+						<Route
+							path="/intelligencer"
+							component={Intelligencer}
 						/>
 						<Route path="/contact/:category?" component={Contact} />
 						<Route path="/donate" component={Donate} />
