@@ -17,10 +17,22 @@ export default ({ show, onClose, children }) => {
 		}
 	}, [show, overlayRef]);
 
+	let handleOverlayClicked = (event) => {
+		console.log(
+			overlayRef.current,
+			event.target === overlayRef.current,
+			overlayRef.current.contains(event.target)
+		);
+
+		if (event.target !== overlayRef.current) return;
+
+		onClose();
+	};
+
 	return (
-		<Overlay ref={overlayRef}>
+		<Overlay ref={overlayRef} onClick={handleOverlayClicked}>
 			<Section deflate>
-				<Grid>
+				<Grid onClick={() => console.log("test")}>
 					<Wrapper>{children}</Wrapper>
 				</Grid>
 			</Section>
