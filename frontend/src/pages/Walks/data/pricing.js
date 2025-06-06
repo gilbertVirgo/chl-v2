@@ -19,7 +19,7 @@ export default [
 		duration: `Two hours and two hours, with a two hour break for lunch and travel.`,
 		cost: (
 			<React.Fragment>
-				£25 <span style={{ color: theme.color.red }}>*</span>
+				£25 {/*<span style={{ color: theme.color.red }}>*</span>*/}
 			</React.Fragment>
 		),
 	},
@@ -30,7 +30,7 @@ export default [
 		duration: "Two hours",
 		cost: (
 			<React.Fragment>
-				£15 <span style={{ color: theme.color.red }}>*</span>
+				£15 {/*<span style={{ color: theme.color.red }}>*</span>*/}
 			</React.Fragment>
 		),
 	},
@@ -52,7 +52,7 @@ export default [
 		duration: `Two hours and two hours, with a two hour break for lunch and travel.`,
 		cost: (
 			<React.Fragment>
-				£25 <span style={{ color: theme.color.red }}>*</span>
+				£25 {/*<span style={{ color: theme.color.red }}>*</span>*/}
 			</React.Fragment>
 		),
 	},
