@@ -19,7 +19,7 @@ export default [
 		duration: `Two hours and two hours, with a two hour break for lunch and travel.`,
 		cost: (
 			<React.Fragment>
-				£25 {/*<span style={{ color: theme.color.red }}>*</span>*/}
+				£25 <span style={{ color: theme.color.red }}>*</span>
 			</React.Fragment>
 		),
 	},
@@ -30,7 +30,7 @@ export default [
 		duration: "Two hours",
 		cost: (
 			<React.Fragment>
-				£15 {/*<span style={{ color: theme.color.red }}>*</span>*/}
+				£15 <span style={{ color: theme.color.red }}>*</span>
 			</React.Fragment>
 		),
 	},
@@ -42,18 +42,26 @@ export default [
 		cost: "£15",
 	},
 	{
-		title: `City Day`,
+		title: (
+			<React.Fragment>
+				City Day<sup style={{ color: theme.color.red }}>†</sup>
+			</React.Fragment>
+		),
 		historicPeople: `William Wilberforce, John Wyclif, John Wesley, William Tyndale, George Whitefield, Thomas Watson, Lord Shaftesbury, John Newton, Thomas Cranmer, Nicholas Ridley, Hugh Latimer, John Owen, Charles Spurgeon, Richard Baxter, Charles Wesley, Rahere, the Smithfield Martyrs, John Bunyan, Elizabeth Fry.`,
 		locations: `City of London: St Paul’s Cathedral, Paul’s Cross, Cheapside, One New Change, St Mary le Bow, Bow Lane, Watling Street, St Stephen Walbrook, Mansion House, Bank of England, St Mary Woolnoth, Royal Exchange, Coleman Street, Guildhall, St Mary Aldermanbury (site of), London Wall, Museum of London, Cloth Fair, St Bartholomew the Great, Smithfield, Snow Fair, St Sepulchre.`,
 		duration: `Two hours and two hours, with a two hour break for lunch and travel.`,
 		cost: (
 			<React.Fragment>
-				£25 {/*<span style={{ color: theme.color.red }}>*</span>*/}
+				£25 <span style={{ color: theme.color.red }}>*</span>
 			</React.Fragment>
 		),
 	},
 	{
-		title: `Westminster Walk`,
+		title: (
+			<React.Fragment>
+				Westminster Walk<sup style={{ color: theme.color.red }}>†</sup>
+			</React.Fragment>
+		),
 		historicPeople: `D. Martyn Lloyd-Jones, John Wesley, George Whitefield, Lord Shaftesbury, George Herbert, William Wilberforce, William Tyndale`,
 		locations: `Westminster Chapel, Westminster Central Hall, Westminster Abbey, Parliament Square, St Margaret’s Westminster, Westminster School, Old Palace Yard, `,
 		duration: `Two hours`,

@@ -166,11 +166,15 @@ export default () => (
 			</Table>
 			<br />
 			{/* <Paragraph>
-				<em>
-					<span style={{ color: theme.color.red }}>*</span> An
-					additional £5 on Saturdays
-				</em>
-			</Paragraph> */}
+        <em>
+          <span style={{ color: theme.color.red }}>*</span> An additional £5 on
+          Saturdays
+        </em>
+        <br />
+        <em>
+          <sup style={{ color: theme.color.red }}>†</sup> Groups of 10 or larger
+        </em>
+      </Paragraph> */}
 		</Section>
 	</React.Fragment>
 );
