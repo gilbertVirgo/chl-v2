@@ -33,34 +33,19 @@ export default () => (
 			</Hero>
 		</Section>
 		<Section skinny>
-			<Heading>London Day</Heading>
-			<Paragraph>
-				There&apos;s amazing church history in the City of London with
-				sites associated with Wilberforce, Tyndale, Wesley, Whitefield,
-				Elizabeth Fry, John Newton and many others. Meanwhile in the
-				British Museum there are items associated with Abraham,
-				Hezekiah, Daniel, Esther, Nehemiah, Paul and others.
-				<br />
-				<br />A <strong>London Day</strong> includes a tour of the{" "}
-				<strong>British Museum</strong> and a guided walk in the{" "}
-				<strong>City of London</strong>.
-			</Paragraph>
+			<Heading>Book a tour</Heading>
 			<Paragraph>
 				We give walking tours through London&apos;s church history and
 				the British Museum to groups as small as four people.
 			</Paragraph>
 			<br />
-			<Button href="/walks/apply" theme="red" suspend>
-				Apply for a London Day
+			<Button
+				href="https://bookings.christianheritagelondon.org"
+				theme="red"
+				suspend
+			>
+				Book a tour
 			</Button>
-			<br />
-			<Paragraph small>
-				Private tours are also available.{" "}
-				<Link to="/contact/private-tour">
-					Enquire about a private tour
-				</Link>
-				.
-			</Paragraph>
 		</Section>
 		<CarouselWrapper span>
 			<Swiper
@@ -180,12 +165,12 @@ export default () => (
 				</tbody>
 			</Table>
 			<br />
-			<Paragraph>
+			{/* <Paragraph>
 				<em>
 					<span style={{ color: theme.color.red }}>*</span> An
 					additional £5 on Saturdays
 				</em>
-			</Paragraph>
+			</Paragraph> */}
 		</Section>
 	</React.Fragment>
 );
