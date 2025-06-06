@@ -85,23 +85,28 @@ export default () => {
 
 			<Section>
 				<Feature invert>
-					<Feature.Title>London Walks</Feature.Title>
+					<Feature.Title>Book a tour</Feature.Title>
 					<Feature.Embed src="https://www.youtube.com/embed/iF2ozY92F9w" />
 					<Feature.Body>
 						<Paragraph>
-							We give walks and tours through the City of London,
-							Westminster, the British Museum, the National
-							Gallery and the V&A Museum.
+							We give walking tours through London&apos;s church
+							history and the British Museum to groups as small as
+							four people.
 						</Paragraph>
-						<Button href="/walks/apply" theme="red" suspend>
-							Apply for a London Day
+						<br />
+						<Button
+							href="https://bookings.christianheritagelondon.org"
+							theme="red"
+							suspend
+						>
+							Book a tour
 						</Button>
-						<Paragraph small>
+						{/* <Paragraph small>
 							Private tours are also available.{" "}
 							<Link to="/contact/private-tour">
 								Enquire about a private tour
 							</Link>
-						</Paragraph>
+						</Paragraph> */}
 					</Feature.Body>
 				</Feature>
 			</Section>
