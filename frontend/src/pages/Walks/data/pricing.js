@@ -40,7 +40,7 @@ export default [
 	// {
 	// 	title: (
 	// 		<React.Fragment>
-	// 			City Day<sup style={{ color: theme.color.red }}>†</sup>
+	// 			City Day<sup style={{ color: theme.color.red }}>*</sup>
 	// 		</React.Fragment>
 	// 	),
 	// 	historicPeople: `William Wilberforce, John Wyclif, John Wesley, William Tyndale, George Whitefield, Thomas Watson, Lord Shaftesbury, John Newton, Thomas Cranmer, Nicholas Ridley, Hugh Latimer, John Owen, Charles Spurgeon, Richard Baxter, Charles Wesley, Rahere, the Smithfield Martyrs, John Bunyan, Elizabeth Fry`,
@@ -55,7 +55,7 @@ export default [
 	{
 		title: (
 			<React.Fragment>
-				Westminster Walk<sup style={{ color: theme.color.red }}>†</sup>
+				Westminster Walk<sup style={{ color: theme.color.red }}>*</sup>
 			</React.Fragment>
 		),
 		historicPeople: `D. Martyn Lloyd-Jones, John Wesley, George Whitefield, Lord Shaftesbury, George Herbert, William Wilberforce, William Tyndale`,
@@ -66,7 +66,7 @@ export default [
 	{
 		title: (
 			<React.Fragment>
-				City Walk Pt. 2<sup style={{ color: theme.color.red }}>†</sup>
+				City Walk Pt. 2<sup style={{ color: theme.color.red }}>*</sup>
 			</React.Fragment>
 		),
 		historicPeople: `Thomas Cranmer, Nicholas Ridley, Hugh Latimer, John Owen, Charles Spurgeon, Richard Baxter, Charles Wesley, Rahere, the Smithfield Martyrs, John Bunyan, Elizabeth Fry`,

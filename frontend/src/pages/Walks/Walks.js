@@ -172,7 +172,7 @@ export default () => (
         </em>*/}
 			<Paragraph>
 				<em>
-					<sup style={{ color: theme.color.red }}>†</sup> Groups of 10
+					<sup style={{ color: theme.color.red }}>*</sup> Groups of 10
 					or larger
 				</em>
 			</Paragraph>
