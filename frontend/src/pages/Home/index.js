@@ -114,23 +114,22 @@ export default () => {
 			<Section>
 				<Feature invert>
 					<Feature.Title>
-						National & International Tours
+						C.S. Lewis &amp; Reformation Tours{" "}
 					</Feature.Title>
 					<Feature.Embed src="https://www.youtube.com/embed/3pEPbAQrYNA" />
 					<Feature.Body>
 						<Paragraph>
-							Christian Heritage London gives tours through the
-							places where Jesus Christ walked, where the Bible
-							was written, where church history happened, where
-							the Reformation broke out and where revivals changed
-							nations.
+							Alongside our London tours, we offer guided visits
+							to <strong>Oxford</strong> and{" "}
+							<strong>Cambridge</strong>—two cities rich in
+							Christian heritage.
 						</Paragraph>
 						<Button
-							href="/contact/international-tour"
+							href="https://national.christianheritagelondon.org"
 							theme="red"
 							suspend
 						>
-							Enquire about an International Tour
+							Request an Oxford or Cambridge tour
 						</Button>
 					</Feature.Body>
 				</Feature>
