@@ -91,7 +91,7 @@ export default () => (
 			</Paragraph>
 		</Section>
 		<Section skinny>
-			<Heading>Tours Outside London</Heading>
+			<Heading>Tours outside London</Heading>
 			<Subheading>
 				The gospel has also made huge impact on the world in the cities
 				of Oxford and Cambridge.
@@ -118,7 +118,7 @@ export default () => (
 			</Button>
 		</Section>
 		<Section outerStyle={{ overflowX: "scroll" }}>
-			<Heading>Pricing Outline</Heading>
+			<Heading>Pricing outline</Heading>
 
 			<Table
 				style={{
