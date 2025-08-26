@@ -24,7 +24,7 @@ export default () => (
 				video="https://www.youtube.com/embed/iF2ozY92F9w?modestbranding=1"
 				thumbnail={require("../../assets/thumbnail-test.jpg")}
 			>
-				<Heading>Walks &amp; Tours</Heading>
+				<Heading>Guided Walks</Heading>
 				<Paragraph>
 					Christian Heritage London take people on walks to display
 					some of the wonderful gospel history that can be found in
@@ -33,9 +33,9 @@ export default () => (
 			</Hero>
 		</Section>
 		<Section skinny>
-			<Heading>Book a tour</Heading>
+			<Heading>Book a walk</Heading>
 			<Paragraph>
-				We give walking tours through London&apos;s church history and
+				We give guided walks through London&apos;s church history and
 				the British Museum to groups as small as four people.
 			</Paragraph>
 			<br />
@@ -44,7 +44,7 @@ export default () => (
 				theme="red"
 				suspend
 			>
-				Book a tour
+				Book a walk
 			</Button>
 		</Section>
 		<CarouselWrapper span>
@@ -71,9 +71,9 @@ export default () => (
 			</Swiper>
 		</CarouselWrapper>
 		<Section skinny>
-			<Heading>Other Tours</Heading>
+			<Heading>Other walks</Heading>
 			<Paragraph>
-				Our other tours include:
+				Our other London walks include:
 				<ul>
 					<li>
 						The Gospel in Art, in the{" "}
@@ -83,51 +83,43 @@ export default () => (
 						The Influence of Christianity on the West in{" "}
 						<strong>the V&amp;A</strong>
 					</li>
-					<li>Westminster tour</li>
-					<li>City day</li>
 				</ul>
 			</Paragraph>
 			<Paragraph>
-				If you would like to apply for one of these, or if you would
-				like only a City Walk or a British Museum tour, or if you have
-				any other questions please{" "}
+				If you would like to apply for one of these, please{" "}
 				<a href="/contact/other-tours">get in touch</a>.
 			</Paragraph>
-			{/* <Paragraph>
-				Email us at{" "}
-				<a href="mailto:info@christianheritagelondon.org">
-					info@christianheritagelondon.org
-				</a>
-				.
-			</Paragraph> */}
 		</Section>
 		<Section skinny>
-			<Heading>Guided Walks Outside London</Heading>
+			<Heading>Tours Outside London</Heading>
 			<Subheading>
 				The gospel has also made huge impact on the world in the cities
 				of Oxford and Cambridge.
 			</Subheading>
 			<Paragraph>
-				The Reformation, revivals, the missionary movement, the
-				translation of the bible, martyrdoms and other extraordinary
-				events in the lives of William Tyndale, John Owen, Hugh Latimer,
-				Thomas Cranmer, C S Lewis and many others have happened in these
-				cities.
+				If you’d like to book a C.S. Lewis tour of Oxford — including
+				the Kilns, Holy Trinity Church, Magdalen College, and many other
+				fascinating sights — we’d be delighted to arrange it for you.
 			</Paragraph>
+			<br />
 			<Paragraph>
-				We give day tours for groups in Oxford and in Cambridge. For
-				information please{" "}
-				<a href="/contact/other-tours">get in touch</a>.
+				We also offer a day tour of Cambridge University, featuring a
+				Christian Heritage walk exploring the lives of William
+				Wilberforce, Charles Simeon, and others, together with punting
+				and Evensong at King’s College Chapel.
 			</Paragraph>
-			<Paragraph>
-				We also give{" "}
-				<a href="/international-tours">International Tours</a> for
-				churches, schools, universities and other larger groups.
-			</Paragraph>
+			<br />
+			<Button
+				href="https://national.christianheritagelondon.org"
+				theme="red"
+				suspend
+			>
+				Request an Oxford or Cambridge tour
+			</Button>
 		</Section>
 		<Section outerStyle={{ overflowX: "scroll" }}>
 			<Heading>Pricing Outline</Heading>
-			{/* borderRight: couldn't do this with padding or margin. This was the only fix. */}
+
 			<Table
 				style={{
 					minWidth: "1200px",
@@ -172,8 +164,8 @@ export default () => (
         </em>*/}
 			<Paragraph>
 				<em>
-					<sup style={{ color: theme.color.red }}>*</sup> Groups of 10
-					or larger
+					<sup style={{ color: theme.color.red }}>*</sup> Bookable for
+					groups of 10 or larger
 				</em>
 			</Paragraph>
 		</Section>

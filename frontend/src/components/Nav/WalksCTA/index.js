@@ -9,7 +9,7 @@ export default () => {
 			<Paragraph small style={{ marginBottom: 0 }}>
 				Christian Heritage London gives{" "}
 				<strong>
-					<Link to="/walks">guided walks and tours</Link>
+					<Link to="/walks">guided walks</Link>
 				</strong>{" "}
 				through London's Church History.{" "}
 				<strong>

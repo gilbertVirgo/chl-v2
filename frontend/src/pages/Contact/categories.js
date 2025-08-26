@@ -4,7 +4,7 @@ export default [
 		value: "general",
 	},
 	{
-		text: "Enquiring About a Private Tour",
+		text: "Enquiring About a Private Walk",
 		value: "private-tour",
 	},
 	{
@@ -12,7 +12,7 @@ export default [
 		value: "international-tour",
 	},
 	{
-		text: "Enquiring About Other Tours",
+		text: "Enquiring About Other Walks",
 		value: "other-tours",
 	},
 	{

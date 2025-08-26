@@ -85,11 +85,11 @@ export default () => {
 
 			<Section>
 				<Feature invert>
-					<Feature.Title>Book a tour</Feature.Title>
+					<Feature.Title>Book a walk</Feature.Title>
 					<Feature.Embed src="https://www.youtube.com/embed/iF2ozY92F9w" />
 					<Feature.Body>
 						<Paragraph>
-							We give walking tours through London&apos;s church
+							We give guided walks through London&apos;s church
 							history and the British Museum to groups as small as
 							four people.
 						</Paragraph>
@@ -99,14 +99,8 @@ export default () => {
 							theme="red"
 							suspend
 						>
-							Book a tour
+							Book a walk
 						</Button>
-						{/* <Paragraph small>
-							Private tours are also available.{" "}
-							<Link to="/contact/private-tour">
-								Enquire about a private tour
-							</Link>
-						</Paragraph> */}
 					</Feature.Body>
 				</Feature>
 			</Section>
@@ -114,12 +108,12 @@ export default () => {
 			<Section>
 				<Feature invert>
 					<Feature.Title>
-						C.S. Lewis &amp; Reformation Tours{" "}
+						C.S. Lewis &amp; Reformation tours{" "}
 					</Feature.Title>
 					<Feature.Embed src="https://www.youtube.com/embed/3pEPbAQrYNA" />
 					<Feature.Body>
 						<Paragraph>
-							Alongside our London tours, we offer guided visits
+							Alongside our London walks, we offer guided visits
 							to <strong>Oxford</strong> and{" "}
 							<strong>Cambridge</strong>—two cities rich in
 							Christian heritage.
