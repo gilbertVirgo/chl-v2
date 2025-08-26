@@ -20,15 +20,18 @@ export default ({
 
 	const contact = {
 		phone:
-			category === "international-tour"
+			category === "international-tour" ||
+			category === "oxford-cambridge-tour"
 				? "+447528661048"
 				: "+443000301785",
 		email:
-			category === "international-tour"
+			category === "international-tour" ||
+			category === "oxford-cambridge-tour"
 				? "ilona@christianheritagelondon.org"
 				: "info@christianheritagelondon.org",
 		physical:
-			category === "international-tour" ? (
+			category === "international-tour" ||
+			category === "oxford-cambridge-tour" ? (
 				<>
 					33 Upper Meadows
 					<br />
